@@ -144,15 +144,19 @@
 
 
 
-<clause id="_92c0e82f-0599-63b3-3b72-3d1ecb48880c" obligation="normative">
+<clause id="_8fc9882b-910e-a4b3-f2d8-2dc90028fce5" obligation="normative">
 <title id="_decbb8d8-02f7-082a-65ce-618d74868238">Geometry Datatypes</title>
-<clause id="_e0c4ab5c-3d07-ba2e-abc2-767c10a34f8f" obligation="normative">
+<clause id="_b6d9d173-3820-efd8-a74c-c9ef5de83996" obligation="normative">
 <title id="_bfe99301-8231-23c4-dc6a-8702c4c77d0f">DGGS Datatype Specification</title>
-<clause id="_cae13a5f-1be4-39bd-4b61-32adf178a0fa" obligation="normative">
-<title id="_e15843a1-8467-64fb-0b15-65b4be207686">DGGS Literal</title>
-<p id="_c671a6c1-c48a-7e05-2386-64ec3b4230c1">A textual serialization of a Discrete Global Grid System (DGGS) Geometry object.</p>
+<p id="_4a720d7a-53ff-1a7e-3001-029e496b0bb2">This section specifies the DGGS geometry literal datatype (<tt>geo:dggsLiteral</tt>) and 1 accompanying serialization property defined in <tt>dggs.ttl</tt> for representing DGGS geometries in RDF.</p>
 
-<table id="_058478d5-81a5-c072-02b5-acf48ed37ba7"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_bd6ea6de-c125-7fe1-246d-14de94bd186d"><th id="_5303e512-ad05-9808-4aac-caf5b13b21de" valign="middle" align="left">Attribute</th>
+<clause id="_c4ad5c47-7226-eeed-a39c-f3023f682e71" obligation="normative">
+<title id="_e15843a1-8467-64fb-0b15-65b4be207686">DGGS Literal</title>
+<p id="_65d42e6c-4eec-374e-ebd2-f9486ca9d069">The <tt>geo:dggsLiteral</tt> datatype represents geometry literals serialized in the DGGS format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_01876918-2eb7-d067-f570-4de517ec86e7">A textual serialization of a Discrete Global Grid System (DGGS) Geometry object.</p>
+
+<table id="_de3e1ace-35d8-efbd-3a44-77ed897d9abd"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_bd6ea6de-c125-7fe1-246d-14de94bd186d"><th id="_5303e512-ad05-9808-4aac-caf5b13b21de" valign="middle" align="left">Attribute</th>
 <th id="_db6ae9fc-88c5-6c3a-1243-aae07f16ae0e" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_4eafec9b-12c1-5f77-e92d-a97284ecf880"><td id="_315d5034-450f-b896-a915-4fab1e2077e8" valign="middle" align="left">URI</td>
@@ -167,19 +171,17 @@
 <td id="_ccc1f155-c24b-4286-2f1f-79e06e4db028" valign="middle" align="left">true</td>
 </tr><tr id="_40ffa22a-a527-8877-3777-dc4a0fd6ad2b"><td id="_6aab183d-84c2-e922-ce68-e94118852d42" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#isCrsAware"><tt>geo:isCrsAware</tt></link></td>
 <td id="_cba37404-69b7-d159-e452-cac687613b39" valign="middle" align="left">true</td>
-</tr><tr id="_c25a841a-d468-fb74-fb11-9c830d581e0a"><td id="_c3ed10bc-c05b-53d2-8ffe-2d430d954cf5" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_e3fdc1b6-d380-903f-af19-35bad381b4eb" valign="middle" align="left">&lt;<link target="https://h3geo.org/res/7"/>&gt; CELLLIST( 87f16608bffffff )</td>
-</tr><tr id="_884169e4-f17c-0043-3b27-3e969325621f"><td id="_9214f8da-68d0-0c36-4c67-2663a53d2917" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_b5edbb6b-babc-d457-863a-a8e87ad81661" valign="middle" align="left">nbfe05fbb8abf4a699bd7148d0e1711d7b1</td>
+</tr><tr id="_fbb316fc-90ca-d69a-7d10-e12bb6671e25"><td id="_c3ed10bc-c05b-53d2-8ffe-2d430d954cf5" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_f61547fa-299e-8b75-fd71-957fb959a9b8" valign="middle" align="left"><sourcecode id="_591adedb-9f0f-83db-9392-ca7f1d3d53c4" lang="turtle"><body>&lt;https://h3geo.org/res/7&gt; CELLLIST( 87f16608bffffff )</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_032e80c3-fb78-4e5b-7d75-0bf379522d10" obligation="normative">
+<clause id="_31411522-c533-049d-5101-278478182cd1" obligation="normative">
 <title id="_e480586a-a690-846c-43ca-dbf0921052f6">Accompanying Properties (DGGS)</title>
-<clause id="_44d00582-395d-232f-8ee7-8c717f0bfb9c" obligation="normative">
+<clause id="_27e8214a-e604-6c3e-f419-634c776df2fd" obligation="normative">
 <title id="_c1cd70e3-de3b-ec26-911e-4c366ee22e0e">geo:asDGGS</title>
-<p id="_b5ae6881-9357-69e7-9f4a-680dbd323de3"><em>No description provided.</em></p>
+<p id="_6549a8ec-d6a5-6cf1-e566-3360950282d2">The <tt>geo:asDGGS</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:dggsLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_876355a7-fcd9-21a6-77b7-b4fc44fa078f"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_c44d4af1-a963-cdde-462e-c6934fd21880"><th id="_b6dd67f5-0c0d-8046-ca4e-b87adb5c8088" valign="middle" align="left">Property Attribute</th>
 <th id="_bea90161-6d69-e5ca-0adf-16c0d85f4a0d" valign="middle" align="left">Value</th>
@@ -204,13 +206,17 @@
 </clause>
 </clause>
 
-<clause id="_5e71ca0f-eb04-c214-ddbf-9b98d9bc2482" obligation="normative">
+<clause id="_5750b945-6f64-77ec-09e1-9ba0a1df9274" obligation="normative">
 <title id="_cba9a6ab-24c1-e8da-4303-0d233fc6750b">GEOCODE Datatype Specification</title>
-<clause id="_6f07cf97-8f8a-0b39-04ff-2db445e6ec55" obligation="normative">
-<title id="_d4e1bdbc-1e25-7665-8072-5887d0aa06d2">GeoCode Literal</title>
-<p id="_2fcb1389-d367-9afb-0cfb-6c050af4680a">A GeoCode serialization of a Geometry object.</p>
+<p id="_87645ec2-0224-4395-923e-2591e6692b3f">This section specifies the GEOCODE geometry literal datatype (<tt>geo:geoCodeLiteral</tt>) and 1 accompanying serialization property defined in <tt>geocode.ttl</tt> for representing GEOCODE geometries in RDF.</p>
 
-<table id="_d33f109b-3eb3-e36c-465e-1390968a1e27"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_8ed87957-5b71-0e9b-500c-03b6a034e019"><th id="_6e6cd3e5-7a14-680e-55db-13625a0acd5d" valign="middle" align="left">Attribute</th>
+<clause id="_3859ec63-6821-05cb-67a2-8e38d446a92a" obligation="normative">
+<title id="_d4e1bdbc-1e25-7665-8072-5887d0aa06d2">GeoCode Literal</title>
+<p id="_22e57b6f-b903-d122-48ca-8ffc67888405">The <tt>geo:geoCodeLiteral</tt> datatype represents geometry literals serialized in the GEOCODE format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:MultiLineString</tt>, <tt>sf:MultiPoint</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_c1f94360-a116-4527-95e8-69c84478b9a2">A GeoCode serialization of a Geometry object.</p>
+
+<table id="_e3deaa51-77e7-bdd8-a9fc-f2b8d06cce26"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_8ed87957-5b71-0e9b-500c-03b6a034e019"><th id="_6e6cd3e5-7a14-680e-55db-13625a0acd5d" valign="middle" align="left">Attribute</th>
 <th id="_b1a5cebe-4d35-85de-ac2f-bb4181318242" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_bbdf16c5-a604-6664-866d-5eccd177b6a5"><td id="_d1b08149-2b2b-a517-9bbf-6776561c80de" valign="middle" align="left">URI</td>
@@ -240,19 +246,17 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_10fbc8f7-1e1c-6223-ad91-fb24ae5331bc"><td id="_42036d67-21fd-f26b-b4ef-341488a56de0" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_4ff43679-1929-5a22-f89c-d691be47ab06" valign="middle" align="left">&lt;<link target="http://opengis.net/ont/geocode/OpenLocationCode"/>&gt; 2G8PJ822+22</td>
-</tr><tr id="_d8121003-7143-ef62-339b-4c57ea925164"><td id="_519f5234-fe12-e364-adf6-b83d78014146" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_ce80e7f5-42cc-8db7-9711-b5c8f64ad4b0" valign="middle" align="left">n903249d217d645bc9b7d73cbab892132b1</td>
+</tr><tr id="_6a7ecfc0-d71d-8dd0-5076-2ac7ad834afa"><td id="_42036d67-21fd-f26b-b4ef-341488a56de0" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_9155493d-3987-c71e-a0a4-1789f60a90fd" valign="middle" align="left"><sourcecode id="_129640e4-e3ae-7e6a-501d-2694b7e8ecd7" lang="turtle"><body>&lt;http://opengis.net/ont/geocode/OpenLocationCode&gt; 2G8PJ822+22</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_0c46921e-99a2-fee7-cd57-f1ad2289fdc5" obligation="normative">
+<clause id="_649f230e-6fd3-6be7-8649-5af09b6f01e1" obligation="normative">
 <title id="_a740442c-1ab0-76f5-efa6-03ed374a6db9">Accompanying Properties (GEOCODE)</title>
-<clause id="_3933c0f2-7263-8232-d879-bba8e91ae04d" obligation="normative">
+<clause id="_dfeb69e8-66c2-308b-5d18-31c305f897fa" obligation="normative">
 <title id="_da044cfc-6814-ba27-98b7-c232a9526e46">geo:asGeoCode</title>
-<p id="_1d56aa07-c805-28e2-cf4e-1931c9e7681a"><em>No description provided.</em></p>
+<p id="_1299cfa9-f8eb-247a-6874-c7a85c5b988a">The <tt>geo:asGeoCode</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:geoCodeLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_70186dec-e8d3-89df-54ff-549cfeec01ff"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_9e46cafe-f6ea-3e90-4b62-b8472a7f54b5"><th id="_c417c85e-928f-48a5-f2ca-49cdc1e94b46" valign="middle" align="left">Property Attribute</th>
 <th id="_1104bf0f-29f8-bd8c-398e-5bef27a5b783" valign="middle" align="left">Value</th>
@@ -275,13 +279,17 @@
 </clause>
 </clause>
 
-<clause id="_02a33a72-653f-3693-f302-98ea0e345916" obligation="normative">
+<clause id="_873dd0ff-17af-b142-4f2c-50e35551f0d7" obligation="normative">
 <title id="_774f8150-f0db-3a9f-c569-fd55a39f5c8e">GEOJSON Datatype Specification</title>
-<clause id="_095980ef-f87e-dcab-9e7b-27565ad60386" obligation="normative">
-<title id="_a9c48ca3-2874-bf06-a59f-0230f3986fe7">GeoJSON Literal</title>
-<p id="_1ca28c47-fc4b-7ea8-66e3-76de2d691e07">A GeoJSON serialization of a Geometry object.</p>
+<p id="_44ba5259-14c4-7231-d6b3-f18d906b56ba">This section specifies the GEOJSON geometry literal datatype (<tt>geo:geoJSONLiteral</tt>) and 1 accompanying serialization property defined in <tt>geojson.ttl</tt> for representing GEOJSON geometries in RDF.</p>
 
-<table id="_2cdae20a-fe7e-6d4a-7d94-f31bc05adf5e"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_166882cc-807e-9278-d03c-be11ed7be7a1"><th id="_fe743ded-d66f-1fcb-d1a1-978ead2ebbaf" valign="middle" align="left">Attribute</th>
+<clause id="_ecc81323-44e6-bef8-72aa-216bdb648941" obligation="normative">
+<title id="_a9c48ca3-2874-bf06-a59f-0230f3986fe7">GeoJSON Literal</title>
+<p id="_311a01ac-6f3e-0a95-932c-59e95a97f464">The <tt>geo:geoJSONLiteral</tt> datatype represents geometry literals serialized in the GEOJSON format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:MultiLineString</tt>, <tt>sf:MultiPoint</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_31d807ea-8042-e492-3ce3-e4e97d44defc">A GeoJSON serialization of a Geometry object.</p>
+
+<table id="_450d3ba7-542c-c9e1-316f-fcce9c65d963"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_166882cc-807e-9278-d03c-be11ed7be7a1"><th id="_fe743ded-d66f-1fcb-d1a1-978ead2ebbaf" valign="middle" align="left">Attribute</th>
 <th id="_e5ebfb79-0d71-5445-e0e4-58253e59e6e2" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_803279f7-60d8-5bd5-70cd-0d1eb7f45036"><td id="_8a0ae9d1-8dad-b705-c31e-cce9ff838871" valign="middle" align="left">URI</td>
@@ -313,19 +321,17 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_142d2ae9-2ce6-6855-acf8-3d3ec3faccb5"><td id="_9775afac-3b2b-e6a4-ef28-4a5362bae545" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_ee27bde0-618a-cbe7-e9bf-9ed6068d1444" valign="middle" align="left">{”type”:”Point”,”coordinates”:[-88.38, 31.95]}</td>
-</tr><tr id="_9cc17fc3-41ee-a932-51e1-4a66e8f6b1f5"><td id="_b5f7a10c-6210-9334-876c-931347316abb" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_833e380b-8af0-68b1-01c9-6c56fe87b198" valign="middle" align="left">n810f54db64864638951bc2c040c83803b1</td>
+</tr><tr id="_ace4ece0-af5d-de05-ebc0-79f481fc5774"><td id="_9775afac-3b2b-e6a4-ef28-4a5362bae545" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_a80348fd-27f3-6087-bc8c-b7fd1c88f18b" valign="middle" align="left"><sourcecode id="_5cf4e8ca-ae8f-adb1-6baa-964dbacf5c59" lang="turtle"><body>{"type":"Point","coordinates":[-88.38, 31.95]}</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_0ae94e80-8d1a-444a-a6a8-2ca5dc40b93f" obligation="normative">
+<clause id="_315aff6f-2511-0c93-e73c-c3d93afa9660" obligation="normative">
 <title id="_4b2fb7fe-418a-63ff-3b54-6ab45b67fa9b">Accompanying Properties (GEOJSON)</title>
-<clause id="_c5fef187-fcfc-97dd-1535-4416714a698b" obligation="normative">
+<clause id="_28b342df-62ae-828b-2479-3c51158d1158" obligation="normative">
 <title id="_6eec6e53-3a97-a357-bfa8-e871cdaf7614">geo:asGeoJSON</title>
-<p id="_24bd9e4d-1987-c63e-ac0d-2e2f688e064d"><em>No description provided.</em></p>
+<p id="_b53433bf-a7ef-da49-bff3-7497fc78f237">The <tt>geo:asGeoJSON</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:geoJSONLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_ba33200c-f15f-6462-45b6-d997f07b387e"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_7158c87e-9e6c-062e-1e8b-89ff503de207"><th id="_1c55cdd7-33fa-6188-f366-ebcc13213517" valign="middle" align="left">Property Attribute</th>
 <th id="_44d11eb1-baa7-8fea-4dac-13016b2e1788" valign="middle" align="left">Value</th>
@@ -352,13 +358,17 @@
 </clause>
 </clause>
 
-<clause id="_ebf8dddb-7b5a-f071-2a21-bf70668544f2" obligation="normative">
+<clause id="_a845fafd-b286-913b-a0e4-b9e44acebb56" obligation="normative">
 <title id="_24175b5a-3165-9c4b-dc15-37ba1e3ee714">GEOYAML Datatype Specification</title>
-<clause id="_d647e1c1-0436-a2d9-0c2c-2e2a9dc8957a" obligation="normative">
-<title id="_2398f133-a53b-d181-ca9b-886eaf63fa18">GeoYAML Literal</title>
-<p id="_88dbe983-661c-1913-c3cd-2079ee8686e2">A GeoYAML serialization of a Geometry object.</p>
+<p id="_fda0e735-1f3f-6496-ffdc-e4dffc9245c6">This section specifies the GEOYAML geometry literal datatype (<tt>geo:geoYAMLLiteral</tt>) and 1 accompanying serialization property defined in <tt>geoyaml.ttl</tt> for representing GEOYAML geometries in RDF.</p>
 
-<table id="_86d1c670-5dfe-3249-c1c0-9f2c82fae967"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_b0cea1e1-6b1c-1026-4d6d-22d20b45b027"><th id="_825fec58-5d0f-61c7-45b6-e5db238fdfa4" valign="middle" align="left">Attribute</th>
+<clause id="_2d759ba1-2b8c-9a4a-0a34-b381deef974b" obligation="normative">
+<title id="_2398f133-a53b-d181-ca9b-886eaf63fa18">GeoYAML Literal</title>
+<p id="_d8321705-49c1-9434-1c48-802aed79673d">The <tt>geo:geoYAMLLiteral</tt> datatype represents geometry literals serialized in the GEOYAML format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:MultiLineString</tt>, <tt>sf:MultiPoint</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_a01a4eda-365b-2c2b-8b07-8cb7c9a6b420">A GeoYAML serialization of a Geometry object.</p>
+
+<table id="_4be0fe02-b6d1-0fbd-d838-1265d5298625"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_b0cea1e1-6b1c-1026-4d6d-22d20b45b027"><th id="_825fec58-5d0f-61c7-45b6-e5db238fdfa4" valign="middle" align="left">Attribute</th>
 <th id="_5c4789f3-0c2e-5b04-d68e-fa0fcd666401" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_1597d5ac-357d-a10d-973a-728cf1620927"><td id="_0ed3c76d-69a8-ebe3-23ef-2b1dd4eb5e6f" valign="middle" align="left">URI</td>
@@ -388,19 +398,28 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_7d359024-68e0-2485-0e4e-4c719349651f"><td id="_b4a6319c-8e55-7226-1cdc-cc2bed5a6b0c" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_bbcb7b64-9262-a683-aed3-805694028df8" valign="middle" align="left">type: Polygon coordinates: - — - -83.6     — 34.1   — - -83.2     — 34.1   — - -83.2     — 34.5   — - -83.6     — 34.5   — - -83.6     — 34.1</td>
-</tr><tr id="_89f96062-f8f6-4971-a834-89ea90d54797"><td id="_78ef6c04-70d5-5ae9-3900-b1c7c98006f2" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_7d8def2b-eab3-5023-950e-6b0722a236a2" valign="middle" align="left">n66fc0797bd554e9598c0b7ef15107556b1</td>
+</tr><tr id="_28840c7d-ee40-a159-1bbd-3aef2de605d2"><td id="_b4a6319c-8e55-7226-1cdc-cc2bed5a6b0c" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_b3e3d62f-c051-e3ab-9b2a-f0ddc725ac29" valign="middle" align="left"><sourcecode id="_4bb1de2e-4b15-a894-e97b-0a2bfc39ac46" lang="turtle"><body>type: Polygon
+coordinates:
+- - - -83.6
+    - 34.1
+  - - -83.2
+    - 34.1
+  - - -83.2
+    - 34.5
+  - - -83.6
+    - 34.5
+  - - -83.6
+    - 34.1</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_fe98477a-b7f8-1487-cc39-5880fe70f720" obligation="normative">
+<clause id="_07b26bbf-6d9c-ebf5-317a-e1308170389f" obligation="normative">
 <title id="_b182ed1c-066b-7070-5082-0af6d3255c6f">Accompanying Properties (GEOYAML)</title>
-<clause id="_4902e51a-80cd-1cde-621c-1a9c7091d2a9" obligation="normative">
+<clause id="_e72616eb-e944-c5fc-7246-08bb20bd19fc" obligation="normative">
 <title id="_24cb02ce-0ad7-471f-5217-fd10f5af0b67">geo:asGeoYAML</title>
-<p id="_935b2544-740b-c64f-123a-1771a8ee70e8"><em>No description provided.</em></p>
+<p id="_6830ed9c-9578-d861-bbfd-fd9a36175e26">The <tt>geo:asGeoYAML</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:geoYAMLLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_25024a79-9ed6-a81b-9961-43718140bb25"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_0485311f-d614-b561-4cef-d2465958fa98"><th id="_c9e6b9f6-209b-2183-1735-a61bd24a31fd" valign="middle" align="left">Property Attribute</th>
 <th id="_9d4dfc0b-2fff-8424-8771-8070826d616a" valign="middle" align="left">Value</th>
@@ -423,13 +442,17 @@
 </clause>
 </clause>
 
-<clause id="_6f08bde3-dfce-7457-b9e4-b6513ca8e749" obligation="normative">
+<clause id="_a26ca336-0d5f-b9d4-9699-01bd33d5ffab" obligation="normative">
 <title id="_59b3f14c-ee0d-bd85-3f1b-7f0ad26b639f">GLTF Datatype Specification</title>
-<clause id="_0e4e152d-0c3c-2403-f56b-a786996ca9f2" obligation="normative">
-<title id="_ef277e8d-6253-c830-6f56-3f16eacad3a4">GLTF Literal</title>
-<p id="_c68c9a06-9d31-fe7b-5a6c-3bd7a28d4a1f">A GLTF serialization of a Geometry object.</p>
+<p id="_bd951e9e-b95c-08a5-2045-8a0b06704b94">This section specifies the GLTF geometry literal datatype (<tt>geo:gltfLiteral</tt>) and 1 accompanying serialization property defined in <tt>gltf.ttl</tt> for representing GLTF geometries in RDF.</p>
 
-<table id="_b690c999-08bc-45c7-22a4-b2f80220270b"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_eb3bb099-3736-b0fc-c64b-1c5ac1e799b1"><th id="_abc946ca-8f60-cadf-ab8f-baf6b503809c" valign="middle" align="left">Attribute</th>
+<clause id="_aaed36a6-5c63-a5b8-f7d6-a87b2e352576" obligation="normative">
+<title id="_ef277e8d-6253-c830-6f56-3f16eacad3a4">GLTF Literal</title>
+<p id="_2e80d11e-c17e-52dc-f61c-644d00d32ca3">The <tt>geo:gltfLiteral</tt> datatype represents geometry literals serialized in the GLTF format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_bdd2b063-97ee-afa1-4bd5-ba78977a5133">A GLTF serialization of a Geometry object.</p>
+
+<table id="_4d9dd921-1fc6-7cee-77dc-96c4a0b19709"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_eb3bb099-3736-b0fc-c64b-1c5ac1e799b1"><th id="_abc946ca-8f60-cadf-ab8f-baf6b503809c" valign="middle" align="left">Attribute</th>
 <th id="_a78c49bb-d49a-2484-f493-9e2d8e9d4329" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_9fb2d55e-8e80-9bc9-4638-8e128280358d"><td id="_36a466fb-e731-f141-0d77-5655f0a39e88" valign="middle" align="left">URI</td>
@@ -448,17 +471,17 @@
 <td id="_b9c8cebc-8a62-23ab-72d7-13d96ac3c706" valign="middle" align="left">false</td>
 </tr><tr id="_47a4aa6d-36a7-c7b6-5e3a-753fe261f91a"><td id="_50dae7a3-dabf-7973-ceb7-d1a96205c3c2" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#isCsAware"><tt>geo:isCsAware</tt></link></td>
 <td id="_a564426e-9c12-4a1e-4860-45c900c295d2" valign="middle" align="left">true</td>
-</tr><tr id="_40a2aba2-20b5-ad65-7460-9e76766e4d3e"><td id="_4822d5fb-1047-3f5d-1b02-82df9fa8d8d4" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_a008abf5-2fb5-0c27-7575-d196180937ac" valign="middle" align="left">n0400fc8434c34885826d2c49fb230640b1</td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_2176c068-6a86-00ff-7780-2ec08a40f839" obligation="normative">
+<clause id="_52cd0e7a-23c2-5e78-419a-e5d4cf4c7c7b" obligation="normative">
 <title id="_6c1e2e2f-5388-e6b9-3e86-c11acca10ae3">Accompanying Properties (GLTF)</title>
-<clause id="_a0dc2199-f6fe-f8a8-b686-5e4aab2e4da7" obligation="normative">
+<clause id="_cb6a4461-bb99-9dcd-ae8a-fbed21e5bcb3" obligation="normative">
 <title id="_d7c4bf67-348d-9756-d3c0-7b13db348cb9">as GLTF</title>
-<p id="_cfece0c2-377d-713e-11ff-3b10a73237df">The GLTF serialization of a Geometry</p>
+<p id="_70820d9d-9701-8c8d-a88c-bda778ace708">The <tt>geo:asGLTF</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:gltfLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+
+<p id="_c63f1cab-500b-06d0-7b13-966349e83825">The GLTF serialization of a Geometry</p>
 
 <table id="_63bd374c-25c4-ad83-af7c-b8569b70ae00"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_fdf93da1-2529-177e-bf84-addd29154a66"><th id="_67ab6816-1d9f-f99b-c029-a39dda0d62d3" valign="middle" align="left">Property Attribute</th>
 <th id="_a3a8856b-f2d1-a4f5-f6ac-0df9edaa7abb" valign="middle" align="left">Value</th>
@@ -481,13 +504,17 @@
 </clause>
 </clause>
 
-<clause id="_55a61427-246d-b743-668a-e82930a2df1a" obligation="normative">
+<clause id="_7fba1c39-468b-147a-2137-7e8ec7516a98" obligation="normative">
 <title id="_e5413729-5cf3-c799-f4b2-b4e79cd13e02">GML Datatype Specification</title>
-<clause id="_12831b34-6785-d16c-ca92-4e42502a7875" obligation="normative">
-<title id="_0d034b13-8cb0-0190-b595-12e50847aaa6">GML literal</title>
-<p id="_63f54694-c39c-3f22-94f4-1b203590ebb3">The datatype of GML literal values</p>
+<p id="_d885cf9e-b647-94da-7f4b-0227436899e2">This section specifies the GML geometry literal datatype (<tt>geo:gmlLiteral</tt>) and 1 accompanying serialization property defined in <tt>gml.ttl</tt> for representing GML geometries in RDF.</p>
 
-<table id="_fb44f480-4046-d7d8-f937-2dd7699e9e1a"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_99fd8ea6-b2e4-8499-bdcf-539cd36cd88f"><th id="_efcc7756-addd-d85c-350a-d97ca196eb70" valign="middle" align="left">Attribute</th>
+<clause id="_60499a67-b6c1-f20c-5288-5e598b769816" obligation="normative">
+<title id="_0d034b13-8cb0-0190-b595-12e50847aaa6">GML literal</title>
+<p id="_1fc9d99d-4bbb-8301-f1ab-5ff32641788a">The <tt>geo:gmlLiteral</tt> datatype represents geometry literals serialized in the GML format, supporting geometry types such as <tt>sf:Curve</tt>, <tt>sf:Envelope</tt>, <tt>sf:Geometry</tt>, <tt>sf:GeometryCollection</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_9e6b7f48-4948-1e5d-e692-5f743975212d">The datatype of GML literal values</p>
+
+<table id="_9cdbd394-125e-dc96-0bed-4c35f94ce60c"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_99fd8ea6-b2e4-8499-bdcf-539cd36cd88f"><th id="_efcc7756-addd-d85c-350a-d97ca196eb70" valign="middle" align="left">Attribute</th>
 <th id="_5109be8f-80f3-5fbf-6d72-01690f5c7a50" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_f95553ae-42b9-184e-0da6-124585377389"><td id="_dd636fc8-46e7-8bf3-333a-dd43af988e79" valign="middle" align="left">URI</td>
@@ -541,19 +568,17 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_0fe7c01a-8beb-2e4f-1ddf-d426c0567045"><td id="_d74a9187-d601-84af-72e1-86d658857dec" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_44591ed2-4753-4448-42fe-de74febb4859" valign="middle" align="left">&lt;gml:Point xmlns:gml=”<link target="http://www.opengis.net/gml"/>” srsName=”<link target="http://www.opengis.net/def/crs/EPSG/0/4326"/>gml:pos31.95”/&gt; -88.38/gml:pos/gml:Point</td>
-</tr><tr id="_90b523d9-0d40-9631-f4a9-829b75d7fb59"><td id="_d1c2b27e-1237-7bf4-1601-f8df0e6b55e4" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_7b76871a-a409-b773-eca8-0e979437e04f" valign="middle" align="left">n4e66b43bb91b45a1b3d82a51d0cf42aab1</td>
+</tr><tr id="_e2a2b37c-f491-10bc-aa7d-d71a64256f37"><td id="_d74a9187-d601-84af-72e1-86d658857dec" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_85009e61-d1bb-54aa-720c-ee929371e8b6" valign="middle" align="left"><sourcecode id="_a5caa063-cecf-34b2-c8cf-402ab5047f68" lang="turtle"><body>&lt;gml:Point xmlns:gml="http://www.opengis.net/gml" srsName="http://www.opengis.net/def/crs/EPSG/0/4326"&gt;&lt;gml:pos&gt;31.95 -88.38&lt;/gml:pos&gt;&lt;/gml:Point&gt;</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_ca2018a1-d839-2a16-638e-71e689651087" obligation="normative">
+<clause id="_22ab801a-ec13-e716-14c4-4011533a59c2" obligation="normative">
 <title id="_b671e825-4fdd-99a8-646d-79d196c10d4e">Accompanying Properties (GML)</title>
-<clause id="_0dd351f9-e92a-cf4c-835d-397f55e2d7d0" obligation="normative">
+<clause id="_8e371cb1-1c9c-bed9-3d16-97f8c1b25dfc" obligation="normative">
 <title id="_f31c2a5b-766d-09fc-a840-559a495fd68c">geo:asGML</title>
-<p id="_3a01c66a-3b80-2954-f5cb-d7ffad814ac7"><em>No description provided.</em></p>
+<p id="_8aa90a86-a446-ac47-a332-d407f28a7984">The <tt>geo:asGML</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:gmlLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_e03c500b-39a7-8331-6467-43112c0ac0a8"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_e05377c3-3d34-3505-1014-bb7ac334b5fc"><th id="_ffb58392-a82d-f732-69fc-8f507f1260ff" valign="middle" align="left">Property Attribute</th>
 <th id="_e89517c9-fb86-954a-3d91-8c849d30e4b0" valign="middle" align="left">Value</th>
@@ -583,13 +608,17 @@
 </clause>
 </clause>
 
-<clause id="_75144463-ac0a-f385-719e-cd4cf09a5ec7" obligation="normative">
+<clause id="_904b8ec5-6bda-cb20-afda-c2547189b6dd" obligation="normative">
 <title id="_a6d023b7-8a71-d193-7c46-0453ec6768dd">GPX Datatype Specification</title>
-<clause id="_1c163ada-9e1e-4f98-4b38-befcfee7f528" obligation="normative">
-<title id="_1bc1048c-a123-c70d-f58f-57df0b49a564">GPX literal</title>
-<p id="_1329067e-d102-f22e-207e-9ff8624a2fc2">The datatype of GPX literal values</p>
+<p id="_a6aa7a09-f48c-12e6-ea44-9814ed013bc5">This section specifies the GPX geometry literal datatype (<tt>geo:gpxLiteral</tt>) and 1 accompanying serialization property defined in <tt>gpx.ttl</tt> for representing GPX geometries in RDF.</p>
 
-<table id="_e9555fea-5795-22c8-46ae-0dfbfbe19374"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_531df133-6369-3468-1e2d-6a64bde806cd"><th id="_212b0773-cda7-1711-a272-cca0842e2e67" valign="middle" align="left">Attribute</th>
+<clause id="_b8b34521-deb2-0f4d-36fe-fab453944a81" obligation="normative">
+<title id="_1bc1048c-a123-c70d-f58f-57df0b49a564">GPX literal</title>
+<p id="_2eb669fb-0688-77ad-c795-1b6c98dc5d19">The <tt>geo:gpxLiteral</tt> datatype represents geometry literals serialized in the GPX format, supporting geometry types such as <tt>sf:Curve</tt>, <tt>sf:Envelope</tt>, <tt>sf:Geometry</tt>, <tt>sf:GeometryCollection</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_160ba58a-6254-ffd5-67a4-ddcae2c7355b">The datatype of GPX literal values</p>
+
+<table id="_77fe24da-61bb-1054-956a-3020153128cd"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_531df133-6369-3468-1e2d-6a64bde806cd"><th id="_212b0773-cda7-1711-a272-cca0842e2e67" valign="middle" align="left">Attribute</th>
 <th id="_ad50d260-4b87-397b-ed1c-23fa7ff8bb07" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_d98ac112-8f98-5321-011e-9cc560a4bc12"><td id="_d2a2ee0a-9e66-bba0-0b8f-6936ec072997" valign="middle" align="left">URI</td>
@@ -643,19 +672,33 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_37e89dca-9844-c5f1-aa70-2674bb74d2a8"><td id="_068b7cfd-02b3-b6df-e2db-01ce586a128c" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_c136fdb8-09a2-3f7a-0018-70f9a1e9250d" valign="middle" align="left">&lt;?xml version=”1.0” encoding=”UTF-8”?&gt; &lt;gpx xmlns=”<link target="http://www.topografix.com/GPX/1/1"/>” xmlns:xsi=”<link target="http://www.w3.org/2001/XMLSchema-instance"/>” xsi:schemaLocation=”<link target="http://www.topografix.com/GPX/1/1"/> <link target="http://www.topografix.com/GPX/1/1/gpx.xsd"/>”/&gt; version=”1.1” creator=”gpx.py — <link target="https://github.com/tkrajina/gpxpy"/>”/&gt; trk trkseg trkpt lat=”34.1” lon=”-83.6” /trkpt trkpt lat=”34.1” lon=”-83.2” /trkpt trkpt lat=”34.5” lon=”-83.2” /trkpt trkpt lat=”34.5” lon=”-83.6” /trkpt trkpt lat=”34.1” lon=”-83.6” /trkpt /trkseg /trk /gpx</td>
-</tr><tr id="_e80b6781-dffd-e6e9-7348-5a7b183ebd12"><td id="_2d4d9462-68a0-c6d9-000b-c564c9087de9" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_97a25ed6-70d2-af42-347b-4d5afc6a14ab" valign="middle" align="left">n2bd17f58b2324c3b8a0634cd0c11d2ddb1</td>
+</tr><tr id="_c1c18f6c-73d2-5b72-ca5f-89e6fd050ffa"><td id="_068b7cfd-02b3-b6df-e2db-01ce586a128c" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_15779a61-945a-221d-620c-7610a4ce8fbe" valign="middle" align="left"><sourcecode id="_0434b035-b72f-7b87-7ba9-7a938dddde56" lang="turtle"><body>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy"&gt;
+&lt;trk&gt;
+&lt;trkseg&gt;
+&lt;trkpt lat="34.1" lon="-83.6"&gt;
+&lt;/trkpt&gt;
+&lt;trkpt lat="34.1" lon="-83.2"&gt;
+&lt;/trkpt&gt;
+&lt;trkpt lat="34.5" lon="-83.2"&gt;
+&lt;/trkpt&gt;
+&lt;trkpt lat="34.5" lon="-83.6"&gt;
+&lt;/trkpt&gt;
+&lt;trkpt lat="34.1" lon="-83.6"&gt;
+&lt;/trkpt&gt;
+&lt;/trkseg&gt;
+&lt;/trk&gt;
+&lt;/gpx&gt;</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_9dd8e7e6-67fa-2329-f4fc-9af8d000db59" obligation="normative">
+<clause id="_fca6ab50-dbe3-eb86-3623-50111666368f" obligation="normative">
 <title id="_26536df6-370e-4ed3-7666-deb133edb123">Accompanying Properties (GPX)</title>
-<clause id="_4fc72365-4d6e-b08f-dc97-3ba521a727c1" obligation="normative">
+<clause id="_c28329e9-2d7b-4dfc-b284-d3f50b99678d" obligation="normative">
 <title id="_64ad1696-400a-1b6d-aa42-5dfdb7e2697c">geo:asGPX</title>
-<p id="_bb45086d-e5cb-1e39-fe21-1b4a0d7320eb"><em>No description provided.</em></p>
+<p id="_55583bd3-e9d4-a91b-fccc-b265feef6577">The <tt>geo:asGPX</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:gpxLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_70d4afcb-adb1-b623-5e91-c7cb511b90b5"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_e01f1689-c869-bbf5-faa7-381808b7fa29"><th id="_8cd951f8-ebac-1a59-bc23-a7505ca835aa" valign="middle" align="left">Property Attribute</th>
 <th id="_96137981-e3ae-07b0-4694-034afbc1b275" valign="middle" align="left">Value</th>
@@ -678,13 +721,17 @@
 </clause>
 </clause>
 
-<clause id="_a1e6b8c0-1891-3dc0-2c7a-999ce5c8d38b" obligation="normative">
+<clause id="_746ffeb8-541b-8177-a5b4-3cc8caf92cca" obligation="normative">
 <title id="_4481dfcd-5b65-51be-01ec-98220d743c79">JSONFG Datatype Specification</title>
-<clause id="_1636bcea-3f02-1a01-7ec5-c47f9fdc3b31" obligation="normative">
-<title id="_214f37cc-9a62-7a8d-8f9d-88fb6347c3ab">JSONFG Literal</title>
-<p id="_806c381a-7ad3-e68e-7957-8f4c874b421f">A JSONFG serialization of a Geometry object.</p>
+<p id="_df31ecd2-2c6d-f4ee-b95d-c2bfc984531f">This section specifies the JSONFG geometry literal datatype (<tt>geo:jsonFGLiteral</tt>) and 1 accompanying serialization property defined in <tt>jsonfg.ttl</tt> for representing JSONFG geometries in RDF.</p>
 
-<table id="_74a13e27-41b9-245b-9a12-be091fc30bac"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_88d8bb53-b03c-8411-78cc-db81c9a9e59a"><th id="_f917532a-fa5f-bfa1-e0af-e7f607efefcb" valign="middle" align="left">Attribute</th>
+<clause id="_4e98aa4b-61e1-f69f-9e7f-06fc5be53492" obligation="normative">
+<title id="_214f37cc-9a62-7a8d-8f9d-88fb6347c3ab">JSONFG Literal</title>
+<p id="_8e3e5a18-007f-89e1-dfab-6053b238c03e">The <tt>geo:jsonFGLiteral</tt> datatype represents geometry literals serialized in the JSONFG format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:MultiLineString</tt>, <tt>sf:MultiPoint</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_d790c385-8149-db57-c677-6eefed4d391d">A JSONFG serialization of a Geometry object.</p>
+
+<table id="_a5cf99f5-8acc-5ae5-efa3-62a3002f57ae"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_88d8bb53-b03c-8411-78cc-db81c9a9e59a"><th id="_f917532a-fa5f-bfa1-e0af-e7f607efefcb" valign="middle" align="left">Attribute</th>
 <th id="_748517d1-786f-3417-d7a0-d148de648c9d" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_2f57140f-2ebe-be7c-003b-5ffbb7c56966"><td id="_c6e7063a-c2b3-2b38-8b46-4a1368114ede" valign="middle" align="left">URI</td>
@@ -716,19 +763,17 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_0f21f4f9-56d8-4103-42a7-6faf84616ab9"><td id="_7a88ab86-d7fe-f55c-d19f-d8cc28d23f44" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_fddd052a-cc1b-e87e-e267-2f32bc8c3599" valign="middle" align="left">{”type”: “Polygon”, “coordinates”: [[[-83.6, 34.1], [-83.2, 34.1], [-83.2, 34.5], [-83.6, 34.5], [-83.6, 34.1]]], “coordRefSys”: “<link target="http://www.opengis.net/def/crs/OGC/1.3/CRS84"/>”, “conformsTo”: [“<link target="http://www.opengis.net/spec/json-fg-1/1.0/conf/core"/>”, “<link target="http://www.opengis.net/spec/json-fg-1/1.0/conf/types-schemas"/>”]}</td>
-</tr><tr id="_3aca7826-2a90-cc9d-085e-bcbbd026c0b3"><td id="_9d6f5761-6842-7abb-434b-d0a094e391ce" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_f0549520-063d-aba8-e7f3-453b14ccb29b" valign="middle" align="left">n4f0455f33554405db01bb25c7456491bb1</td>
+</tr><tr id="_36193357-8c3e-8df2-9173-0bd1742ef096"><td id="_7a88ab86-d7fe-f55c-d19f-d8cc28d23f44" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_01922468-1499-6a9e-285b-47212a27f40b" valign="middle" align="left"><sourcecode id="_7556d795-8bbf-3bda-c73a-c1d6c9f88fdb" lang="turtle"><body>{"type": "Polygon", "coordinates": [[[-83.6, 34.1], [-83.2, 34.1], [-83.2, 34.5], [-83.6, 34.5], [-83.6, 34.1]]], "coordRefSys": "http://www.opengis.net/def/crs/OGC/1.3/CRS84", "conformsTo": ["http://www.opengis.net/spec/json-fg-1/1.0/conf/core", "http://www.opengis.net/spec/json-fg-1/1.0/conf/types-schemas"]}</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_9325ccbb-7a7b-637a-c5e6-24df867404d5" obligation="normative">
+<clause id="_966fccc0-6cc8-4b5e-4b61-fa06fc2f1d91" obligation="normative">
 <title id="_e1147533-b6ab-9a81-83e2-55eafd95b63c">Accompanying Properties (JSONFG)</title>
-<clause id="_e169cf05-82e1-55f4-7542-57cbcc21907c" obligation="normative">
+<clause id="_76f93777-70a7-b542-72e8-c96e37e1cbc4" obligation="normative">
 <title id="_499fde59-ad01-a0b9-64cc-6dba1c3a5dc7">geo:asJSONFG</title>
-<p id="_f8e1d474-2c31-2301-6a0d-511d0eeb1176"><em>No description provided.</em></p>
+<p id="_bb7e896f-1e14-3390-4867-fa7d83cb1e8e">The <tt>geo:asJSONFG</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:jsonFGLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_729e2936-3beb-7bef-4ba8-9300e986e7d0"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_9b45f29b-921a-174a-19d2-e465abd73c0a"><th id="_890ed34e-c814-618b-1f1a-1414e2445db2" valign="middle" align="left">Property Attribute</th>
 <th id="_413296fb-5dfe-f763-4406-963737adb186" valign="middle" align="left">Value</th>
@@ -751,13 +796,17 @@
 </clause>
 </clause>
 
-<clause id="_320cc462-982d-a0fc-9796-1ec6cbe675fb" obligation="normative">
+<clause id="_818d6fc6-4a67-b501-3644-7860b4478cf7" obligation="normative">
 <title id="_7af38dc2-6548-4bda-2e9d-b672dcae3842">KML Datatype Specification</title>
-<clause id="_623ea858-5f6c-7966-582c-2b2c2eb1f938" obligation="normative">
-<title id="_efbb8ba4-a10a-432a-c036-b3e73c9a61dd">KML Literal</title>
-<p id="_8088530c-0e9e-837c-6fd5-ffb8406f7643">A KML serialization of a Geometry object.</p>
+<p id="_47f7eaf7-8cbe-eda8-95ab-adeb4b161ed2">This section specifies the KML geometry literal datatype (<tt>geo:kmlLiteral</tt>) and 1 accompanying serialization property defined in <tt>kml.ttl</tt> for representing KML geometries in RDF.</p>
 
-<table id="_14e770cf-196d-5f9f-971f-8fc719a9fe96"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_5be20198-eff5-1bf0-2c65-19ea685b4431"><th id="_ca1c9940-3b30-2069-5f9f-fa339e7dbd53" valign="middle" align="left">Attribute</th>
+<clause id="_c8f574d0-75ac-eee5-b482-3b5eb3b26a44" obligation="normative">
+<title id="_efbb8ba4-a10a-432a-c036-b3e73c9a61dd">KML Literal</title>
+<p id="_4f709806-e56d-3d71-bfc9-ab58907516bb">The <tt>geo:kmlLiteral</tt> datatype represents geometry literals serialized in the KML format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:LinearRing</tt>, <tt>sf:MultiLineString</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_b1b8abf8-78a2-eaed-bc38-d0129811465d">A KML serialization of a Geometry object.</p>
+
+<table id="_e062a3a6-8c21-b5af-7a29-e2f00a0eeaa8"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_5be20198-eff5-1bf0-2c65-19ea685b4431"><th id="_ca1c9940-3b30-2069-5f9f-fa339e7dbd53" valign="middle" align="left">Attribute</th>
 <th id="_e2b6ff18-e78a-174d-1141-90e4453e909c" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_b0d7d1dd-714d-7506-3f50-32632eb72195"><td id="_0b0a1a5f-cc40-cf83-81b5-fba4b33ff4a2" valign="middle" align="left">URI</td>
@@ -791,19 +840,17 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_399af2cc-b94f-0a5e-d913-9a20cde3ad78"><td id="_83c4c5be-bacb-1ed6-e978-75b475d77b8c" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_8a907e25-d945-59c5-62c9-90f12cc95b5c" valign="middle" align="left">&lt;Point&gt;&lt;coordinates&gt;-88.38,31.95&lt;/coordinates&gt;&lt;/Point&gt;</td>
-</tr><tr id="_4d0bf4f3-c599-5934-caa2-19d97af868d4"><td id="_e7d9f326-ac37-c39b-d49d-f07c8b0fb244" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_573016ac-82a5-3ab5-737b-53549e029faa" valign="middle" align="left">n63aab8d568ce45ecb4468ac747721f0bb1</td>
+</tr><tr id="_dc2b9598-d1ac-bd88-5397-363f8d31c70e"><td id="_83c4c5be-bacb-1ed6-e978-75b475d77b8c" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_b35ed8fe-1d91-a47a-b1f8-04c1e3c1ab6f" valign="middle" align="left"><sourcecode id="_7e06b4bb-627a-a23b-5135-662ae626742e" lang="turtle"><body>&lt;Point&gt;&lt;coordinates&gt;-88.38,31.95&lt;/coordinates&gt;&lt;/Point&gt;</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_40d53d9d-081b-7b40-87de-05ca276ae77c" obligation="normative">
+<clause id="_f5c034c6-9cf4-31d8-7802-e7360ba8a225" obligation="normative">
 <title id="_dd4ebd72-4079-6cfc-a6d5-7ecce61fbab8">Accompanying Properties (KML)</title>
-<clause id="_2b8ed9fe-2be7-46e7-e84f-b4d251761982" obligation="normative">
+<clause id="_93b019cc-6d34-cb3d-0bad-f0144d09053c" obligation="normative">
 <title id="_a09f463a-5028-3369-7082-640d705fe859">geo:asKML</title>
-<p id="_3f781aca-ca31-6bc7-2907-59a718bcb799"><em>No description provided.</em></p>
+<p id="_f79c1bd8-abfd-8115-0ec5-4c42c78dda97">The <tt>geo:asKML</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:kmlLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_8abbd14f-67c4-a7cc-0cee-e1438783fe94"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_aedca1c3-1050-d7a3-d74a-6f3786df9850"><th id="_1af371c9-ad05-c1be-3ff9-571da1c65eef" valign="middle" align="left">Property Attribute</th>
 <th id="_dccda9cd-4342-3108-6499-0444745d7e33" valign="middle" align="left">Value</th>
@@ -830,13 +877,17 @@
 </clause>
 </clause>
 
-<clause id="_7920b9f3-d4c7-1bf3-0f79-4112b3001882" obligation="normative">
+<clause id="_5807c3fe-7d8d-328b-f80e-d050db8f0a22" obligation="normative">
 <title id="_97a606ea-5d79-f484-3ae2-17538cfe90bc">OBJ Datatype Specification</title>
-<clause id="_ab2abe4d-5615-b792-b85d-d6622cd13d3e" obligation="normative">
-<title id="_24bce42c-6023-d276-cc9c-88cc9323bcf8">OBJ Literal</title>
-<p id="_c8178916-6bbb-81ea-4a62-c87de25a8a42">A OBJ serialization of a Geometry object.</p>
+<p id="_cf68faf5-ee99-92be-ab55-874beea15001">This section specifies the OBJ geometry literal datatype (<tt>geo:objLiteral</tt>) and 1 accompanying serialization property defined in <tt>obj.ttl</tt> for representing OBJ geometries in RDF.</p>
 
-<table id="_9808bc7b-2943-f80d-1665-fa2d35477512"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_c5a43abd-6b1f-4eb2-cb7d-1facdbb7315a"><th id="_a9df97d2-3415-641f-d2b7-0ae553cb2463" valign="middle" align="left">Attribute</th>
+<clause id="_88c894a7-9d20-54a1-b4d1-6235650b9bdc" obligation="normative">
+<title id="_24bce42c-6023-d276-cc9c-88cc9323bcf8">OBJ Literal</title>
+<p id="_4e4fd9e2-edf5-e201-3f25-e5a78745da2c">The <tt>geo:objLiteral</tt> datatype represents geometry literals serialized in the OBJ format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_26f6a8d3-de4f-df0b-f2dc-396753e74c39">A OBJ serialization of a Geometry object.</p>
+
+<table id="_f2b6802c-7654-820d-410b-94a4461b92c3"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_c5a43abd-6b1f-4eb2-cb7d-1facdbb7315a"><th id="_a9df97d2-3415-641f-d2b7-0ae553cb2463" valign="middle" align="left">Attribute</th>
 <th id="_32e0960d-e3f6-18f8-8954-19974f8a2013" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_c70ac5ca-685c-5a91-bb6a-6d1ce96aae94"><td id="_990da89f-1277-81ac-ab95-5236fa8fd2bb" valign="middle" align="left">URI</td>
@@ -851,17 +902,17 @@
 <td id="_aced6276-ac78-fdc7-21a0-d3e0104661cd" valign="middle" align="left">false</td>
 </tr><tr id="_8c802e28-eb46-d384-51da-7812b24076f9"><td id="_e1b52810-9f13-1973-a519-542af2fbf644" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#isCsAware"><tt>geo:isCsAware</tt></link></td>
 <td id="_925c5bd3-d5d4-7264-0b8b-f8bb33724066" valign="middle" align="left">true</td>
-</tr><tr id="_b5e77064-1d26-c66b-176f-897909c30c8f"><td id="_825c5a04-e01d-772e-7e3d-3eb9cbb3387f" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_1d7a69d5-0092-af8f-e657-42ef4455b200" valign="middle" align="left">n124dabff86594b4b94fa6c5eb6ff35ceb1</td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_e57a0c2a-beb5-6dfd-c3da-1a74bcf97c97" obligation="normative">
+<clause id="_6facec29-1c56-6a8e-45d7-d05ee40b4b51" obligation="normative">
 <title id="_73b2326d-5f45-08d2-8499-3735db624332">Accompanying Properties (OBJ)</title>
-<clause id="_9351825c-b112-1bbe-a6b0-2444a1122d00" obligation="normative">
+<clause id="_98b02115-4a4f-f5a0-38a6-b5de16c352cb" obligation="normative">
 <title id="_42f03715-2d09-0dc2-617a-611a3c32c173">as OBJ</title>
-<p id="_2ad61c1e-8a39-75b2-8808-ac396ce2f821">The OBJ serialization of a Geometry</p>
+<p id="_ef232e84-29ad-61c5-4e5e-522233b90be8">The <tt>geo:asOBJ</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:objLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+
+<p id="_0d0fc083-e9e9-0fdc-ac2c-db92ef065224">The OBJ serialization of a Geometry</p>
 
 <table id="_bd3a48db-d7e5-46d1-501b-49f79f8f55c3"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_80e78daa-2528-84d4-9a8d-4e0a4c546d05"><th id="_d220684e-6787-3a66-3e19-162ef5113a51" valign="middle" align="left">Property Attribute</th>
 <th id="_cbec15d1-a7d8-d66d-c5e0-aea4c64f963d" valign="middle" align="left">Value</th>
@@ -884,13 +935,17 @@
 </clause>
 </clause>
 
-<clause id="_a4d613c8-2235-4903-4847-a1cad6fbfdfe" obligation="normative">
+<clause id="_0e91bebe-bd6f-281b-faee-87ce23102c52" obligation="normative">
 <title id="_1153ae9c-6488-28f9-7f62-516aff715d92">PLY Datatype Specification</title>
-<clause id="_29e35a47-9404-a637-9345-2bcfc14529c4" obligation="normative">
-<title id="_5aa61e80-5413-c5ad-7fb5-7e93a397064d">PLY Literal</title>
-<p id="_761117d9-d785-584c-baf5-e6963faf001d">A PLY serialization of a Geometry object.</p>
+<p id="_37fdff85-fe96-7ce5-06ef-977e3fff41d6">This section specifies the PLY geometry literal datatype (<tt>geo:plyLiteral</tt>) and 1 accompanying serialization property defined in <tt>ply.ttl</tt> for representing PLY geometries in RDF.</p>
 
-<table id="_fd9a9cce-444e-f5b8-a1ba-c4ac47c735b1"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_3d42e2b4-a14e-bf63-63aa-ef1d3dedd2c0"><th id="_5b872dc2-4c10-924c-7b3d-89b838b8e863" valign="middle" align="left">Attribute</th>
+<clause id="_9180ca73-7b5f-e4a7-88fe-16d74613bb22" obligation="normative">
+<title id="_5aa61e80-5413-c5ad-7fb5-7e93a397064d">PLY Literal</title>
+<p id="_be9ec6a9-8e6b-70fe-7bfc-ef40d220cf48">The <tt>geo:plyLiteral</tt> datatype represents geometry literals serialized in the PLY format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_5d2c1f76-c10b-e03c-40f3-f07972503833">A PLY serialization of a Geometry object.</p>
+
+<table id="_203188c8-361a-bc43-b970-0019604aeea6"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_3d42e2b4-a14e-bf63-63aa-ef1d3dedd2c0"><th id="_5b872dc2-4c10-924c-7b3d-89b838b8e863" valign="middle" align="left">Attribute</th>
 <th id="_e1aad0c9-6127-55c0-5939-24d56f37f8e6" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_df0c5235-3861-1c7a-a078-2db55df11e8a"><td id="_64c4d35f-f901-6ff7-13c6-cd88ffc5766f" valign="middle" align="left">URI</td>
@@ -907,19 +962,48 @@
 <td id="_d90c71e3-ae0a-5b15-f8c9-d26790ad8915" valign="middle" align="left">false</td>
 </tr><tr id="_b8e7fe5e-511a-a959-5cef-aa0e15c300b5"><td id="_0d051a9c-4855-5b67-dd24-84337da85abc" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#isCsAware"><tt>geo:isCsAware</tt></link></td>
 <td id="_9a52283a-3e67-7caa-4fa4-79f3ce974849" valign="middle" align="left">true</td>
-</tr><tr id="_f6044b0f-0cc0-4c4b-758a-16844e09b92b"><td id="_af8e1871-616e-ca53-0244-4bdda0f8cf4a" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_45e864bd-b8b0-26be-1678-f2f0692ca559" valign="middle" align="left">ply format ascii 1.0 comment  <link target="https://github.com/mikedh/trimesh"/> element vertex 8 property float x property float y property float z element face 12 property list uchar int vertex_indices end_header -83.59999847 34.09999847 0.00000000 -83.19999695 34.09999847 0.00000000 -83.19999695 34.50000000 0.00000000 -83.59999847 34.50000000 0.00000000 -83.59999847 34.09999847 0.10000000 -83.19999695 34.09999847 0.10000000 -83.19999695 34.50000000 0.10000000 -83.59999847 34.50000000 0.10000000 3 1 0 3 3 3 2 1 3 7 4 5 3 5 6 7 3 5 4 1 3 1 4 0 3 6 5 2 3 2 5 1 3 4 7 0 3 0 7 3 3 7 6 3 3 3 6 2</td>
-</tr><tr id="_49269f95-2400-18ea-c70c-c4922935ac2a"><td id="_25e69951-e1ce-faec-b380-c8c156e4b974" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_7596c114-bc4e-923f-be57-5113be362516" valign="middle" align="left">ne1f7d06ec0a347bc864e1b14c30da1d0b1</td>
+</tr><tr id="_15a75195-14ff-92f8-596d-0f8caeacaee5"><td id="_af8e1871-616e-ca53-0244-4bdda0f8cf4a" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_e2cfee91-e343-1654-e239-a72d565f299e" valign="middle" align="left"><sourcecode id="_79f6badd-88d6-b15c-8793-7aa66bca252e" lang="turtle"><body>ply
+format ascii 1.0
+comment https://github.com/mikedh/trimesh
+element vertex 8
+property float x
+property float y
+property float z
+element face 12
+property list uchar int vertex_indices
+end_header
+-83.59999847 34.09999847 0.00000000
+-83.19999695 34.09999847 0.00000000
+-83.19999695 34.50000000 0.00000000
+-83.59999847 34.50000000 0.00000000
+-83.59999847 34.09999847 0.10000000
+-83.19999695 34.09999847 0.10000000
+-83.19999695 34.50000000 0.10000000
+-83.59999847 34.50000000 0.10000000
+3 1 0 3
+3 3 2 1
+3 7 4 5
+3 5 6 7
+3 5 4 1
+3 1 4 0
+3 6 5 2
+3 2 5 1
+3 4 7 0
+3 0 7 3
+3 7 6 3
+3 3 6 2</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_19f97560-b8b5-db28-e2f0-749e23da10dd" obligation="normative">
+<clause id="_61eebe72-d558-9d9e-35e5-00e4f742946d" obligation="normative">
 <title id="_d98856a0-21f1-6d72-e14f-8c2e7907226c">Accompanying Properties (PLY)</title>
-<clause id="_6ec6ac91-c360-b00a-f7c2-b76b6b11340e" obligation="normative">
+<clause id="_7e7a432f-26d9-b196-8792-9c104fd7a312" obligation="normative">
 <title id="_25e935a8-7ae0-7719-a553-6d945a124560">as PLY</title>
-<p id="_20212f83-762c-a7f1-b3e7-45024a5c283d">The PLY serialization of a Geometry</p>
+<p id="_60a2541e-3fb0-c3df-0d3f-7aa6ab3a033d">The <tt>geo:asPLY</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:plyLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+
+<p id="_81b9e095-7f15-1839-b64f-1ae3643e2760">The PLY serialization of a Geometry</p>
 
 <table id="_49a60450-1a27-76e4-a01b-be77866f6ca5"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_67870d16-0fb6-ca57-6ab4-c12241a01a55"><th id="_eb4c0297-dbf8-c14a-e56a-7343d8875ad0" valign="middle" align="left">Property Attribute</th>
 <th id="_b074393a-e518-3094-0e79-95a98725b6a1" valign="middle" align="left">Value</th>
@@ -942,13 +1026,17 @@
 </clause>
 </clause>
 
-<clause id="_d2ef1a66-3df5-4f16-ed8b-209c89b08f99" obligation="normative">
+<clause id="_a33a8c32-2690-48d8-2056-15a9ead2948f" obligation="normative">
 <title id="_a6543691-b6e5-63a2-5b86-3c16337e94f4">WKB Datatype Specification</title>
-<clause id="_89629644-50af-aa90-00b9-fe16dece28c7" obligation="normative">
-<title id="_66865941-e1c3-a122-a408-16f7df5bf3f0">Well-known Binary literal</title>
-<p id="_a2f0252b-72da-ef0b-df21-74903e5cdd98">A Well-known Binary serialization of a Geometry object.</p>
+<p id="_ae146efb-7f41-cfd0-5f6c-30bac6f9d1a7">This section specifies the WKB geometry literal datatype (<tt>geo:wkbLiteral</tt>) and 1 accompanying serialization property defined in <tt>wkb.ttl</tt> for representing WKB geometries in RDF.</p>
 
-<table id="_c2236f8b-ea2b-30ff-985e-12ecc31efd0e"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_d233364c-afa4-3dff-2a62-58f19a56aa72"><th id="_1679ffc5-1b8d-d4d9-4613-be5717bdc2bc" valign="middle" align="left">Attribute</th>
+<clause id="_b48db97c-aa34-ab73-638d-3910c76844af" obligation="normative">
+<title id="_66865941-e1c3-a122-a408-16f7df5bf3f0">Well-known Binary literal</title>
+<p id="_ea202eb2-102c-0e40-5219-0372915a30c5">The <tt>geo:wkbLiteral</tt> datatype represents geometry literals serialized in the WKB format, supporting geometry types such as <tt>sf:Curve</tt>, <tt>sf:Envelope</tt>, <tt>sf:Geometry</tt>, <tt>sf:GeometryCollection</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_0aa30686-a2c4-dece-b810-593bc9929edf">A Well-known Binary serialization of a Geometry object.</p>
+
+<table id="_8e532b4b-fd58-9b10-e1f6-8edd9dd9838a"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_d233364c-afa4-3dff-2a62-58f19a56aa72"><th id="_1679ffc5-1b8d-d4d9-4613-be5717bdc2bc" valign="middle" align="left">Attribute</th>
 <th id="_937f5a77-99eb-6df9-f94b-21b6dd530790" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_357dddbf-71c8-f861-45b7-fc556c9a634d"><td id="_75960431-1bbe-58ea-139b-c8d5f9b003b0" valign="middle" align="left">URI</td>
@@ -1002,19 +1090,17 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_1d524d76-0182-1945-fa2c-75b59f0f1a77"><td id="_1f9868b9-7944-958d-eb02-e7acc7feb707" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_9d416836-2792-ad1b-351d-f1a9c4858f42" valign="middle" align="left">010300000001000000050000006666666666E654C0CDCCCCCCCC0C4140CDCCCCCCCCCC54C0CDCCCCCCCC0C4140CDCCCCCCCCCC54C000000000004041406666666666E654C000000000004041406666666666E654C0CDCCCCCCCC0C4140</td>
-</tr><tr id="_e2d0331c-fb4d-c6de-ad58-6d087e91e379"><td id="_c0a76280-b652-9b99-210b-b619ecc8be1c" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_f89aef7a-8165-acc8-3836-3dc4d3879de2" valign="middle" align="left">n7777773b025f4be8bca4397c014c4909b1</td>
+</tr><tr id="_5f3231a1-e55f-96d2-cb09-cc6dd919bc9d"><td id="_1f9868b9-7944-958d-eb02-e7acc7feb707" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_8da79780-fa3e-df85-0e1d-793e0a65febd" valign="middle" align="left"><sourcecode id="_99b58a97-bff2-63ee-5be6-f69d3e1cba72" lang="turtle"><body>010300000001000000050000006666666666E654C0CDCCCCCCCC0C4140CDCCCCCCCCCC54C0CDCCCCCCCC0C4140CDCCCCCCCCCC54C000000000004041406666666666E654C000000000004041406666666666E654C0CDCCCCCCCC0C4140</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_cf419eb4-acd5-80d1-fe9d-242c3a724fa4" obligation="normative">
+<clause id="_400c76fd-f801-fa34-3fb7-15c2a1317d92" obligation="normative">
 <title id="_d6ee659c-4c14-2b6f-1911-6c91d75fc2e2">Accompanying Properties (WKB)</title>
-<clause id="_785afb6a-b8c8-d87b-932d-a5f25b8735b9" obligation="normative">
+<clause id="_094c5748-5151-d751-34d4-8566f9dea31a" obligation="normative">
 <title id="_165463e7-bfbb-e19d-8686-7752ffab0abc">geo:asWKB</title>
-<p id="_c1ba78cd-3415-a377-4588-eb878e6cbbf9"><em>No description provided.</em></p>
+<p id="_312c7547-dc9c-a846-366d-7c61b356a323">The <tt>geo:asWKB</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:wkbLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_90ae9ff5-afd1-8e6e-719c-8b68226e6d1f"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_742bb01e-cd4f-0356-8f10-04d0ec312635"><th id="_27aaa825-8f95-39b5-b556-266990da5a02" valign="middle" align="left">Property Attribute</th>
 <th id="_bc49620a-420b-0600-1c89-5d1b19fc597d" valign="middle" align="left">Value</th>
@@ -1037,13 +1123,17 @@
 </clause>
 </clause>
 
-<clause id="_6aff6ea0-5cdc-9876-f6d9-272404839e59" obligation="normative">
+<clause id="_2509eed4-80f2-7f93-415e-11294dba5f39" obligation="normative">
 <title id="_8bbab1ac-4348-4391-6e1f-8fef51e40d0e">WKT Datatype Specification</title>
-<clause id="_5210f897-3439-f6f3-6433-3e2199c5f0b8" obligation="normative">
-<title id="_ade658d6-3282-aed4-24c5-253fe9525064">Well-known Text literal</title>
-<p id="_d9cb5be2-9f07-ba47-8399-ce94ed762a69">A Well-known Text serialization of a Geometry object.</p>
+<p id="_64ce116b-fccc-ccfd-91fa-40a5423a99e0">This section specifies the WKT geometry literal datatype (<tt>geo:wktLiteral</tt>) and 1 accompanying serialization property defined in <tt>wkt.ttl</tt> for representing WKT geometries in RDF.</p>
 
-<table id="_05fc5502-def7-21eb-52cc-ef00fb753079"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_f8676a4a-0666-52fb-f4af-0ed1f58e6942"><th id="_7f1c381f-1d8e-93f3-21a0-293da320a034" valign="middle" align="left">Attribute</th>
+<clause id="_dd9d0578-5611-684d-a58a-9d446c53de4a" obligation="normative">
+<title id="_ade658d6-3282-aed4-24c5-253fe9525064">Well-known Text literal</title>
+<p id="_9402f855-1fdf-84cc-7f9c-0930418286d4">The <tt>geo:wktLiteral</tt> datatype represents geometry literals serialized in the WKT format, supporting geometry types such as <tt>sf:Curve</tt>, <tt>sf:Envelope</tt>, <tt>sf:Geometry</tt>, <tt>sf:GeometryCollection</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_eb902a08-043c-748f-d53e-f230725a5e7a">A Well-known Text serialization of a Geometry object.</p>
+
+<table id="_7e06eedd-ea31-b170-6510-4db0a9b20877"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_f8676a4a-0666-52fb-f4af-0ed1f58e6942"><th id="_7f1c381f-1d8e-93f3-21a0-293da320a034" valign="middle" align="left">Attribute</th>
 <th id="_297447d8-4df1-fb8a-6e33-61844af3476e" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_b610de79-1a63-9e10-a2bd-a0351e51f448"><td id="_78aa1002-b50e-94e7-8d00-bb2926416343" valign="middle" align="left">URI</td>
@@ -1106,19 +1196,17 @@
 </li>
 </ul>
 </td>
-</tr><tr id="_bdf4f99d-c06b-44f0-9841-bf3bbe8be4dd"><td id="_1d2be921-3059-c507-c789-69487ad19b4a" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
-<td id="_1039869c-6302-ca5c-326b-4a98bf05710b" valign="middle" align="left">&lt;<link target="http://www.opengis.net/def/crs/EPSG/0/4326"/>&gt; Point(31.95 -88.38)</td>
-</tr><tr id="_5f6522d9-68ab-094a-c5a1-1e9ed6521fc2"><td id="_6d1cc1e5-55fd-56d0-5f40-0413ebf09099" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_6085ac32-7228-4198-eaa4-5eac7630ced0" valign="middle" align="left">n1058940c28964ad78c3bc89f2d7fbdddb1</td>
+</tr><tr id="_2e21d0a2-2364-f50f-497b-e269225d4199"><td id="_1d2be921-3059-c507-c789-69487ad19b4a" valign="middle" align="left"><link target="http://www.w3.org/2004/02/skos/core#example"><tt>skos:example</tt></link></td>
+<td id="_df54b1da-484c-5cb4-07ec-3815f00a178e" valign="middle" align="left"><sourcecode id="_9bdd3df9-aed7-0126-e50b-5d734c61dce4" lang="turtle"><body>&lt;http://www.opengis.net/def/crs/EPSG/0/4326&gt; Point(31.95 -88.38)</body></sourcecode> </td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_f93eb6f6-41bd-4e32-03f6-687a3ebf6a4d" obligation="normative">
+<clause id="_00ddee85-103e-f5c9-934a-ef74371b19a4" obligation="normative">
 <title id="_381910ba-7b7c-51eb-4679-7dcd83433a34">Accompanying Properties (WKT)</title>
-<clause id="_7042c25b-89c0-960c-e43a-466af52c926e" obligation="normative">
+<clause id="_d3f54eab-097e-4e0f-3f9e-e52dcf2b07e1" obligation="normative">
 <title id="_e3df1b8f-15d5-8c56-2eff-9233ecab7305">geo:asWKT</title>
-<p id="_95e39996-16a6-5d87-0073-93582d895495"><em>No description provided.</em></p>
+<p id="_eb5fed9b-373f-568f-c795-e60b7a915af9">The <tt>geo:asWKT</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:wktLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
 
 <table id="_c82ce519-a830-8a24-edc2-fff0b38eebfb"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_2d93ca34-12f7-c5fd-76cc-8cf6cdd81081"><th id="_c19d3ab2-38a2-8337-9e94-df89a217bfbb" valign="middle" align="left">Property Attribute</th>
 <th id="_b39202bb-5de7-4211-9494-46f79b5c85a5" valign="middle" align="left">Value</th>
@@ -1148,13 +1236,17 @@
 </clause>
 </clause>
 
-<clause id="_e0bf44f5-1e7f-7113-ad58-d5aeb4f7f912" obligation="normative">
+<clause id="_1d5016f0-b0e5-bca5-0c8a-5b812e6785f6" obligation="normative">
 <title id="_4513a400-f743-e39a-1a57-9808e1467ba2">X3D Datatype Specification</title>
-<clause id="_79ac8491-e98c-f55b-2c1e-d5384c70c8bb" obligation="normative">
-<title id="_5aa4de74-566c-12e5-0397-d8dc64439232">X3D Literal</title>
-<p id="_ae868632-a40e-8373-7c08-86d9538e9a73">A X3D serialization of a Geometry object.</p>
+<p id="_b7770db5-08dd-c1ef-69e4-5337c6b35ee2">This section specifies the X3D geometry literal datatype (<tt>geo:x3dLiteral</tt>) and 1 accompanying serialization property defined in <tt>x3d.ttl</tt> for representing X3D geometries in RDF.</p>
 
-<table id="_cb3082bc-19b6-61a4-7465-ecdb6d22cf54"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_3b3a6158-5cfc-98bd-3061-b931cabb1931"><th id="_f14f2c4f-3f4b-bf66-33f4-145e836bde78" valign="middle" align="left">Attribute</th>
+<clause id="_39bf69c5-fb26-4404-137a-51f36d02ca37" obligation="normative">
+<title id="_5aa4de74-566c-12e5-0397-d8dc64439232">X3D Literal</title>
+<p id="_80b0e0f9-a00b-28ba-33c6-7d904d036140">The <tt>geo:x3dLiteral</tt> datatype represents geometry literals serialized in the X3D format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+
+<p id="_325be427-74a8-8f65-c82e-6e6f5b9defd4">A X3D serialization of a Geometry object.</p>
+
+<table id="_e1147157-4b8b-b248-31dc-be3ced04cf78"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_3b3a6158-5cfc-98bd-3061-b931cabb1931"><th id="_f14f2c4f-3f4b-bf66-33f4-145e836bde78" valign="middle" align="left">Attribute</th>
 <th id="_474ae4f5-d9d1-a869-6758-dc2365774a3f" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_991f66e7-809b-8469-cc10-6d3841307e0e"><td id="_8a8fc076-5a9f-ddf0-84ee-647e4d351992" valign="middle" align="left">URI</td>
@@ -1171,17 +1263,17 @@
 <td id="_f7d7b658-f615-2c0b-db10-10fa851fdbc8" valign="middle" align="left">false</td>
 </tr><tr id="_7e153dfd-9274-3c5d-2cf2-cbea06bf8a1e"><td id="_354df495-5f29-ed3b-22b3-992396802bec" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#isCsAware"><tt>geo:isCsAware</tt></link></td>
 <td id="_42b10af6-f87b-21bb-90f3-bed53e1b5dc0" valign="middle" align="left">true</td>
-</tr><tr id="_89277fe6-8932-ae3c-799b-f75652088749"><td id="_e846b416-5df4-8eec-8790-b0aff66b1749" valign="middle" align="left"><link target="http://www.w3.org/ns/prov-o#qualifiedAttribution"><tt>prov1:qualifiedAttribution</tt></link></td>
-<td id="_a1ed4c30-2815-4157-703d-4f2048d01194" valign="middle" align="left">n4577d503cd5f40bba3a9ebfbe3b28b5cb1</td>
 </tr></tbody>
 </table>
 </clause>
 
-<clause id="_87cc5100-28c9-e7fc-ab6a-5a2544eff2bc" obligation="normative">
+<clause id="_ffdb8d62-6ff1-dd58-b44f-63ef0ec8e474" obligation="normative">
 <title id="_8415fd0a-e208-1c92-182c-1d876cede445">Accompanying Properties (X3D)</title>
-<clause id="_ab9d9846-3c25-3cab-bc19-18283474bada" obligation="normative">
+<clause id="_47c5bb92-56ab-b1c0-dec8-c7b0776be407" obligation="normative">
 <title id="_63d00c57-c8bf-1fef-108e-c30f0ee4cd67">as X3D</title>
-<p id="_b74227b8-fd35-f2df-3477-c5cf6df262ec">The X3D serialization of a Geometry</p>
+<p id="_7bcc3817-dc8d-150e-eaad-06387052c3ce">The <tt>geo:asX3D</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:x3dLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+
+<p id="_c0211d49-921a-cb84-a0c6-1baeb24cec46">The X3D serialization of a Geometry</p>
 
 <table id="_a8349a5d-4009-ac88-6a51-e917c38d841d"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_f26a8154-43b4-a0e1-e041-65ca52a7d11f"><th id="_520d860e-5664-50e8-7095-022cf039c91d" valign="middle" align="left">Property Attribute</th>
 <th id="_3cfa8f53-674b-81a8-39a2-3c8c86f95bc0" valign="middle" align="left">Value</th>
