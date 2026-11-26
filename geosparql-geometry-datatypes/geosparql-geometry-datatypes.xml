@@ -144,19 +144,22 @@
 
 
 
-<clause id="_8fc9882b-910e-a4b3-f2d8-2dc90028fce5" obligation="normative">
+<clause id="_efed16d6-02b0-d878-47b0-fccdbe6c3d20" obligation="normative">
 <title id="_decbb8d8-02f7-082a-65ce-618d74868238">Geometry Datatypes</title>
-<clause id="_b6d9d173-3820-efd8-a74c-c9ef5de83996" obligation="normative">
+<clause id="_636da4bf-537a-70f4-d98a-f2b640b5f91d" obligation="normative">
 <title id="_bfe99301-8231-23c4-dc6a-8702c4c77d0f">DGGS Datatype Specification</title>
-<p id="_4a720d7a-53ff-1a7e-3001-029e496b0bb2">This section specifies the DGGS geometry literal datatype (<tt>geo:dggsLiteral</tt>) and 1 accompanying serialization property defined in <tt>dggs.ttl</tt> for representing DGGS geometries in RDF.</p>
+<p id="_4a720d7a-53ff-1a7e-3001-029e496b0bb2">This section specifies the DGGS geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#dggsLiteral"><tt>geo:dggsLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>dggs.ttl</tt> for representing DGGS geometries in RDF.</p>
 
-<clause id="_c4ad5c47-7226-eeed-a39c-f3023f682e71" obligation="normative">
+<clause id="_a373abd7-93a6-e8e6-3598-bcb218ff6cdb" obligation="normative">
 <title id="_e15843a1-8467-64fb-0b15-65b4be207686">DGGS Literal</title>
-<p id="_65d42e6c-4eec-374e-ebd2-f9486ca9d069">The <tt>geo:dggsLiteral</tt> datatype represents geometry literals serialized in the DGGS format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_a57a47d7-6a2e-c1f7-4795-3356eb4f7fe0">The <link target="http://www.opengis.net/ont/geosparql#dggsLiteral"><tt>geo:dggsLiteral</tt></link> datatype represents geometry literals serialized in the DGGS format. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-dggs-geo-dggsliteral"/>.<note id="_875ab790-803c-1edb-3576-f48d34528635"><p id="_a8191044-aac0-1a23-646d-37b7dca3ebb2">A textual serialization of a Discrete Global Grid System (DGGS) Geometry object.</p>
+</note></p>
 
-<p id="_01876918-2eb7-d067-f570-4de517ec86e7">A textual serialization of a Discrete Global Grid System (DGGS) Geometry object.</p>
 
-<table id="_de3e1ace-35d8-efbd-3a44-77ed897d9abd"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_bd6ea6de-c125-7fe1-246d-14de94bd186d"><th id="_5303e512-ad05-9808-4aac-caf5b13b21de" valign="middle" align="left">Attribute</th>
+
+<table id="_e701cf49-7a22-047d-c5e2-d464ca0cd6df" anchor="table-dt-dggs-geo-dggsliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_c7df3e0a-3c2f-125d-3c6f-d3361f03f3fe">Attributes of DGGS Literal (<tt>geo:dggsLiteral</tt>)</name>
+<thead><tr id="_bd6ea6de-c125-7fe1-246d-14de94bd186d"><th id="_5303e512-ad05-9808-4aac-caf5b13b21de" valign="middle" align="left">Attribute</th>
 <th id="_db6ae9fc-88c5-6c3a-1243-aae07f16ae0e" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_4eafec9b-12c1-5f77-e92d-a97284ecf880"><td id="_315d5034-450f-b896-a915-4fab1e2077e8" valign="middle" align="left">URI</td>
@@ -177,13 +180,15 @@
 </table>
 </clause>
 
-<clause id="_31411522-c533-049d-5101-278478182cd1" obligation="normative">
+<clause id="_7b1b1494-f732-8bed-b2cd-91108085c3c3" obligation="normative">
 <title id="_e480586a-a690-846c-43ca-dbf0921052f6">Accompanying Properties (DGGS)</title>
-<clause id="_27e8214a-e604-6c3e-f419-634c776df2fd" obligation="normative">
+<clause id="_fd604a93-e7f6-f2ca-cffe-ff36fc002725" obligation="normative">
 <title id="_c1cd70e3-de3b-ec26-911e-4c366ee22e0e">geo:asDGGS</title>
-<p id="_6549a8ec-d6a5-6cf1-e566-3360950282d2">The <tt>geo:asDGGS</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:dggsLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_f9eac5c1-b8bc-1268-257f-2a2fe42dae3e">The <link target="http://www.opengis.net/ont/geosparql#asDGGS"><tt>geo:asDGGS</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#dggsLiteral"><tt>geo:dggsLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-dggs-geo-asdggs"/>.</p>
 
-<table id="_876355a7-fcd9-21a6-77b7-b4fc44fa078f"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_c44d4af1-a963-cdde-462e-c6934fd21880"><th id="_b6dd67f5-0c0d-8046-ca4e-b87adb5c8088" valign="middle" align="left">Property Attribute</th>
+<table id="_cd4dc331-dfd9-a372-f43c-08449cc9560a" anchor="table-prop-dggs-geo-asdggs"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_09a68626-479a-0b9d-1f02-8f610588f2c3">Property attributes of geo:asDGGS (<tt>geo:asDGGS</tt>)</name>
+<thead><tr id="_c44d4af1-a963-cdde-462e-c6934fd21880"><th id="_b6dd67f5-0c0d-8046-ca4e-b87adb5c8088" valign="middle" align="left">Property Attribute</th>
 <th id="_bea90161-6d69-e5ca-0adf-16c0d85f4a0d" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_38e64bff-522d-9709-a42e-6e9fed2f71ac"><td id="_32570192-2a87-36f6-6cb3-6a2bb66309b8" valign="middle" align="left">URI</td>
@@ -206,17 +211,20 @@
 </clause>
 </clause>
 
-<clause id="_5750b945-6f64-77ec-09e1-9ba0a1df9274" obligation="normative">
+<clause id="_16ac85c5-bdaf-58fa-3bd3-59bb847f982c" obligation="normative">
 <title id="_cba9a6ab-24c1-e8da-4303-0d233fc6750b">GEOCODE Datatype Specification</title>
-<p id="_87645ec2-0224-4395-923e-2591e6692b3f">This section specifies the GEOCODE geometry literal datatype (<tt>geo:geoCodeLiteral</tt>) and 1 accompanying serialization property defined in <tt>geocode.ttl</tt> for representing GEOCODE geometries in RDF.</p>
+<p id="_87645ec2-0224-4395-923e-2591e6692b3f">This section specifies the GEOCODE geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#geoCodeLiteral"><tt>geo:geoCodeLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>geocode.ttl</tt> for representing GEOCODE geometries in RDF.</p>
 
-<clause id="_3859ec63-6821-05cb-67a2-8e38d446a92a" obligation="normative">
+<clause id="_8017f9d9-fa6f-90e6-b738-54359afeb7eb" obligation="normative">
 <title id="_d4e1bdbc-1e25-7665-8072-5887d0aa06d2">GeoCode Literal</title>
-<p id="_22e57b6f-b903-d122-48ca-8ffc67888405">The <tt>geo:geoCodeLiteral</tt> datatype represents geometry literals serialized in the GEOCODE format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:MultiLineString</tt>, <tt>sf:MultiPoint</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_31f0687a-d4a6-255b-76bf-e680f3efb1ea">The <link target="http://www.opengis.net/ont/geosparql#geoCodeLiteral"><tt>geo:geoCodeLiteral</tt></link> datatype represents geometry literals serialized in the GEOCODE format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, <link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiLineString"><tt>sf:MultiLineString</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiPoint"><tt>sf:MultiPoint</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-geocode-geo-geocodeliteral"/>.<note id="_5062c722-df70-22fb-f513-321ca647e7a1"><p id="_fa3a40d7-86c1-1409-e134-7a7e83dea843">A GeoCode serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_c1f94360-a116-4527-95e8-69c84478b9a2">A GeoCode serialization of a Geometry object.</p>
 
-<table id="_e3deaa51-77e7-bdd8-a9fc-f2b8d06cce26"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_8ed87957-5b71-0e9b-500c-03b6a034e019"><th id="_6e6cd3e5-7a14-680e-55db-13625a0acd5d" valign="middle" align="left">Attribute</th>
+
+<table id="_e44a4837-86bf-31e8-081a-796efec54cc9" anchor="table-dt-geocode-geo-geocodeliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_d986935c-fe85-22c4-6377-a0d1fa5ab913">Attributes of GeoCode Literal (<tt>geo:geoCodeLiteral</tt>)</name>
+<thead><tr id="_8ed87957-5b71-0e9b-500c-03b6a034e019"><th id="_6e6cd3e5-7a14-680e-55db-13625a0acd5d" valign="middle" align="left">Attribute</th>
 <th id="_b1a5cebe-4d35-85de-ac2f-bb4181318242" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_bbdf16c5-a604-6664-866d-5eccd177b6a5"><td id="_d1b08149-2b2b-a517-9bbf-6776561c80de" valign="middle" align="left">URI</td>
@@ -252,13 +260,15 @@
 </table>
 </clause>
 
-<clause id="_649f230e-6fd3-6be7-8649-5af09b6f01e1" obligation="normative">
+<clause id="_9505431e-b016-b4be-c0e5-760eedbba666" obligation="normative">
 <title id="_a740442c-1ab0-76f5-efa6-03ed374a6db9">Accompanying Properties (GEOCODE)</title>
-<clause id="_dfeb69e8-66c2-308b-5d18-31c305f897fa" obligation="normative">
+<clause id="_bbe43501-a4f1-6d1e-7646-d413e5edd5f1" obligation="normative">
 <title id="_da044cfc-6814-ba27-98b7-c232a9526e46">geo:asGeoCode</title>
-<p id="_1299cfa9-f8eb-247a-6874-c7a85c5b988a">The <tt>geo:asGeoCode</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:geoCodeLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_78a2337f-6898-0545-356d-d38ce5514220">The <link target="http://www.opengis.net/ont/geosparql#asGeoCode"><tt>geo:asGeoCode</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#geoCodeLiteral"><tt>geo:geoCodeLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-geocode-geo-asgeocode"/>.</p>
 
-<table id="_70186dec-e8d3-89df-54ff-549cfeec01ff"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_9e46cafe-f6ea-3e90-4b62-b8472a7f54b5"><th id="_c417c85e-928f-48a5-f2ca-49cdc1e94b46" valign="middle" align="left">Property Attribute</th>
+<table id="_cd72b726-c359-99d6-c8ea-02ea11379ddf" anchor="table-prop-geocode-geo-asgeocode"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_aa1ab64b-1dce-23b0-ef64-7dcce8c1fab2">Property attributes of geo:asGeoCode (<tt>geo:asGeoCode</tt>)</name>
+<thead><tr id="_9e46cafe-f6ea-3e90-4b62-b8472a7f54b5"><th id="_c417c85e-928f-48a5-f2ca-49cdc1e94b46" valign="middle" align="left">Property Attribute</th>
 <th id="_1104bf0f-29f8-bd8c-398e-5bef27a5b783" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_be92af92-db5c-d09f-835d-343bf8db6aa2"><td id="_a5e7af7a-a172-128c-2f96-c96b8a71cc88" valign="middle" align="left">URI</td>
@@ -279,17 +289,20 @@
 </clause>
 </clause>
 
-<clause id="_873dd0ff-17af-b142-4f2c-50e35551f0d7" obligation="normative">
+<clause id="_190e7db9-2c41-9972-631a-0ba7fee389ab" obligation="normative">
 <title id="_774f8150-f0db-3a9f-c569-fd55a39f5c8e">GEOJSON Datatype Specification</title>
-<p id="_44ba5259-14c4-7231-d6b3-f18d906b56ba">This section specifies the GEOJSON geometry literal datatype (<tt>geo:geoJSONLiteral</tt>) and 1 accompanying serialization property defined in <tt>geojson.ttl</tt> for representing GEOJSON geometries in RDF.</p>
+<p id="_44ba5259-14c4-7231-d6b3-f18d906b56ba">This section specifies the GEOJSON geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#geoJSONLiteral"><tt>geo:geoJSONLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>geojson.ttl</tt> for representing GEOJSON geometries in RDF.</p>
 
-<clause id="_ecc81323-44e6-bef8-72aa-216bdb648941" obligation="normative">
+<clause id="_2aa940a6-cc2c-5b47-8adb-34bf1cec21d1" obligation="normative">
 <title id="_a9c48ca3-2874-bf06-a59f-0230f3986fe7">GeoJSON Literal</title>
-<p id="_311a01ac-6f3e-0a95-932c-59e95a97f464">The <tt>geo:geoJSONLiteral</tt> datatype represents geometry literals serialized in the GEOJSON format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:MultiLineString</tt>, <tt>sf:MultiPoint</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_1e6512e1-415e-693f-67c8-2bb13b3cf1f0">The <link target="http://www.opengis.net/ont/geosparql#geoJSONLiteral"><tt>geo:geoJSONLiteral</tt></link> datatype represents geometry literals serialized in the GEOJSON format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, <link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiLineString"><tt>sf:MultiLineString</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiPoint"><tt>sf:MultiPoint</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-geojson-geo-geojsonliteral"/>.<note id="_0b0604a3-0afb-2e88-9454-410645cab000"><p id="_0f448ba2-506d-cfcf-c377-f36471e17ae0">A GeoJSON serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_31d807ea-8042-e492-3ce3-e4e97d44defc">A GeoJSON serialization of a Geometry object.</p>
 
-<table id="_450d3ba7-542c-c9e1-316f-fcce9c65d963"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_166882cc-807e-9278-d03c-be11ed7be7a1"><th id="_fe743ded-d66f-1fcb-d1a1-978ead2ebbaf" valign="middle" align="left">Attribute</th>
+
+<table id="_8f776735-3ef0-744b-68bd-7ea010e3504b" anchor="table-dt-geojson-geo-geojsonliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_0f300826-0907-f2c3-a1c2-c1dd56bb0745">Attributes of GeoJSON Literal (<tt>geo:geoJSONLiteral</tt>)</name>
+<thead><tr id="_166882cc-807e-9278-d03c-be11ed7be7a1"><th id="_fe743ded-d66f-1fcb-d1a1-978ead2ebbaf" valign="middle" align="left">Attribute</th>
 <th id="_e5ebfb79-0d71-5445-e0e4-58253e59e6e2" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_803279f7-60d8-5bd5-70cd-0d1eb7f45036"><td id="_8a0ae9d1-8dad-b705-c31e-cce9ff838871" valign="middle" align="left">URI</td>
@@ -327,13 +340,15 @@
 </table>
 </clause>
 
-<clause id="_315aff6f-2511-0c93-e73c-c3d93afa9660" obligation="normative">
+<clause id="_8f75a544-9bdb-eced-6ec1-e972a720b1f0" obligation="normative">
 <title id="_4b2fb7fe-418a-63ff-3b54-6ab45b67fa9b">Accompanying Properties (GEOJSON)</title>
-<clause id="_28b342df-62ae-828b-2479-3c51158d1158" obligation="normative">
+<clause id="_6fbed860-e650-40a3-bf11-4e2df41dc659" obligation="normative">
 <title id="_6eec6e53-3a97-a357-bfa8-e871cdaf7614">geo:asGeoJSON</title>
-<p id="_b53433bf-a7ef-da49-bff3-7497fc78f237">The <tt>geo:asGeoJSON</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:geoJSONLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_76bd9510-3f1d-e05d-5d92-cedbfceb7cb3">The <link target="http://www.opengis.net/ont/geosparql#asGeoJSON"><tt>geo:asGeoJSON</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#geoJSONLiteral"><tt>geo:geoJSONLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-geojson-geo-asgeojson"/>.</p>
 
-<table id="_ba33200c-f15f-6462-45b6-d997f07b387e"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_7158c87e-9e6c-062e-1e8b-89ff503de207"><th id="_1c55cdd7-33fa-6188-f366-ebcc13213517" valign="middle" align="left">Property Attribute</th>
+<table id="_91e62a54-4487-ccb7-f5d9-9182a7f8a176" anchor="table-prop-geojson-geo-asgeojson"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_4395bf60-ac80-6165-1df7-464a3a5d1b93">Property attributes of geo:asGeoJSON (<tt>geo:asGeoJSON</tt>)</name>
+<thead><tr id="_7158c87e-9e6c-062e-1e8b-89ff503de207"><th id="_1c55cdd7-33fa-6188-f366-ebcc13213517" valign="middle" align="left">Property Attribute</th>
 <th id="_44d11eb1-baa7-8fea-4dac-13016b2e1788" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_af42c43d-d8a8-a102-b026-08bb91754aab"><td id="_8255bc06-af34-d95e-fb4d-34944ef78f53" valign="middle" align="left">URI</td>
@@ -358,17 +373,20 @@
 </clause>
 </clause>
 
-<clause id="_a845fafd-b286-913b-a0e4-b9e44acebb56" obligation="normative">
+<clause id="_14bc894a-a69a-8f90-edcf-e04966d69915" obligation="normative">
 <title id="_24175b5a-3165-9c4b-dc15-37ba1e3ee714">GEOYAML Datatype Specification</title>
-<p id="_fda0e735-1f3f-6496-ffdc-e4dffc9245c6">This section specifies the GEOYAML geometry literal datatype (<tt>geo:geoYAMLLiteral</tt>) and 1 accompanying serialization property defined in <tt>geoyaml.ttl</tt> for representing GEOYAML geometries in RDF.</p>
+<p id="_fda0e735-1f3f-6496-ffdc-e4dffc9245c6">This section specifies the GEOYAML geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#geoYAMLLiteral"><tt>geo:geoYAMLLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>geoyaml.ttl</tt> for representing GEOYAML geometries in RDF.</p>
 
-<clause id="_2d759ba1-2b8c-9a4a-0a34-b381deef974b" obligation="normative">
+<clause id="_81e3060e-a87c-a608-3635-26f2d3693475" obligation="normative">
 <title id="_2398f133-a53b-d181-ca9b-886eaf63fa18">GeoYAML Literal</title>
-<p id="_d8321705-49c1-9434-1c48-802aed79673d">The <tt>geo:geoYAMLLiteral</tt> datatype represents geometry literals serialized in the GEOYAML format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:MultiLineString</tt>, <tt>sf:MultiPoint</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_30c3d8f5-299c-2c66-6b21-c7a23866330d">The <link target="http://www.opengis.net/ont/geosparql#geoYAMLLiteral"><tt>geo:geoYAMLLiteral</tt></link> datatype represents geometry literals serialized in the GEOYAML format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, <link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiLineString"><tt>sf:MultiLineString</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiPoint"><tt>sf:MultiPoint</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-geoyaml-geo-geoyamlliteral"/>.<note id="_1fba245f-d8af-d8c5-d5e1-5b703849f5b5"><p id="_c18ba142-1d3d-63c8-bdad-54f3e5901a4c">A GeoYAML serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_a01a4eda-365b-2c2b-8b07-8cb7c9a6b420">A GeoYAML serialization of a Geometry object.</p>
 
-<table id="_4be0fe02-b6d1-0fbd-d838-1265d5298625"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_b0cea1e1-6b1c-1026-4d6d-22d20b45b027"><th id="_825fec58-5d0f-61c7-45b6-e5db238fdfa4" valign="middle" align="left">Attribute</th>
+
+<table id="_9ec81217-98c9-bb0b-ed96-6e04976b6c4b" anchor="table-dt-geoyaml-geo-geoyamlliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_e5009e94-9a02-f5f1-7a11-5aee946be4bc">Attributes of GeoYAML Literal (<tt>geo:geoYAMLLiteral</tt>)</name>
+<thead><tr id="_b0cea1e1-6b1c-1026-4d6d-22d20b45b027"><th id="_825fec58-5d0f-61c7-45b6-e5db238fdfa4" valign="middle" align="left">Attribute</th>
 <th id="_5c4789f3-0c2e-5b04-d68e-fa0fcd666401" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_1597d5ac-357d-a10d-973a-728cf1620927"><td id="_0ed3c76d-69a8-ebe3-23ef-2b1dd4eb5e6f" valign="middle" align="left">URI</td>
@@ -415,13 +433,15 @@ coordinates:
 </table>
 </clause>
 
-<clause id="_07b26bbf-6d9c-ebf5-317a-e1308170389f" obligation="normative">
+<clause id="_356dd1ac-2be0-3178-f4a4-dc98a59bd879" obligation="normative">
 <title id="_b182ed1c-066b-7070-5082-0af6d3255c6f">Accompanying Properties (GEOYAML)</title>
-<clause id="_e72616eb-e944-c5fc-7246-08bb20bd19fc" obligation="normative">
+<clause id="_92b6cf99-a9ae-54e5-5e18-698397ec104a" obligation="normative">
 <title id="_24cb02ce-0ad7-471f-5217-fd10f5af0b67">geo:asGeoYAML</title>
-<p id="_6830ed9c-9578-d861-bbfd-fd9a36175e26">The <tt>geo:asGeoYAML</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:geoYAMLLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_4eec6e9f-fc0d-efcd-8014-61247c22345d">The <link target="http://www.opengis.net/ont/geosparql#asGeoYAML"><tt>geo:asGeoYAML</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#geoYAMLLiteral"><tt>geo:geoYAMLLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-geoyaml-geo-asgeoyaml"/>.</p>
 
-<table id="_25024a79-9ed6-a81b-9961-43718140bb25"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_0485311f-d614-b561-4cef-d2465958fa98"><th id="_c9e6b9f6-209b-2183-1735-a61bd24a31fd" valign="middle" align="left">Property Attribute</th>
+<table id="_44e42c5c-cf54-6e47-137c-29958445d505" anchor="table-prop-geoyaml-geo-asgeoyaml"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_801a44ff-a6b1-321f-a5c2-5818ad83a779">Property attributes of geo:asGeoYAML (<tt>geo:asGeoYAML</tt>)</name>
+<thead><tr id="_0485311f-d614-b561-4cef-d2465958fa98"><th id="_c9e6b9f6-209b-2183-1735-a61bd24a31fd" valign="middle" align="left">Property Attribute</th>
 <th id="_9d4dfc0b-2fff-8424-8771-8070826d616a" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_43977313-61bf-6d14-4e18-9958f3001fac"><td id="_6379ca76-d152-8691-b932-e4c2a2f5fc7f" valign="middle" align="left">URI</td>
@@ -442,17 +462,20 @@ coordinates:
 </clause>
 </clause>
 
-<clause id="_a26ca336-0d5f-b9d4-9699-01bd33d5ffab" obligation="normative">
+<clause id="_c1093cd7-b9a7-2a72-06a4-8b4423546b25" obligation="normative">
 <title id="_59b3f14c-ee0d-bd85-3f1b-7f0ad26b639f">GLTF Datatype Specification</title>
-<p id="_bd951e9e-b95c-08a5-2045-8a0b06704b94">This section specifies the GLTF geometry literal datatype (<tt>geo:gltfLiteral</tt>) and 1 accompanying serialization property defined in <tt>gltf.ttl</tt> for representing GLTF geometries in RDF.</p>
+<p id="_bd951e9e-b95c-08a5-2045-8a0b06704b94">This section specifies the GLTF geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#gltfLiteral"><tt>geo:gltfLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>gltf.ttl</tt> for representing GLTF geometries in RDF.</p>
 
-<clause id="_aaed36a6-5c63-a5b8-f7d6-a87b2e352576" obligation="normative">
+<clause id="_433be872-7b11-95f2-75ed-b8be7c008532" obligation="normative">
 <title id="_ef277e8d-6253-c830-6f56-3f16eacad3a4">GLTF Literal</title>
-<p id="_2e80d11e-c17e-52dc-f61c-644d00d32ca3">The <tt>geo:gltfLiteral</tt> datatype represents geometry literals serialized in the GLTF format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_6102881d-317c-6dbe-574f-24a7920fd7c9">The <link target="http://www.opengis.net/ont/geosparql#gltfLiteral"><tt>geo:gltfLiteral</tt></link> datatype represents geometry literals serialized in the GLTF format. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-gltf-geo-gltfliteral"/>.<note id="_39482c49-a8d9-16e8-1cfc-fce4a55ad056"><p id="_faf6b5ff-14e7-29f5-7197-fa299025a041">A GLTF serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_bdd2b063-97ee-afa1-4bd5-ba78977a5133">A GLTF serialization of a Geometry object.</p>
 
-<table id="_4d9dd921-1fc6-7cee-77dc-96c4a0b19709"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_eb3bb099-3736-b0fc-c64b-1c5ac1e799b1"><th id="_abc946ca-8f60-cadf-ab8f-baf6b503809c" valign="middle" align="left">Attribute</th>
+
+<table id="_06a0f09c-8402-2723-3071-8fd2788eb065" anchor="table-dt-gltf-geo-gltfliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_f3e734fd-5717-9393-f821-6c50bc1cb883">Attributes of GLTF Literal (<tt>geo:gltfLiteral</tt>)</name>
+<thead><tr id="_eb3bb099-3736-b0fc-c64b-1c5ac1e799b1"><th id="_abc946ca-8f60-cadf-ab8f-baf6b503809c" valign="middle" align="left">Attribute</th>
 <th id="_a78c49bb-d49a-2484-f493-9e2d8e9d4329" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_9fb2d55e-8e80-9bc9-4638-8e128280358d"><td id="_36a466fb-e731-f141-0d77-5655f0a39e88" valign="middle" align="left">URI</td>
@@ -475,15 +498,18 @@ coordinates:
 </table>
 </clause>
 
-<clause id="_52cd0e7a-23c2-5e78-419a-e5d4cf4c7c7b" obligation="normative">
+<clause id="_1631e579-679b-c437-0b07-9f504c39832e" obligation="normative">
 <title id="_6c1e2e2f-5388-e6b9-3e86-c11acca10ae3">Accompanying Properties (GLTF)</title>
-<clause id="_cb6a4461-bb99-9dcd-ae8a-fbed21e5bcb3" obligation="normative">
+<clause id="_f2b52553-f5a2-b277-335f-6b3f84073aa6" obligation="normative">
 <title id="_d7c4bf67-348d-9756-d3c0-7b13db348cb9">as GLTF</title>
-<p id="_70820d9d-9701-8c8d-a88c-bda778ace708">The <tt>geo:asGLTF</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:gltfLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_9b94ad3c-13d2-c47f-f507-2664e2d9beac">The <link target="http://www.opengis.net/ont/geosparql#asGLTF"><tt>geo:asGLTF</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#gltfLiteral"><tt>geo:gltfLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-gltf-geo-asgltf"/>.<note id="_edd27dd5-2f9b-38c9-82af-58e3a1bff147"><p id="_cd695182-c245-a17f-146b-e675657c801a">The GLTF serialization of a Geometry</p>
+</note></p>
 
-<p id="_c63f1cab-500b-06d0-7b13-966349e83825">The GLTF serialization of a Geometry</p>
 
-<table id="_63bd374c-25c4-ad83-af7c-b8569b70ae00"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_fdf93da1-2529-177e-bf84-addd29154a66"><th id="_67ab6816-1d9f-f99b-c029-a39dda0d62d3" valign="middle" align="left">Property Attribute</th>
+
+<table id="_08dba01d-48ef-1462-59d0-19c41c298476" anchor="table-prop-gltf-geo-asgltf"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_a3bb1ed6-3edc-0a60-5c28-77d6df8e6892">Property attributes of as GLTF (<tt>geo:asGLTF</tt>)</name>
+<thead><tr id="_fdf93da1-2529-177e-bf84-addd29154a66"><th id="_67ab6816-1d9f-f99b-c029-a39dda0d62d3" valign="middle" align="left">Property Attribute</th>
 <th id="_a3a8856b-f2d1-a4f5-f6ac-0df9edaa7abb" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_0233850e-5b64-154d-788a-0413d67b092f"><td id="_6b4f287f-efc8-793c-b437-20e70e52c1ec" valign="middle" align="left">URI</td>
@@ -504,17 +530,20 @@ coordinates:
 </clause>
 </clause>
 
-<clause id="_7fba1c39-468b-147a-2137-7e8ec7516a98" obligation="normative">
+<clause id="_b2659bab-1cae-7384-f964-4cf57db15bb7" obligation="normative">
 <title id="_e5413729-5cf3-c799-f4b2-b4e79cd13e02">GML Datatype Specification</title>
-<p id="_d885cf9e-b647-94da-7f4b-0227436899e2">This section specifies the GML geometry literal datatype (<tt>geo:gmlLiteral</tt>) and 1 accompanying serialization property defined in <tt>gml.ttl</tt> for representing GML geometries in RDF.</p>
+<p id="_d885cf9e-b647-94da-7f4b-0227436899e2">This section specifies the GML geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#gmlLiteral"><tt>geo:gmlLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>gml.ttl</tt> for representing GML geometries in RDF.</p>
 
-<clause id="_60499a67-b6c1-f20c-5288-5e598b769816" obligation="normative">
+<clause id="_d5e42614-29e9-6b40-fca5-d959afcdbf46" obligation="normative">
 <title id="_0d034b13-8cb0-0190-b595-12e50847aaa6">GML literal</title>
-<p id="_1fc9d99d-4bbb-8301-f1ab-5ff32641788a">The <tt>geo:gmlLiteral</tt> datatype represents geometry literals serialized in the GML format, supporting geometry types such as <tt>sf:Curve</tt>, <tt>sf:Envelope</tt>, <tt>sf:Geometry</tt>, <tt>sf:GeometryCollection</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_521ce692-4bcd-d7f0-0d8a-118fc0a758c2">The <link target="http://www.opengis.net/ont/geosparql#gmlLiteral"><tt>geo:gmlLiteral</tt></link> datatype represents geometry literals serialized in the GML format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#Curve"><tt>sf:Curve</tt></link>, <link target="http://www.opengis.net/ont/sf#Envelope"><tt>sf:Envelope</tt></link>, <link target="http://www.opengis.net/ont/sf#Geometry"><tt>sf:Geometry</tt></link>, <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-gml-geo-gmlliteral"/>.<note id="_7089f8a0-094b-d0c0-4543-0583dd8bd8ed"><p id="_e75ca072-acba-6388-9cf4-31df28acf41c">The datatype of GML literal values</p>
+</note></p>
 
-<p id="_9e6b7f48-4948-1e5d-e692-5f743975212d">The datatype of GML literal values</p>
 
-<table id="_9cdbd394-125e-dc96-0bed-4c35f94ce60c"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_99fd8ea6-b2e4-8499-bdcf-539cd36cd88f"><th id="_efcc7756-addd-d85c-350a-d97ca196eb70" valign="middle" align="left">Attribute</th>
+
+<table id="_01c30d49-0cc9-ea2f-dac3-84b973dd6cb9" anchor="table-dt-gml-geo-gmlliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_a1ed9507-ae57-a8c0-30e0-b571f68e2f38">Attributes of GML literal (<tt>geo:gmlLiteral</tt>)</name>
+<thead><tr id="_99fd8ea6-b2e4-8499-bdcf-539cd36cd88f"><th id="_efcc7756-addd-d85c-350a-d97ca196eb70" valign="middle" align="left">Attribute</th>
 <th id="_5109be8f-80f3-5fbf-6d72-01690f5c7a50" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_f95553ae-42b9-184e-0da6-124585377389"><td id="_dd636fc8-46e7-8bf3-333a-dd43af988e79" valign="middle" align="left">URI</td>
@@ -574,13 +603,15 @@ coordinates:
 </table>
 </clause>
 
-<clause id="_22ab801a-ec13-e716-14c4-4011533a59c2" obligation="normative">
+<clause id="_b13a4f68-c6c3-9653-8e87-69a4c8f1245f" obligation="normative">
 <title id="_b671e825-4fdd-99a8-646d-79d196c10d4e">Accompanying Properties (GML)</title>
-<clause id="_8e371cb1-1c9c-bed9-3d16-97f8c1b25dfc" obligation="normative">
+<clause id="_38cb0f70-e695-f0ad-d370-561f341512fd" obligation="normative">
 <title id="_f31c2a5b-766d-09fc-a840-559a495fd68c">geo:asGML</title>
-<p id="_8aa90a86-a446-ac47-a332-d407f28a7984">The <tt>geo:asGML</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:gmlLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_e4541406-65db-004c-0ea1-46e628516131">The <link target="http://www.opengis.net/ont/geosparql#asGML"><tt>geo:asGML</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#gmlLiteral"><tt>geo:gmlLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-gml-geo-asgml"/>.</p>
 
-<table id="_e03c500b-39a7-8331-6467-43112c0ac0a8"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_e05377c3-3d34-3505-1014-bb7ac334b5fc"><th id="_ffb58392-a82d-f732-69fc-8f507f1260ff" valign="middle" align="left">Property Attribute</th>
+<table id="_b3352a34-36d0-1c67-7054-6f3b24219fd9" anchor="table-prop-gml-geo-asgml"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_9a0a58d6-9e4a-c5b3-3e4a-c1509039f576">Property attributes of geo:asGML (<tt>geo:asGML</tt>)</name>
+<thead><tr id="_e05377c3-3d34-3505-1014-bb7ac334b5fc"><th id="_ffb58392-a82d-f732-69fc-8f507f1260ff" valign="middle" align="left">Property Attribute</th>
 <th id="_e89517c9-fb86-954a-3d91-8c849d30e4b0" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_d12cd344-7b3f-9943-17ae-83f19727599d"><td id="_f84ca865-8213-aa0a-3474-0e183f73f880" valign="middle" align="left">URI</td>
@@ -608,17 +639,20 @@ coordinates:
 </clause>
 </clause>
 
-<clause id="_904b8ec5-6bda-cb20-afda-c2547189b6dd" obligation="normative">
+<clause id="_ffddfbb0-c0ac-63e8-5ddb-92c91870b170" obligation="normative">
 <title id="_a6d023b7-8a71-d193-7c46-0453ec6768dd">GPX Datatype Specification</title>
-<p id="_a6aa7a09-f48c-12e6-ea44-9814ed013bc5">This section specifies the GPX geometry literal datatype (<tt>geo:gpxLiteral</tt>) and 1 accompanying serialization property defined in <tt>gpx.ttl</tt> for representing GPX geometries in RDF.</p>
+<p id="_a6aa7a09-f48c-12e6-ea44-9814ed013bc5">This section specifies the GPX geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#gpxLiteral"><tt>geo:gpxLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>gpx.ttl</tt> for representing GPX geometries in RDF.</p>
 
-<clause id="_b8b34521-deb2-0f4d-36fe-fab453944a81" obligation="normative">
+<clause id="_11d1b47a-3a73-8105-38fc-756060d82de6" obligation="normative">
 <title id="_1bc1048c-a123-c70d-f58f-57df0b49a564">GPX literal</title>
-<p id="_2eb669fb-0688-77ad-c795-1b6c98dc5d19">The <tt>geo:gpxLiteral</tt> datatype represents geometry literals serialized in the GPX format, supporting geometry types such as <tt>sf:Curve</tt>, <tt>sf:Envelope</tt>, <tt>sf:Geometry</tt>, <tt>sf:GeometryCollection</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_7b4a0ab2-1de3-2241-f42e-a99e6dceb8c6">The <link target="http://www.opengis.net/ont/geosparql#gpxLiteral"><tt>geo:gpxLiteral</tt></link> datatype represents geometry literals serialized in the GPX format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#Curve"><tt>sf:Curve</tt></link>, <link target="http://www.opengis.net/ont/sf#Envelope"><tt>sf:Envelope</tt></link>, <link target="http://www.opengis.net/ont/sf#Geometry"><tt>sf:Geometry</tt></link>, <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-gpx-geo-gpxliteral"/>.<note id="_4c586b1b-3d90-5f13-b77b-888ff146ecd9"><p id="_a32ba6d4-bc8e-4c0e-bc3b-53fab9274f4d">The datatype of GPX literal values</p>
+</note></p>
 
-<p id="_160ba58a-6254-ffd5-67a4-ddcae2c7355b">The datatype of GPX literal values</p>
 
-<table id="_77fe24da-61bb-1054-956a-3020153128cd"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_531df133-6369-3468-1e2d-6a64bde806cd"><th id="_212b0773-cda7-1711-a272-cca0842e2e67" valign="middle" align="left">Attribute</th>
+
+<table id="_c18429d8-9d2d-97ec-58f0-93eab2760cc2" anchor="table-dt-gpx-geo-gpxliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_b1467e90-a2c8-b433-9884-9325f520c7bd">Attributes of GPX literal (<tt>geo:gpxLiteral</tt>)</name>
+<thead><tr id="_531df133-6369-3468-1e2d-6a64bde806cd"><th id="_212b0773-cda7-1711-a272-cca0842e2e67" valign="middle" align="left">Attribute</th>
 <th id="_ad50d260-4b87-397b-ed1c-23fa7ff8bb07" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_d98ac112-8f98-5321-011e-9cc560a4bc12"><td id="_d2a2ee0a-9e66-bba0-0b8f-6936ec072997" valign="middle" align="left">URI</td>
@@ -694,13 +728,15 @@ coordinates:
 </table>
 </clause>
 
-<clause id="_fca6ab50-dbe3-eb86-3623-50111666368f" obligation="normative">
+<clause id="_6ddc7637-a517-d15a-b986-1644664f6a65" obligation="normative">
 <title id="_26536df6-370e-4ed3-7666-deb133edb123">Accompanying Properties (GPX)</title>
-<clause id="_c28329e9-2d7b-4dfc-b284-d3f50b99678d" obligation="normative">
+<clause id="_41078da4-e04f-fb6b-a378-ec6dce3c14dd" obligation="normative">
 <title id="_64ad1696-400a-1b6d-aa42-5dfdb7e2697c">geo:asGPX</title>
-<p id="_55583bd3-e9d4-a91b-fccc-b265feef6577">The <tt>geo:asGPX</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:gpxLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_9623189e-7e3a-40d8-9012-af50efb3ebcb">The <link target="http://www.opengis.net/ont/geosparql#asGPX"><tt>geo:asGPX</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#gpxLiteral"><tt>geo:gpxLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-gpx-geo-asgpx"/>.</p>
 
-<table id="_70d4afcb-adb1-b623-5e91-c7cb511b90b5"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_e01f1689-c869-bbf5-faa7-381808b7fa29"><th id="_8cd951f8-ebac-1a59-bc23-a7505ca835aa" valign="middle" align="left">Property Attribute</th>
+<table id="_986abfb5-71dc-3207-29a1-2f2c48c08c58" anchor="table-prop-gpx-geo-asgpx"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_ae6253b1-73e9-9fb5-1373-ca41fd76b0e8">Property attributes of geo:asGPX (<tt>geo:asGPX</tt>)</name>
+<thead><tr id="_e01f1689-c869-bbf5-faa7-381808b7fa29"><th id="_8cd951f8-ebac-1a59-bc23-a7505ca835aa" valign="middle" align="left">Property Attribute</th>
 <th id="_96137981-e3ae-07b0-4694-034afbc1b275" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_c39340d4-7169-4938-8fb4-a1dfcc70c2ae"><td id="_e921eab9-035c-ba16-a70a-b5972eb2b2c3" valign="middle" align="left">URI</td>
@@ -721,17 +757,20 @@ coordinates:
 </clause>
 </clause>
 
-<clause id="_746ffeb8-541b-8177-a5b4-3cc8caf92cca" obligation="normative">
+<clause id="_6db3ab69-824e-7f7d-b39e-90f78b9ec999" obligation="normative">
 <title id="_4481dfcd-5b65-51be-01ec-98220d743c79">JSONFG Datatype Specification</title>
-<p id="_df31ecd2-2c6d-f4ee-b95d-c2bfc984531f">This section specifies the JSONFG geometry literal datatype (<tt>geo:jsonFGLiteral</tt>) and 1 accompanying serialization property defined in <tt>jsonfg.ttl</tt> for representing JSONFG geometries in RDF.</p>
+<p id="_df31ecd2-2c6d-f4ee-b95d-c2bfc984531f">This section specifies the JSONFG geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#jsonFGLiteral"><tt>geo:jsonFGLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>jsonfg.ttl</tt> for representing JSONFG geometries in RDF.</p>
 
-<clause id="_4e98aa4b-61e1-f69f-9e7f-06fc5be53492" obligation="normative">
+<clause id="_aa532f8b-91c1-5406-9e91-bed90b8e77bd" obligation="normative">
 <title id="_214f37cc-9a62-7a8d-8f9d-88fb6347c3ab">JSONFG Literal</title>
-<p id="_8e3e5a18-007f-89e1-dfab-6053b238c03e">The <tt>geo:jsonFGLiteral</tt> datatype represents geometry literals serialized in the JSONFG format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:MultiLineString</tt>, <tt>sf:MultiPoint</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_be7c6c8f-a24a-d885-c7b1-93ac1e4a4838">The <link target="http://www.opengis.net/ont/geosparql#jsonFGLiteral"><tt>geo:jsonFGLiteral</tt></link> datatype represents geometry literals serialized in the JSONFG format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, <link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiLineString"><tt>sf:MultiLineString</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiPoint"><tt>sf:MultiPoint</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-jsonfg-geo-jsonfgliteral"/>.<note id="_4304d456-6501-aab6-add3-93b578ea1b1b"><p id="_7d38efa1-b7fd-d73c-8d2f-de51f75537cc">A JSONFG serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_d790c385-8149-db57-c677-6eefed4d391d">A JSONFG serialization of a Geometry object.</p>
 
-<table id="_a5cf99f5-8acc-5ae5-efa3-62a3002f57ae"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_88d8bb53-b03c-8411-78cc-db81c9a9e59a"><th id="_f917532a-fa5f-bfa1-e0af-e7f607efefcb" valign="middle" align="left">Attribute</th>
+
+<table id="_d7813eb8-17ac-e591-0542-d7cc2eaef616" anchor="table-dt-jsonfg-geo-jsonfgliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_eb3d18ea-63d7-922b-b955-d417f0aea8ab">Attributes of JSONFG Literal (<tt>geo:jsonFGLiteral</tt>)</name>
+<thead><tr id="_88d8bb53-b03c-8411-78cc-db81c9a9e59a"><th id="_f917532a-fa5f-bfa1-e0af-e7f607efefcb" valign="middle" align="left">Attribute</th>
 <th id="_748517d1-786f-3417-d7a0-d148de648c9d" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_2f57140f-2ebe-be7c-003b-5ffbb7c56966"><td id="_c6e7063a-c2b3-2b38-8b46-4a1368114ede" valign="middle" align="left">URI</td>
@@ -769,13 +808,15 @@ coordinates:
 </table>
 </clause>
 
-<clause id="_966fccc0-6cc8-4b5e-4b61-fa06fc2f1d91" obligation="normative">
+<clause id="_f9bc94b2-3e11-b898-0054-a5b6493e1053" obligation="normative">
 <title id="_e1147533-b6ab-9a81-83e2-55eafd95b63c">Accompanying Properties (JSONFG)</title>
-<clause id="_76f93777-70a7-b542-72e8-c96e37e1cbc4" obligation="normative">
+<clause id="_dde6d99d-5b87-febc-6ce8-3f6634f726c4" obligation="normative">
 <title id="_499fde59-ad01-a0b9-64cc-6dba1c3a5dc7">geo:asJSONFG</title>
-<p id="_bb7e896f-1e14-3390-4867-fa7d83cb1e8e">The <tt>geo:asJSONFG</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:jsonFGLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_5d2efb3e-8719-2733-8df9-33f5ced4f89b">The <link target="http://www.opengis.net/ont/geosparql#asJSONFG"><tt>geo:asJSONFG</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#jsonFGLiteral"><tt>geo:jsonFGLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-jsonfg-geo-asjsonfg"/>.</p>
 
-<table id="_729e2936-3beb-7bef-4ba8-9300e986e7d0"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_9b45f29b-921a-174a-19d2-e465abd73c0a"><th id="_890ed34e-c814-618b-1f1a-1414e2445db2" valign="middle" align="left">Property Attribute</th>
+<table id="_d7e952c0-0171-5c6f-cab4-cb700c17cc70" anchor="table-prop-jsonfg-geo-asjsonfg"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_5baecd2c-cee9-7838-31dc-7bd213a4a9bb">Property attributes of geo:asJSONFG (<tt>geo:asJSONFG</tt>)</name>
+<thead><tr id="_9b45f29b-921a-174a-19d2-e465abd73c0a"><th id="_890ed34e-c814-618b-1f1a-1414e2445db2" valign="middle" align="left">Property Attribute</th>
 <th id="_413296fb-5dfe-f763-4406-963737adb186" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_b59d9281-89f7-c0a0-04f9-c9e81f6b88cb"><td id="_39e6a73c-60d5-57b8-eb19-5342d68ce76c" valign="middle" align="left">URI</td>
@@ -796,17 +837,20 @@ coordinates:
 </clause>
 </clause>
 
-<clause id="_818d6fc6-4a67-b501-3644-7860b4478cf7" obligation="normative">
+<clause id="_359c6015-3612-f75c-43ef-b958baad6571" obligation="normative">
 <title id="_7af38dc2-6548-4bda-2e9d-b672dcae3842">KML Datatype Specification</title>
-<p id="_47f7eaf7-8cbe-eda8-95ab-adeb4b161ed2">This section specifies the KML geometry literal datatype (<tt>geo:kmlLiteral</tt>) and 1 accompanying serialization property defined in <tt>kml.ttl</tt> for representing KML geometries in RDF.</p>
+<p id="_47f7eaf7-8cbe-eda8-95ab-adeb4b161ed2">This section specifies the KML geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#kmlLiteral"><tt>geo:kmlLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>kml.ttl</tt> for representing KML geometries in RDF.</p>
 
-<clause id="_c8f574d0-75ac-eee5-b482-3b5eb3b26a44" obligation="normative">
+<clause id="_e9761fe3-c086-21ca-6086-9eec2b34d417" obligation="normative">
 <title id="_efbb8ba4-a10a-432a-c036-b3e73c9a61dd">KML Literal</title>
-<p id="_4f709806-e56d-3d71-bfc9-ab58907516bb">The <tt>geo:kmlLiteral</tt> datatype represents geometry literals serialized in the KML format, supporting geometry types such as <tt>sf:GeometryCollection</tt>, <tt>sf:LineString</tt>, <tt>sf:LinearRing</tt>, <tt>sf:MultiLineString</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_bf0a4191-c2f5-d98c-3fba-d776a5ddc101">The <link target="http://www.opengis.net/ont/geosparql#kmlLiteral"><tt>geo:kmlLiteral</tt></link> datatype represents geometry literals serialized in the KML format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, <link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link>, <link target="http://www.opengis.net/ont/sf#LinearRing"><tt>sf:LinearRing</tt></link>, <link target="http://www.opengis.net/ont/sf#MultiLineString"><tt>sf:MultiLineString</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-kml-geo-kmlliteral"/>.<note id="_98ec5ca2-9e8b-7641-0e4f-89b1ecdad096"><p id="_1f42f71d-e7c8-d6d3-b5a7-62433d973ba5">A KML serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_b1b8abf8-78a2-eaed-bc38-d0129811465d">A KML serialization of a Geometry object.</p>
 
-<table id="_e062a3a6-8c21-b5af-7a29-e2f00a0eeaa8"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_5be20198-eff5-1bf0-2c65-19ea685b4431"><th id="_ca1c9940-3b30-2069-5f9f-fa339e7dbd53" valign="middle" align="left">Attribute</th>
+
+<table id="_f4cef02f-17ce-eefe-f029-ed1437805703" anchor="table-dt-kml-geo-kmlliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_cef5e79d-7095-a76b-e667-c3b626a642c9">Attributes of KML Literal (<tt>geo:kmlLiteral</tt>)</name>
+<thead><tr id="_5be20198-eff5-1bf0-2c65-19ea685b4431"><th id="_ca1c9940-3b30-2069-5f9f-fa339e7dbd53" valign="middle" align="left">Attribute</th>
 <th id="_e2b6ff18-e78a-174d-1141-90e4453e909c" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_b0d7d1dd-714d-7506-3f50-32632eb72195"><td id="_0b0a1a5f-cc40-cf83-81b5-fba4b33ff4a2" valign="middle" align="left">URI</td>
@@ -846,13 +890,15 @@ coordinates:
 </table>
 </clause>
 
-<clause id="_f5c034c6-9cf4-31d8-7802-e7360ba8a225" obligation="normative">
+<clause id="_a3b5dabe-6c04-591c-e340-f614507bc006" obligation="normative">
 <title id="_dd4ebd72-4079-6cfc-a6d5-7ecce61fbab8">Accompanying Properties (KML)</title>
-<clause id="_93b019cc-6d34-cb3d-0bad-f0144d09053c" obligation="normative">
+<clause id="_ea1556c0-dffe-b66b-463d-a0f03c83edf5" obligation="normative">
 <title id="_a09f463a-5028-3369-7082-640d705fe859">geo:asKML</title>
-<p id="_f79c1bd8-abfd-8115-0ec5-4c42c78dda97">The <tt>geo:asKML</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:kmlLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_0b75623a-ca2f-c68a-2acc-af73f1c3727a">The <link target="http://www.opengis.net/ont/geosparql#asKML"><tt>geo:asKML</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#kmlLiteral"><tt>geo:kmlLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-kml-geo-askml"/>.</p>
 
-<table id="_8abbd14f-67c4-a7cc-0cee-e1438783fe94"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_aedca1c3-1050-d7a3-d74a-6f3786df9850"><th id="_1af371c9-ad05-c1be-3ff9-571da1c65eef" valign="middle" align="left">Property Attribute</th>
+<table id="_dbecf332-73ef-4d33-b93b-5cd767328f7f" anchor="table-prop-kml-geo-askml"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_fb25eafb-a212-620c-b2fd-b0f7f15db563">Property attributes of geo:asKML (<tt>geo:asKML</tt>)</name>
+<thead><tr id="_aedca1c3-1050-d7a3-d74a-6f3786df9850"><th id="_1af371c9-ad05-c1be-3ff9-571da1c65eef" valign="middle" align="left">Property Attribute</th>
 <th id="_dccda9cd-4342-3108-6499-0444745d7e33" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_46f1d46e-b2ef-7066-d122-383f9c202a01"><td id="_d32bd01f-ee74-8037-5cc4-260ab5ed39b2" valign="middle" align="left">URI</td>
@@ -877,17 +923,20 @@ coordinates:
 </clause>
 </clause>
 
-<clause id="_5807c3fe-7d8d-328b-f80e-d050db8f0a22" obligation="normative">
+<clause id="_bd2555fd-de55-9439-0f58-4765537cd88c" obligation="normative">
 <title id="_97a606ea-5d79-f484-3ae2-17538cfe90bc">OBJ Datatype Specification</title>
-<p id="_cf68faf5-ee99-92be-ab55-874beea15001">This section specifies the OBJ geometry literal datatype (<tt>geo:objLiteral</tt>) and 1 accompanying serialization property defined in <tt>obj.ttl</tt> for representing OBJ geometries in RDF.</p>
+<p id="_cf68faf5-ee99-92be-ab55-874beea15001">This section specifies the OBJ geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#objLiteral"><tt>geo:objLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>obj.ttl</tt> for representing OBJ geometries in RDF.</p>
 
-<clause id="_88c894a7-9d20-54a1-b4d1-6235650b9bdc" obligation="normative">
+<clause id="_7371c4db-dd12-8af8-6680-112a05de346e" obligation="normative">
 <title id="_24bce42c-6023-d276-cc9c-88cc9323bcf8">OBJ Literal</title>
-<p id="_4e4fd9e2-edf5-e201-3f25-e5a78745da2c">The <tt>geo:objLiteral</tt> datatype represents geometry literals serialized in the OBJ format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_3755ae1b-14b8-1fed-18de-3e9d42a95ca9">The <link target="http://www.opengis.net/ont/geosparql#objLiteral"><tt>geo:objLiteral</tt></link> datatype represents geometry literals serialized in the OBJ format. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-obj-geo-objliteral"/>.<note id="_73ee1847-a708-ffc9-1739-0de53a90be53"><p id="_1f406d20-6c03-4abc-d138-20125f9a77e2">A OBJ serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_26f6a8d3-de4f-df0b-f2dc-396753e74c39">A OBJ serialization of a Geometry object.</p>
 
-<table id="_f2b6802c-7654-820d-410b-94a4461b92c3"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_c5a43abd-6b1f-4eb2-cb7d-1facdbb7315a"><th id="_a9df97d2-3415-641f-d2b7-0ae553cb2463" valign="middle" align="left">Attribute</th>
+
+<table id="_aa6a63e4-d38a-3ec1-2075-c90b21fea231" anchor="table-dt-obj-geo-objliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_809febee-2ba6-d6fb-7c9a-bf7c36e072b1">Attributes of OBJ Literal (<tt>geo:objLiteral</tt>)</name>
+<thead><tr id="_c5a43abd-6b1f-4eb2-cb7d-1facdbb7315a"><th id="_a9df97d2-3415-641f-d2b7-0ae553cb2463" valign="middle" align="left">Attribute</th>
 <th id="_32e0960d-e3f6-18f8-8954-19974f8a2013" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_c70ac5ca-685c-5a91-bb6a-6d1ce96aae94"><td id="_990da89f-1277-81ac-ab95-5236fa8fd2bb" valign="middle" align="left">URI</td>
@@ -906,15 +955,18 @@ coordinates:
 </table>
 </clause>
 
-<clause id="_6facec29-1c56-6a8e-45d7-d05ee40b4b51" obligation="normative">
+<clause id="_76732f91-567c-1b8a-f02b-70243d16b4dc" obligation="normative">
 <title id="_73b2326d-5f45-08d2-8499-3735db624332">Accompanying Properties (OBJ)</title>
-<clause id="_98b02115-4a4f-f5a0-38a6-b5de16c352cb" obligation="normative">
+<clause id="_2db618d9-b827-5e3e-50b7-083b619ae9b6" obligation="normative">
 <title id="_42f03715-2d09-0dc2-617a-611a3c32c173">as OBJ</title>
-<p id="_ef232e84-29ad-61c5-4e5e-522233b90be8">The <tt>geo:asOBJ</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:objLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_497cf99a-f319-29ea-70ff-4830a7b3566f">The <link target="http://www.opengis.net/ont/geosparql#asOBJ"><tt>geo:asOBJ</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#objLiteral"><tt>geo:objLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-obj-geo-asobj"/>.<note id="_79798a59-e8fb-7f73-0805-8b3b34e84f02"><p id="_38fd88df-5052-b0f6-4b02-5ebf28fbbf21">The OBJ serialization of a Geometry</p>
+</note></p>
 
-<p id="_0d0fc083-e9e9-0fdc-ac2c-db92ef065224">The OBJ serialization of a Geometry</p>
 
-<table id="_bd3a48db-d7e5-46d1-501b-49f79f8f55c3"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_80e78daa-2528-84d4-9a8d-4e0a4c546d05"><th id="_d220684e-6787-3a66-3e19-162ef5113a51" valign="middle" align="left">Property Attribute</th>
+
+<table id="_a600d0bc-423c-dea7-5353-c990785d2124" anchor="table-prop-obj-geo-asobj"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_2f41da0f-9f62-bd26-e71e-dd007d7431c7">Property attributes of as OBJ (<tt>geo:asOBJ</tt>)</name>
+<thead><tr id="_80e78daa-2528-84d4-9a8d-4e0a4c546d05"><th id="_d220684e-6787-3a66-3e19-162ef5113a51" valign="middle" align="left">Property Attribute</th>
 <th id="_cbec15d1-a7d8-d66d-c5e0-aea4c64f963d" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_5b366a96-8fac-2825-631c-0f9fe029329e"><td id="_1472c482-25de-6acb-f0fc-361b00fc0b49" valign="middle" align="left">URI</td>
@@ -935,17 +987,20 @@ coordinates:
 </clause>
 </clause>
 
-<clause id="_0e91bebe-bd6f-281b-faee-87ce23102c52" obligation="normative">
+<clause id="_13ab32cc-8c1b-6712-fea8-4765369b931f" obligation="normative">
 <title id="_1153ae9c-6488-28f9-7f62-516aff715d92">PLY Datatype Specification</title>
-<p id="_37fdff85-fe96-7ce5-06ef-977e3fff41d6">This section specifies the PLY geometry literal datatype (<tt>geo:plyLiteral</tt>) and 1 accompanying serialization property defined in <tt>ply.ttl</tt> for representing PLY geometries in RDF.</p>
+<p id="_37fdff85-fe96-7ce5-06ef-977e3fff41d6">This section specifies the PLY geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#plyLiteral"><tt>geo:plyLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>ply.ttl</tt> for representing PLY geometries in RDF.</p>
 
-<clause id="_9180ca73-7b5f-e4a7-88fe-16d74613bb22" obligation="normative">
+<clause id="_7311e558-aaa8-4695-3b7a-3daafca04cec" obligation="normative">
 <title id="_5aa61e80-5413-c5ad-7fb5-7e93a397064d">PLY Literal</title>
-<p id="_be9ec6a9-8e6b-70fe-7bfc-ef40d220cf48">The <tt>geo:plyLiteral</tt> datatype represents geometry literals serialized in the PLY format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_08b5e969-c167-9e84-6d4e-1d5f1789f9b7">The <link target="http://www.opengis.net/ont/geosparql#plyLiteral"><tt>geo:plyLiteral</tt></link> datatype represents geometry literals serialized in the PLY format. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-ply-geo-plyliteral"/>.<note id="_5aa753d9-bf7c-72dd-9672-e998ae206703"><p id="_951ce2e9-31df-25d5-c0b6-edf020262059">A PLY serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_5d2c1f76-c10b-e03c-40f3-f07972503833">A PLY serialization of a Geometry object.</p>
 
-<table id="_203188c8-361a-bc43-b970-0019604aeea6"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_3d42e2b4-a14e-bf63-63aa-ef1d3dedd2c0"><th id="_5b872dc2-4c10-924c-7b3d-89b838b8e863" valign="middle" align="left">Attribute</th>
+
+<table id="_c45d20bc-eb93-7e56-ae34-efa122a2e714" anchor="table-dt-ply-geo-plyliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_fbda33f6-1ed7-0e20-eb72-40ce43d43f78">Attributes of PLY Literal (<tt>geo:plyLiteral</tt>)</name>
+<thead><tr id="_3d42e2b4-a14e-bf63-63aa-ef1d3dedd2c0"><th id="_5b872dc2-4c10-924c-7b3d-89b838b8e863" valign="middle" align="left">Attribute</th>
 <th id="_e1aad0c9-6127-55c0-5939-24d56f37f8e6" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_df0c5235-3861-1c7a-a078-2db55df11e8a"><td id="_64c4d35f-f901-6ff7-13c6-cd88ffc5766f" valign="middle" align="left">URI</td>
@@ -997,15 +1052,18 @@ end_header
 </table>
 </clause>
 
-<clause id="_61eebe72-d558-9d9e-35e5-00e4f742946d" obligation="normative">
+<clause id="_ff0d5192-4e25-ffb8-6ed1-1181fa12734b" obligation="normative">
 <title id="_d98856a0-21f1-6d72-e14f-8c2e7907226c">Accompanying Properties (PLY)</title>
-<clause id="_7e7a432f-26d9-b196-8792-9c104fd7a312" obligation="normative">
+<clause id="_819e9207-5fb8-0455-ca65-254ed4a02140" obligation="normative">
 <title id="_25e935a8-7ae0-7719-a553-6d945a124560">as PLY</title>
-<p id="_60a2541e-3fb0-c3df-0d3f-7aa6ab3a033d">The <tt>geo:asPLY</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:plyLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_5591e665-445e-bbc0-217f-980c04ef5f86">The <link target="http://www.opengis.net/ont/geosparql#asPLY"><tt>geo:asPLY</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#plyLiteral"><tt>geo:plyLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-ply-geo-asply"/>.<note id="_e167bc07-90f5-2241-e3bb-dd8eddd03b60"><p id="_e6cf5f43-46f7-0913-ba35-c2305cfbb1d9">The PLY serialization of a Geometry</p>
+</note></p>
 
-<p id="_81b9e095-7f15-1839-b64f-1ae3643e2760">The PLY serialization of a Geometry</p>
 
-<table id="_49a60450-1a27-76e4-a01b-be77866f6ca5"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_67870d16-0fb6-ca57-6ab4-c12241a01a55"><th id="_eb4c0297-dbf8-c14a-e56a-7343d8875ad0" valign="middle" align="left">Property Attribute</th>
+
+<table id="_e4b1b923-7f62-c21a-59d7-6710e7d578ad" anchor="table-prop-ply-geo-asply"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_f66cc0b1-fa56-e4f0-1fb7-fd0f0c1554f4">Property attributes of as PLY (<tt>geo:asPLY</tt>)</name>
+<thead><tr id="_67870d16-0fb6-ca57-6ab4-c12241a01a55"><th id="_eb4c0297-dbf8-c14a-e56a-7343d8875ad0" valign="middle" align="left">Property Attribute</th>
 <th id="_b074393a-e518-3094-0e79-95a98725b6a1" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_25e0f715-384a-ec64-e168-87698f8d6450"><td id="_a4939023-7f70-33de-e3b0-2e659759f3c8" valign="middle" align="left">URI</td>
@@ -1026,17 +1084,20 @@ end_header
 </clause>
 </clause>
 
-<clause id="_a33a8c32-2690-48d8-2056-15a9ead2948f" obligation="normative">
+<clause id="_9911399a-d117-d14e-50b0-e64de7ac0068" obligation="normative">
 <title id="_a6543691-b6e5-63a2-5b86-3c16337e94f4">WKB Datatype Specification</title>
-<p id="_ae146efb-7f41-cfd0-5f6c-30bac6f9d1a7">This section specifies the WKB geometry literal datatype (<tt>geo:wkbLiteral</tt>) and 1 accompanying serialization property defined in <tt>wkb.ttl</tt> for representing WKB geometries in RDF.</p>
+<p id="_ae146efb-7f41-cfd0-5f6c-30bac6f9d1a7">This section specifies the WKB geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#wkbLiteral"><tt>geo:wkbLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>wkb.ttl</tt> for representing WKB geometries in RDF.</p>
 
-<clause id="_b48db97c-aa34-ab73-638d-3910c76844af" obligation="normative">
+<clause id="_6a1ab41f-b891-a196-7e29-e315ca2fe43e" obligation="normative">
 <title id="_66865941-e1c3-a122-a408-16f7df5bf3f0">Well-known Binary literal</title>
-<p id="_ea202eb2-102c-0e40-5219-0372915a30c5">The <tt>geo:wkbLiteral</tt> datatype represents geometry literals serialized in the WKB format, supporting geometry types such as <tt>sf:Curve</tt>, <tt>sf:Envelope</tt>, <tt>sf:Geometry</tt>, <tt>sf:GeometryCollection</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_0904d7bc-5352-ce17-57ac-2a91c622b121">The <link target="http://www.opengis.net/ont/geosparql#wkbLiteral"><tt>geo:wkbLiteral</tt></link> datatype represents geometry literals serialized in the WKB format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#Curve"><tt>sf:Curve</tt></link>, <link target="http://www.opengis.net/ont/sf#Envelope"><tt>sf:Envelope</tt></link>, <link target="http://www.opengis.net/ont/sf#Geometry"><tt>sf:Geometry</tt></link>, <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-wkb-geo-wkbliteral"/>.<note id="_ffd59368-da86-aae5-5b36-8bdda98a6ef5"><p id="_86bc5216-50c5-fc26-174d-233abd83802e">A Well-known Binary serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_0aa30686-a2c4-dece-b810-593bc9929edf">A Well-known Binary serialization of a Geometry object.</p>
 
-<table id="_8e532b4b-fd58-9b10-e1f6-8edd9dd9838a"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_d233364c-afa4-3dff-2a62-58f19a56aa72"><th id="_1679ffc5-1b8d-d4d9-4613-be5717bdc2bc" valign="middle" align="left">Attribute</th>
+
+<table id="_bd136cbb-f503-6269-1fb7-9fd0957ed72d" anchor="table-dt-wkb-geo-wkbliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_0d5f522c-140c-d6bf-87e0-5a1212f40e22">Attributes of Well-known Binary literal (<tt>geo:wkbLiteral</tt>)</name>
+<thead><tr id="_d233364c-afa4-3dff-2a62-58f19a56aa72"><th id="_1679ffc5-1b8d-d4d9-4613-be5717bdc2bc" valign="middle" align="left">Attribute</th>
 <th id="_937f5a77-99eb-6df9-f94b-21b6dd530790" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_357dddbf-71c8-f861-45b7-fc556c9a634d"><td id="_75960431-1bbe-58ea-139b-c8d5f9b003b0" valign="middle" align="left">URI</td>
@@ -1096,13 +1157,15 @@ end_header
 </table>
 </clause>
 
-<clause id="_400c76fd-f801-fa34-3fb7-15c2a1317d92" obligation="normative">
+<clause id="_89ddf999-38dc-de93-c84a-f81f3f86f3fe" obligation="normative">
 <title id="_d6ee659c-4c14-2b6f-1911-6c91d75fc2e2">Accompanying Properties (WKB)</title>
-<clause id="_094c5748-5151-d751-34d4-8566f9dea31a" obligation="normative">
+<clause id="_24518d5a-e3fd-f47f-e197-3c8ab93f47fd" obligation="normative">
 <title id="_165463e7-bfbb-e19d-8686-7752ffab0abc">geo:asWKB</title>
-<p id="_312c7547-dc9c-a846-366d-7c61b356a323">The <tt>geo:asWKB</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:wkbLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_adabfe9a-9b1a-a590-f0f5-bda72f6234c3">The <link target="http://www.opengis.net/ont/geosparql#asWKB"><tt>geo:asWKB</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#wkbLiteral"><tt>geo:wkbLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-wkb-geo-aswkb"/>.</p>
 
-<table id="_90ae9ff5-afd1-8e6e-719c-8b68226e6d1f"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_742bb01e-cd4f-0356-8f10-04d0ec312635"><th id="_27aaa825-8f95-39b5-b556-266990da5a02" valign="middle" align="left">Property Attribute</th>
+<table id="_d0eadbf2-8413-b46b-ba40-634657068719" anchor="table-prop-wkb-geo-aswkb"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_214fee08-29d4-9964-d09f-e14f944a8310">Property attributes of geo:asWKB (<tt>geo:asWKB</tt>)</name>
+<thead><tr id="_742bb01e-cd4f-0356-8f10-04d0ec312635"><th id="_27aaa825-8f95-39b5-b556-266990da5a02" valign="middle" align="left">Property Attribute</th>
 <th id="_bc49620a-420b-0600-1c89-5d1b19fc597d" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_3f523da4-aec1-7fe9-f818-7ffe672355e2"><td id="_5c399962-eff9-6cd6-8592-4ed55f9e1602" valign="middle" align="left">URI</td>
@@ -1123,17 +1186,20 @@ end_header
 </clause>
 </clause>
 
-<clause id="_2509eed4-80f2-7f93-415e-11294dba5f39" obligation="normative">
+<clause id="_087fca55-0112-517d-20f6-3235c76a35de" obligation="normative">
 <title id="_8bbab1ac-4348-4391-6e1f-8fef51e40d0e">WKT Datatype Specification</title>
-<p id="_64ce116b-fccc-ccfd-91fa-40a5423a99e0">This section specifies the WKT geometry literal datatype (<tt>geo:wktLiteral</tt>) and 1 accompanying serialization property defined in <tt>wkt.ttl</tt> for representing WKT geometries in RDF.</p>
+<p id="_64ce116b-fccc-ccfd-91fa-40a5423a99e0">This section specifies the WKT geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#wktLiteral"><tt>geo:wktLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>wkt.ttl</tt> for representing WKT geometries in RDF.</p>
 
-<clause id="_dd9d0578-5611-684d-a58a-9d446c53de4a" obligation="normative">
+<clause id="_ac0319e7-cc92-dd6b-3157-30c5c474d5fb" obligation="normative">
 <title id="_ade658d6-3282-aed4-24c5-253fe9525064">Well-known Text literal</title>
-<p id="_9402f855-1fdf-84cc-7f9c-0930418286d4">The <tt>geo:wktLiteral</tt> datatype represents geometry literals serialized in the WKT format, supporting geometry types such as <tt>sf:Curve</tt>, <tt>sf:Envelope</tt>, <tt>sf:Geometry</tt>, <tt>sf:GeometryCollection</tt>, among others. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_35579ba1-55e6-4a87-daca-6e8ad1178527">The <link target="http://www.opengis.net/ont/geosparql#wktLiteral"><tt>geo:wktLiteral</tt></link> datatype represents geometry literals serialized in the WKT format, supporting geometry types such as <link target="http://www.opengis.net/ont/sf#Curve"><tt>sf:Curve</tt></link>, <link target="http://www.opengis.net/ont/sf#Envelope"><tt>sf:Envelope</tt></link>, <link target="http://www.opengis.net/ont/sf#Geometry"><tt>sf:Geometry</tt></link>, <link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link>, among others. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-wkt-geo-wktliteral"/>.<note id="_77670c74-8188-fcc5-bedb-559d05248af1"><p id="_b1cd35db-2c2f-f02a-8edd-bc71bd82707b">A Well-known Text serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_eb902a08-043c-748f-d53e-f230725a5e7a">A Well-known Text serialization of a Geometry object.</p>
 
-<table id="_7e06eedd-ea31-b170-6510-4db0a9b20877"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_f8676a4a-0666-52fb-f4af-0ed1f58e6942"><th id="_7f1c381f-1d8e-93f3-21a0-293da320a034" valign="middle" align="left">Attribute</th>
+
+<table id="_921e2b16-8ce5-8ddd-28f7-426710587b52" anchor="table-dt-wkt-geo-wktliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_3f621e2a-4415-c5a5-c1eb-c3a048d0cc0e">Attributes of Well-known Text literal (<tt>geo:wktLiteral</tt>)</name>
+<thead><tr id="_f8676a4a-0666-52fb-f4af-0ed1f58e6942"><th id="_7f1c381f-1d8e-93f3-21a0-293da320a034" valign="middle" align="left">Attribute</th>
 <th id="_297447d8-4df1-fb8a-6e33-61844af3476e" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_b610de79-1a63-9e10-a2bd-a0351e51f448"><td id="_78aa1002-b50e-94e7-8d00-bb2926416343" valign="middle" align="left">URI</td>
@@ -1202,13 +1268,15 @@ end_header
 </table>
 </clause>
 
-<clause id="_00ddee85-103e-f5c9-934a-ef74371b19a4" obligation="normative">
+<clause id="_85187787-feb6-b73d-68c0-5350b60ba249" obligation="normative">
 <title id="_381910ba-7b7c-51eb-4679-7dcd83433a34">Accompanying Properties (WKT)</title>
-<clause id="_d3f54eab-097e-4e0f-3f9e-e52dcf2b07e1" obligation="normative">
+<clause id="_ceb8068a-0bd5-019f-5b71-3e4152c58016" obligation="normative">
 <title id="_e3df1b8f-15d5-8c56-2eff-9233ecab7305">geo:asWKT</title>
-<p id="_eb5fed9b-373f-568f-c795-e60b7a915af9">The <tt>geo:asWKT</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:wktLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_f2778017-2555-ad02-67c3-6cb5c3531d79">The <link target="http://www.opengis.net/ont/geosparql#asWKT"><tt>geo:asWKT</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#wktLiteral"><tt>geo:wktLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-wkt-geo-aswkt"/>.</p>
 
-<table id="_c82ce519-a830-8a24-edc2-fff0b38eebfb"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_2d93ca34-12f7-c5fd-76cc-8cf6cdd81081"><th id="_c19d3ab2-38a2-8337-9e94-df89a217bfbb" valign="middle" align="left">Property Attribute</th>
+<table id="_6311a514-a1be-086a-6c4e-3ebdf30d9ae4" anchor="table-prop-wkt-geo-aswkt"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_b6ca45fa-9ed4-a61a-b1d2-292530f27b85">Property attributes of geo:asWKT (<tt>geo:asWKT</tt>)</name>
+<thead><tr id="_2d93ca34-12f7-c5fd-76cc-8cf6cdd81081"><th id="_c19d3ab2-38a2-8337-9e94-df89a217bfbb" valign="middle" align="left">Property Attribute</th>
 <th id="_b39202bb-5de7-4211-9494-46f79b5c85a5" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_a3523c41-3383-27b5-164b-1b1d97810979"><td id="_81ae4127-624a-578a-301f-6e88a12af45f" valign="middle" align="left">URI</td>
@@ -1236,17 +1304,20 @@ end_header
 </clause>
 </clause>
 
-<clause id="_1d5016f0-b0e5-bca5-0c8a-5b812e6785f6" obligation="normative">
+<clause id="_db771a80-4a85-a949-2cb1-a9a9c9b42194" obligation="normative">
 <title id="_4513a400-f743-e39a-1a57-9808e1467ba2">X3D Datatype Specification</title>
-<p id="_b7770db5-08dd-c1ef-69e4-5337c6b35ee2">This section specifies the X3D geometry literal datatype (<tt>geo:x3dLiteral</tt>) and 1 accompanying serialization property defined in <tt>x3d.ttl</tt> for representing X3D geometries in RDF.</p>
+<p id="_b7770db5-08dd-c1ef-69e4-5337c6b35ee2">This section specifies the X3D geometry literal datatype (<link target="http://www.opengis.net/ont/geosparql#x3dLiteral"><tt>geo:x3dLiteral</tt></link>) and 1 accompanying serialization property defined in <tt>x3d.ttl</tt> for representing X3D geometries in RDF.</p>
 
-<clause id="_39bf69c5-fb26-4404-137a-51f36d02ca37" obligation="normative">
+<clause id="_fd55cc82-b4a4-08e8-4d2c-fbd0da95cadc" obligation="normative">
 <title id="_5aa4de74-566c-12e5-0397-d8dc64439232">X3D Literal</title>
-<p id="_80b0e0f9-a00b-28ba-33c6-7d904d036140">The <tt>geo:x3dLiteral</tt> datatype represents geometry literals serialized in the X3D format. Its canonical IRI, metadata attributes, and usage examples are detailed below.</p>
+<p id="_c84aa646-6c2e-efbd-a4fe-b034edd95eed">The <link target="http://www.opengis.net/ont/geosparql#x3dLiteral"><tt>geo:x3dLiteral</tt></link> datatype represents geometry literals serialized in the X3D format. Its canonical IRI, metadata attributes, and usage examples are specified in <xref target="table-dt-x3d-geo-x3dliteral"/>.<note id="_26b24f9b-3ae8-c038-78b8-d3a6aeb97a7e"><p id="_5fdfc1db-be08-c520-90b3-6e837928e94e">A X3D serialization of a Geometry object.</p>
+</note></p>
 
-<p id="_325be427-74a8-8f65-c82e-6e6f5b9defd4">A X3D serialization of a Geometry object.</p>
 
-<table id="_e1147157-4b8b-b248-31dc-be3ced04cf78"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_3b3a6158-5cfc-98bd-3061-b931cabb1931"><th id="_f14f2c4f-3f4b-bf66-33f4-145e836bde78" valign="middle" align="left">Attribute</th>
+
+<table id="_754c5206-f7f2-1cc3-c7b8-ee710556b4ee" anchor="table-dt-x3d-geo-x3dliteral"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_6a3d388c-391a-3c99-2277-6329c6914168">Attributes of X3D Literal (<tt>geo:x3dLiteral</tt>)</name>
+<thead><tr id="_3b3a6158-5cfc-98bd-3061-b931cabb1931"><th id="_f14f2c4f-3f4b-bf66-33f4-145e836bde78" valign="middle" align="left">Attribute</th>
 <th id="_474ae4f5-d9d1-a869-6758-dc2365774a3f" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_991f66e7-809b-8469-cc10-6d3841307e0e"><td id="_8a8fc076-5a9f-ddf0-84ee-647e4d351992" valign="middle" align="left">URI</td>
@@ -1267,15 +1338,18 @@ end_header
 </table>
 </clause>
 
-<clause id="_ffdb8d62-6ff1-dd58-b44f-63ef0ec8e474" obligation="normative">
+<clause id="_30d8e984-197b-e58e-6941-3a09b614ae22" obligation="normative">
 <title id="_8415fd0a-e208-1c92-182c-1d876cede445">Accompanying Properties (X3D)</title>
-<clause id="_47c5bb92-56ab-b1c0-dec8-c7b0776be407" obligation="normative">
+<clause id="_85f1d8bd-1842-3ab3-f7cb-2ef000b418c5" obligation="normative">
 <title id="_63d00c57-c8bf-1fef-108e-c30f0ee4cd67">as X3D</title>
-<p id="_7bcc3817-dc8d-150e-eaad-06387052c3ce">The <tt>geo:asX3D</tt> property associates <tt>geo:Geometry</tt> resources with geometry literals typed as <tt>geo:x3dLiteral</tt> as a subproperty of <tt>geo:hasSerialization</tt>.</p>
+<p id="_2e553321-2497-17a4-09be-4389f3a47735">The <link target="http://www.opengis.net/ont/geosparql#asX3D"><tt>geo:asX3D</tt></link> property associates <link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link> resources with geometry literals typed as <link target="http://www.opengis.net/ont/geosparql#x3dLiteral"><tt>geo:x3dLiteral</tt></link> as a subproperty of <link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link>. Its canonical IRI and property attributes are detailed in <xref target="table-prop-x3d-geo-asx3d"/>.<note id="_e51dc87d-fb55-9823-d5fb-c867974c5caf"><p id="_66ad41b9-aa49-0f4a-ca7e-cc89d3d6a1af">The X3D serialization of a Geometry</p>
+</note></p>
 
-<p id="_c0211d49-921a-cb84-a0c6-1baeb24cec46">The X3D serialization of a Geometry</p>
 
-<table id="_a8349a5d-4009-ac88-6a51-e917c38d841d"><colgroup><col width="25%"/><col width="75%"/></colgroup><thead><tr id="_f26a8154-43b4-a0e1-e041-65ca52a7d11f"><th id="_520d860e-5664-50e8-7095-022cf039c91d" valign="middle" align="left">Property Attribute</th>
+
+<table id="_8c6d43e9-2f73-58a4-4505-f413f1d283ad" anchor="table-prop-x3d-geo-asx3d"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_cb3f7880-e2a1-2154-1b52-0fbef5919073">Property attributes of as X3D (<tt>geo:asX3D</tt>)</name>
+<thead><tr id="_f26a8154-43b4-a0e1-e041-65ca52a7d11f"><th id="_520d860e-5664-50e8-7095-022cf039c91d" valign="middle" align="left">Property Attribute</th>
 <th id="_3cfa8f53-674b-81a8-39a2-3c8c86f95bc0" valign="middle" align="left">Value</th>
 </tr></thead>
 <tbody><tr id="_099632d4-ba5a-ce28-1b00-61ba5f6f3702"><td id="_a0be0aac-9edc-de1f-cbfb-fda66079e2dc" valign="middle" align="left">URI</td>
