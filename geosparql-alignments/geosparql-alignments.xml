@@ -197,7 +197,7 @@
 <p id="_d637f486-33ec-27da-1756-e937ab6a86b5">Community members and ontology maintainers may propose new vocabulary alignments or revisions to existing mappings by opening an issue at <link target="https://github.com/issues">https://github.com/issues</link> with the target vocabulary IRI, proposed Turtle mapping triples, and rationale for the chosen alignment predicates.</p>
 </clause>
 
-<clause id="_19359f8e-86e8-3a9c-1f0c-f9370a8e799e" obligation="normative">
+<clause id="_3315df65-3ba0-6425-3a31-4e80c5803dfb" obligation="normative">
 <title id="_c8ca54eb-5f61-805f-d1a2-c7ca1a8d2159">Vocabulary Alignments</title>
 <clause id="_a8f3c62d-2a7c-499c-33cb-97f722324888" obligation="normative">
 <title id="_ae738ff3-5fae-6267-257d-4899d6dddc70">Overview</title>
@@ -340,11 +340,11 @@
 </table>
 </clause>
 
-<clause id="_7108cf8b-0e2b-f99a-888d-d3e82387cd11" obligation="normative">
+<clause id="_eba25cc2-6adc-f31b-45ce-30bd17031f37" obligation="normative">
 <title id="_bd0b7036-2095-b4c2-007a-fe9e31f30a0d">BFO</title>
 <p id="_9b141c09-259e-96eb-61a3-1b9aa0cf658a">This section defines 18 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and BFO as specified in <tt>bfo.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-bfo"/>.</p>
 
-<table id="_1c3091a3-b419-da64-c07e-a2e176e4f9b2" anchor="table-alignment-bfo"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<table id="_f44d5594-3e6f-3005-7e46-e680f61b1e68" anchor="table-alignment-bfo"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
 <name id="_15fe0740-1c35-6919-1120-bfeca15da09e">Alignment between GeoSPARQL and BFO</name>
 <thead><tr id="_32015cc9-15b6-66a6-2065-e8553375bb9d"><th id="_5015fcca-64e8-7fde-c3db-b0440162883d" valign="middle" align="left">Source Term</th>
 <th id="_cb3dfec1-045f-f6f3-62a2-0d2183286c2e" valign="middle" align="left">Alignment Relation</th>
@@ -359,9 +359,9 @@
 <td id="_7ba1862f-3d89-4d88-ba28-c68decaee87e" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
 <td id="_6505d6e2-ba26-0174-3e20-3dbc1197144c" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
 <td id="_24f15982-0615-0766-f911-87c2712f4a8e" valign="middle" align="left">—</td>
-</tr><tr id="_2afe7a70-24fd-61e6-5f29-1ae9b50c66d9"><td id="_e0eb0c8f-0a5c-c4a9-1b5b-2d9871d4517b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+</tr><tr id="_0ebda715-d196-b232-fc7d-c1452e126221"><td id="_e0eb0c8f-0a5c-c4a9-1b5b-2d9871d4517b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
 <td id="_2173c27e-220f-dad5-4620-9079bf158bf3" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
-<td id="_93a2e84d-2607-9d01-2e50-d6390d9e69e8" valign="middle" align="left">nc212efea1d4443f1ab9ebeb56627e1b3b1</td>
+<td id="_1f2ef76e-2047-f266-0fa7-55ec7a15b22b" valign="middle" align="left">n38f9864a0a8b4b469ce47da33cf124aab1</td>
 <td id="_b5d97f84-aea7-30fb-8c21-16acffbbc3f2" valign="middle" align="left">—</td>
 </tr><tr id="_37a89db1-1cc8-df53-bb60-78d0f67cd647"><td id="_9a349626-69d0-0be1-6b5b-e21505324434" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
 <td id="_86d0f14a-e0b2-43aa-ec6f-a4f1ccd4b7ff" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
@@ -1002,32 +1002,32 @@
 </table>
 </clause>
 
-<clause id="_c8b28f79-6ab3-6260-1097-e2568d365376" obligation="normative">
+<clause id="_49f8aa62-1d09-3fca-0b96-b8f9979e9468" obligation="normative">
 <title id="_a7d7c10f-4aee-6006-2819-f2de974dafa9">OSMRDF</title>
 <p id="_0e5fc97a-c4c6-d170-e2af-8049630f094d">This section defines 9 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and OSMRDF as specified in <tt>osmrdf.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-osmrdf"/>.</p>
 
-<table id="_a2798824-200e-2eb8-79d7-2f601c39c66f" anchor="table-alignment-osmrdf"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<table id="_7079a9bf-1bc7-d30e-a619-78bb9d01b0f3" anchor="table-alignment-osmrdf"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
 <name id="_7d9c9911-9eff-5e52-22ad-008af8ee49e3">Alignment between GeoSPARQL and OSMRDF</name>
 <thead><tr id="_7a819dd0-751a-af1f-ff76-26aa76414c89"><th id="_fb4dc900-9314-3506-6df9-456bd7e31ec4" valign="middle" align="left">Source Term</th>
 <th id="_91617030-26f8-db20-2c8b-a6d67c0e3d49" valign="middle" align="left">Alignment Relation</th>
 <th id="_e19e0de4-c8fb-8640-7edc-9525eef477e3" valign="middle" align="left">Target Term</th>
 <th id="_5bb27c59-f715-a8e9-5925-c32d9fb3e21d" valign="middle" align="left">Notes</th>
 </tr></thead>
-<tbody><tr id="_006ffb02-627b-8ccb-3e7d-a04395216f4b"><td id="_5085f0ea-9ae9-f9a5-0515-ad7e3dbc8e4d" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link></td>
+<tbody><tr id="_6986da5c-18bd-8778-0cde-cd5af5a3f664"><td id="_5085f0ea-9ae9-f9a5-0515-ad7e3dbc8e4d" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link></td>
 <td id="_32a869d7-0263-feea-e9ad-bb12c1cb4c6d" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
-<td id="_d5b7e8ab-9a92-e3bb-84a8-dd135d264bf3" valign="middle" align="left">n0a9ce9411cda489da0507f6a302915c0b1</td>
+<td id="_84b4f271-041e-3975-c752-255e2bffe3f1" valign="middle" align="left">n4d0b342dd3ac4a7592d7c6f794c5b6c1b1</td>
 <td id="_6cbca067-868e-edf2-95db-d8575240703c" valign="middle" align="left">—</td>
-</tr><tr id="_8399e01e-99a9-41e1-5506-6bc81877cd78"><td id="_4000d5d7-b1ac-ae3c-7b4c-d55615479bda" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link></td>
+</tr><tr id="_7a1d0e9f-f778-76b3-1f49-714c73a30b34"><td id="_4000d5d7-b1ac-ae3c-7b4c-d55615479bda" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link></td>
 <td id="_d76bef00-bb38-c255-bdb9-b4e100e12d14" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
-<td id="_da9c15a1-1558-c0ad-42ee-a848f9779dfe" valign="middle" align="left">n0a9ce9411cda489da0507f6a302915c0b2</td>
+<td id="_9db0bb9d-eff5-132f-648f-d84153f45490" valign="middle" align="left">n4d0b342dd3ac4a7592d7c6f794c5b6c1b2</td>
 <td id="_c8224309-e42b-27da-755e-4530b740876d" valign="middle" align="left">—</td>
-</tr><tr id="_4e23ceee-a1cf-70be-b741-3dd366439195"><td id="_faf578f7-d530-dc90-1f20-309513b934ee" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link></td>
+</tr><tr id="_2d49b649-e326-86ff-eb45-f73eafb661f3"><td id="_faf578f7-d530-dc90-1f20-309513b934ee" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link></td>
 <td id="_fb41070b-33e5-4a54-78db-2c8e3ad6a8c3" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
-<td id="_6a6dc2a9-9be5-5a0b-61e7-b045ed51cb9a" valign="middle" align="left">n0a9ce9411cda489da0507f6a302915c0b3</td>
+<td id="_01aa3e1c-4130-5819-012e-8dca90dd73cf" valign="middle" align="left">n4d0b342dd3ac4a7592d7c6f794c5b6c1b3</td>
 <td id="_875c1c80-52bd-ff40-7a54-9eebb4fbadb7" valign="middle" align="left">—</td>
-</tr><tr id="_1d29ced2-51dd-ba72-6cbb-f939a7781bac"><td id="_4b7eca4e-0e19-abcf-3580-5f4a8065ae57" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#Polygon"><tt>sf:Polygon</tt></link></td>
+</tr><tr id="_4dd88375-9c58-305c-6671-f1c49932053f"><td id="_4b7eca4e-0e19-abcf-3580-5f4a8065ae57" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#Polygon"><tt>sf:Polygon</tt></link></td>
 <td id="_fc3dc767-424f-62c2-73a4-9967669d25a2" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
-<td id="_42a72596-0ba2-53e3-451a-c99621636348" valign="middle" align="left">n0a9ce9411cda489da0507f6a302915c0b4</td>
+<td id="_70d4d27d-a915-6f2c-4bf8-c89aa82007a0" valign="middle" align="left">n4d0b342dd3ac4a7592d7c6f794c5b6c1b4</td>
 <td id="_23b633b2-cc62-e37b-2090-dffa43840d3a" valign="middle" align="left">—</td>
 </tr><tr id="_7ac70c72-5843-f664-d9d7-18877f846a28"><td id="_2e752d4a-0825-fc98-793f-7ab8b8289593" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/has"><tt>osmm:has</tt></link></td>
 <td id="_8d470f9c-48a4-7dcf-64a3-f10a56d82ed4" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
