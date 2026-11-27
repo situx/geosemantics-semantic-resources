@@ -1370,12 +1370,12 @@ end_header
 </clause>
 </clause>
 </clause>
-</sections><bibliography><clause id="_f0c70991-e47d-5bc8-e3c9-d197cdc69b03" obligation="informative">
+</sections><bibliography><clause id="_70c963bd-6919-96b3-206f-8abe469071b0" obligation="informative">
 <title id="_3be6e2bf-2a72-9834-8982-7cbd311906b8">Normative references</title><p id="_65d2856b-3ae9-0f16-fd2b-ffa0d7236af5">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 
 
-<references unnumbered="true" normative="true"><bibitem id="_8f36ddc8-51a8-2c0c-1ab2-241788438e4b" type="standard" schema-version="v1.5.6" anchor="ogc-geosparql">
-  <fetched>2026-11-26</fetched>
+<references unnumbered="true" normative="true"><bibitem id="_b1630ac2-bddb-d4df-e6e1-b1630a3f4b38" type="standard" schema-version="v1.5.6" anchor="ogc-geosparql">
+  <fetched>2026-11-27</fetched>
   
 <title language="en" script="Latn" type="title-intro">OGC GeoSPARQL</title>
 

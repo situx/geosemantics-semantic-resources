@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.10.0" schema-version="v2.2.0" flavor="ogc">
+<bibdata type="standard">
+<title language="en" type="main">GeoSPARQL Vocabulary Alignments</title>
+<docidentifier type="ogc-internal" primary="true">26-002</docidentifier><docnumber>26-002</docnumber><date type="published"><on>2026-11-27</on></date><contributor><role type="editor"/><person>
+<name><completename>GeoSPARQL Standards Working Group</completename></name>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Open Geospatial Consortium</name>
+<subdivision type="Committee">
+<name>technical</name>
+</subdivision><subdivision type="Workgroup">
+<name>GeoSPARQL SWG</name>
+</subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></contributor><edition>1.0</edition><language>en</language><script>Latn</script><status><stage>work-item-draft</stage></status><copyright><from>2026</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><ext><doctype>community-standard</doctype><flavor>ogc</flavor><stage>work-item-draft</stage></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>false</stage-published></semantic-metadata>
+<presentation-metadata><document-scheme>2026</document-scheme><color-admonition-caution>rgb(79, 129, 189)</color-admonition-caution><color-admonition-editor>rgb(79, 129, 189)</color-admonition-editor><color-admonition-important>rgb(79, 129, 189)</color-admonition-important><color-admonition-note>rgb(79, 129, 189)</color-admonition-note><color-admonition-safety-precaution>rgb(79, 129, 189)</color-admonition-safety-precaution><color-admonition-tip>rgb(79, 129, 189)</color-admonition-tip><color-admonition-todo>rgb(79, 129, 189)</color-admonition-todo><color-admonition-warning>rgb(79, 129, 189)</color-admonition-warning><color-background-definition-description>rgb(242, 251, 255)</color-background-definition-description><color-background-definition-term>rgb(215, 243, 255)</color-background-definition-term><color-background-page>rgb(33, 55, 92)</color-background-page><color-background-table-header>rgb(33, 55, 92)</color-background-table-header><color-background-table-row-even>rgb(252, 246, 222)</color-background-table-row-even><color-background-table-row-odd>rgb(254, 252, 245)</color-background-table-row-odd><color-background-term-admitted-label>rgb(223, 236, 249)</color-background-term-admitted-label><color-background-term-deprecated-label>rgb(237, 237, 238)</color-background-term-deprecated-label><color-background-term-preferred-label>rgb(249, 235, 187)</color-background-term-preferred-label><color-background-text-label-legacy>rgb(33, 60, 107)</color-background-text-label-legacy><color-secondary-shade-1>rgb(0, 177, 255)</color-secondary-shade-1><color-secondary-shade-2>rgb(0, 177, 255)</color-secondary-shade-2><color-text>rgb(88, 89, 91)</color-text><color-text-title>rgb(33, 55, 92)</color-text-title><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_2cd773fc-8495-2dfa-91a1-d57da3fc5833" obligation="normative">
+<title id="_19604a82-a482-3c87-1356-705ef7b11f09">Copyright notice</title>
+<p id="_f3c4258f-6b29-424c-cd01-337c0e916a04" align="center">Copyright © 2026 Open Geospatial Consortium<br/> To obtain additional rights of use, visit <link target="https://www.ogc.org/legal"/></p>
+</clause>
+
+<clause id="_6908548e-204b-56e7-9062-6924cccf2315" obligation="normative">
+<title id="_db83e2f6-5841-eaeb-0d35-1277ee9d3f6a">Note</title>
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" align="left">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" align="left">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7" obligation="normative">
+<title id="_3788828e-41fb-3895-6acc-52071643abed">License Agreement</title>
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <link target="https://www.ogc.org/license"/></p>
+</clause>
+</license-statement>
+
+<legal-statement>
+
+<clause id="_d969cbc1-a2ce-fc29-9ca8-2b6bf8626cdf" obligation="normative">
+<title id="_58a63032-6943-6f37-087e-470a8982dad8">Notice for Drafts</title>
+<p id="_da556f2c-cb53-8902-19fe-a5f8a6222f48">This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.</p>
+
+<p id="_e8629e34-594d-6076-a18a-23d7b5df19ba">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+</feedback-statement>
+</boilerplate><preface><clause id="_f0653ca9-742f-0254-87fa-fd8a7de01938" obligation="informative">
+<title id="_bbc63dd7-fcfd-95c0-3571-c645d8cd8a03">Abstract</title>
+<p id="_46cfa726-f432-b68c-9caf-8c790057af28">This OGC Community Standard specifies formal RDF, RDFS, OWL, and SKOS vocabulary alignments between the OGC GeoSPARQL ontology (<tt><link target="http://opengis.net"/></tt>) and widely adopted external geospatial, Linked Data, and domain vocabularies. These machine-readable mappings enable semantic interoperability, federated querying, and cross-ontology reasoning across heterogeneous spatial knowledge graphs.</p>
+</clause><clause id="_64e2e649-3d97-771d-88c4-e2f84b15d6e5" obligation="informative">
+<title id="_cc1f87ab-31ca-0093-c68a-5e889308dfa5">Keywords</title>
+<p id="_9c5db3d8-e538-873d-2326-8ed415e37cbc">The following are keywords to be used by search engines and document catalogues:</p>
+
+<p id="_a219f837-a467-314c-c040-a7203365d189">ogcdoc, OGC document, GeoSPARQL, RDF, OWL, SKOS, Vocabulary Alignment, Ontology Mapping, Semantic Web, Linked Data</p>
+</clause><clause id="_432d0374-b095-f4e7-93a1-5b20b227410b" obligation="informative">
+<title id="_7ca1ffbd-9a44-3f8c-4c8e-ad904e3afb57">Submitting Organizations</title>
+<p id="_7c32e7c1-4298-e7ee-ee20-f1b019bece83">The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p>
+
+<ul id="_a6b7d10a-a9f8-1703-acec-6dfb9f2e0eab"><li><p id="_c15e89b3-a529-fab9-b66a-e09357a7a980">OGC GeoSPARQL Standards Working Group (SWG)</p>
+</li>
+</ul>
+</clause><clause id="_545fa7ac-8b38-116d-5fc8-dd99bc2ac067" obligation="informative">
+<title id="_fb17802d-eac7-9ade-77db-4b8d6a74c7f7">Introduction</title>
+<p id="_102c8bb1-e4d6-4aeb-21a9-8e58206f8f2b">The OGC GeoSPARQL standard provides a foundational ontology and SPARQL extension for representing and querying spatial features, geometries, and topological relations on the Semantic Web. In practice, spatial datasets frequently describe geographic entities using established domain vocabularies—such as W3C Basic Geo (<tt>geo_pos</tt>), Schema.org, CIDOC CRM, PROV-O, Dublin Core Terms, or regional spatial data infrastructures—alongside or instead of core GeoSPARQL classes and properties.</p>
+
+<p id="_e26a1160-64a0-795f-1c83-f64b485073b4">This document defines the <strong>GeoSPARQL Vocabulary Alignments</strong>, a curated collection of declarative mapping axioms maintained by the OGC GeoSPARQL Standards Working Group (SWG). Rather than requiring data publishers to rewrite existing RDF graphs, these alignments establish formal semantic bridges between GeoSPARQL terms and external ontologies.</p>
+
+<clause id="_ce826da5-e651-e8e1-eee3-0c5124cd7348" obligation="informative">
+<title id="_f8edc181-174a-4448-ca69-762130436230">Purpose and Role of Vocabulary Alignments</title>
+<p id="_10cd574d-0726-3fdc-5c31-d09355d6799e">Providing standardized ontology alignments supports three primary interoperability patterns:</p>
+
+<ul id="_36908165-1341-8428-71cb-cba10cb619e0"><li><p id="_1acbc1bf-3990-91ad-e88b-e35f1b0bcec2"><strong>Automated Reasoning and Inference</strong>: OWL and RDFS axioms (<tt>owl:equivalentClass</tt>, <tt>owl:equivalentProperty</tt>, <tt>rdfs:subClassOf</tt>, <tt>rdfs:subPropertyOf</tt>) allow OWL/RDFS reasoners to infer GeoSPARQL types and spatial properties from existing domain triples automatically.</p>
+</li>
+<li><p id="_a42b3832-23cf-11f8-e018-669a48c8169e"><strong>Cross-Vocabulary Query Translation</strong>: Mapping relationships enable SPARQL query engines and middleware to rewrite or federate spatial queries across datasets modeled with different schemas.</p>
+</li>
+<li><p id="_e3f98c5e-1a82-ac95-aa75-eb6d7fd65914"><strong>Semantic Discovery and Mapping Clarity</strong>: SKOS mapping properties (<tt>skos:exactMatch</tt>, <tt>skos:closeMatch</tt>, <tt>skos:broadMatch</tt>, <tt>skos:narrowMatch</tt>, <tt>skos:relatedMatch</tt>) document conceptual correspondences where strict logical equivalence does not hold due to differing ontological commitments.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_47923f19-d6ac-6f8b-8f92-2da3854eaf5d" obligation="informative">
+<title id="_5e25cbf0-966e-e1b8-df9a-8f9cf4703812">Structure of This Document</title>
+<p id="_824f6481-73b5-e976-83e8-4ba92eb48a81">Each alignment module in this specification is generated directly from normative Turtle (<tt>.ttl</tt>) mapping files maintained in the OGC Geosemantics Semantic Resources repository. For every target vocabulary, this document provides:</p>
+
+<ol id="_8e24ed62-35f9-c34b-1fcd-34987da913e1" type="arabic"><li><p id="_2497c649-c996-e60a-8888-0dfd864f7f2a"><strong>Namespace Prefix Overview</strong>: A summary table of all RDF namespaces and prefixes referenced across the alignment modules.</p>
+</li>
+<li><p id="_cf0ef4cf-690e-249e-20ef-0a9cc505f933"><strong>Vocabulary Alignment Sections</strong>: Dedicated subsections detailing the source GeoSPARQL terms, alignment predicates, target vocabulary terms, and explanatory scope notes. == Scope</p>
+</li>
+</ol>
+
+<p id="_8b36a87f-5164-8d57-0148-060c955794a6">This OGC Community Standard specifies declarative vocabulary alignments between classes and properties of the OGC GeoSPARQL ontology and external RDF/OWL/SKOS vocabularies.</p>
+
+<p id="_9cc14a05-0e4a-3ec3-0f0a-b777af47981b">The scope of this document includes:</p>
+
+<ul id="_4ecedc97-6812-ab3b-a6b9-88c5a8dd34fa"><li><p id="_d22e24fb-3bba-f1f4-4c78-35a1a091945e">Canonical namespace bindings and vocabulary metadata for each GeoSPARQL alignment module;</p>
+</li>
+<li><p id="_e2dc4245-2b6b-5f75-0400-d2321a663495">Normative and informative mapping axioms expressed using RDFS, OWL, and SKOS predicates;</p>
+</li>
+<li><p id="_c65f3d29-7af4-58ff-5892-7836c5f48b72">Governance procedures for proposing and maintaining new vocabulary alignments via the OGC GeoSPARQL Standards Working Group.</p>
+</li>
+</ul>
+
+<p id="_ff5a115a-f7fb-a16d-e1ed-cc7cba13896c">This document does not modify the core GeoSPARQL ontology or redefine the semantics of external target vocabularies.</p>
+</clause>
+</clause><clause type="security" id="_b353b21e-ce45-dd92-6374-6d904414d872" obligation="informative">
+  <title id="_15c1b5ab-0df7-ce37-52e4-5e2c7fb0cffb">Security considerations</title>
+  <p id="_27b9161c-30cc-1c40-160d-30857d77fe44">No security considerations have been made for this document.</p></clause>
+</preface><sections>
+
+
+
+
+
+
+
+<clause id="_69d4dd0d-a9fb-625d-5893-393261a26af1" type="conformance" obligation="normative">
+<title id="_0345e05b-75c0-f954-9f69-1227c35e7d5e">Conformance</title>
+<p id="_d9160baa-296d-16ed-80ba-429445385088">This standard defines conformance requirements for RDF alignment graphs and reasoning profiles that implement the GeoSPARQL vocabulary mappings specified in this document.</p>
+
+<example id="_39d8ea36-6fce-468b-df16-e29c7554cea9" anchor="/conf/vocabulary-alignment">
+<name id="_9ffecd34-1231-dc11-aaf9-b54e4c7e2274">GeoSPARQL Vocabulary Alignment</name>
+<p id="_764d56d6-5884-9b21-bb53-d72db4590940"><strong>Target</strong>: RDF graphs and semantic middleware applying GeoSPARQL vocabulary alignments.</p>
+
+<p id="_62807019-9312-1dd6-2ff9-05aa46c95289"><strong>Requirement</strong>: <tt>/req/vocabulary-alignment/axiom-consistency</tt></p>
+
+<p id="_3503cab3-f519-da44-4b26-75d02aff94f2"><strong>Test method</strong>: Inspect the alignment graph and entailed triples to verify that:</p>
+
+<ol id="_9437b51f-554d-954a-0f48-3fc27c4341b6" type="arabic"><li><p id="_7f5cbb64-7d78-0f7b-dfc3-af724057f49a">All GeoSPARQL source terms use canonical IRIs within the <tt><link target="http://opengis.net"/></tt> or <tt><link target="http://opengis.net"/></tt> namespaces.</p>
+</li>
+<li><p id="_3ab2e1e9-1073-98ee-42a9-760282b468f0">Each mapping triple uses a recognized alignment predicate (<tt>owl:equivalentClass</tt>, <tt>owl:equivalentProperty</tt>, <tt>rdfs:subClassOf</tt>, <tt>rdfs:subPropertyOf</tt>, or a <tt>skos:*Match</tt> property).</p>
+</li>
+<li><p id="_a8bfe633-95bb-3ed1-a192-fca582a28658">Applying the RDFS/OWL alignment axioms to a valid source graph produces no logical inconsistencies under OWL 2 DL or RDFS entailment regimes.</p>
+</li>
+</ol>
+</example>
+</clause>
+
+
+
+<terms id="_ed7afaf4-6656-244c-8521-be5450455b55" obligation="normative">
+<title id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><p id="_8c49041f-8363-1e0b-0484-6e1046987489">This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+
+<p id="_7bbae1f8-9cf5-3d71-b33b-b85f9ba4c251">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+
+<p id="_548e409e-2890-5c36-8c0d-528166f290d6">For the purposes of this document, the following additional terms and definitions apply.</p>
+<p id="_928879d2-79ce-c333-598f-fe0b43c59799">This document uses the terms defined in <link target="https://ogc.org">OGC Policy Directives</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.</p>
+
+<p id="_0f50c843-87f7-88da-8425-b8bc86c6180c">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<term id="_3a2284e9-3262-89ff-803c-39645fca6655" anchor="term-Ontology-Alignment"><preferred><expression>
+<name>Ontology Alignment</name>
+</expression>
+</preferred>
+<definition id="_1c3ce6d2-bd01-b61f-c491-a1aa553f6d47"><verbal-definition id="_6b3be2e9-b55a-5288-859e-630cc5d5272c"><p id="_deb6f434-9150-cfd8-dc5d-dbcd03d2b094">set of correspondences between entities (classes, properties, or concepts) belonging to two or more distinct ontologies or vocabularies</p></verbal-definition></definition>
+ </term>
+
+<term id="_9c1f8577-721b-dc9e-2f7f-756c631d9b76" anchor="term-Equivalence-Axiom"><preferred><expression>
+<name>Equivalence Axiom</name>
+</expression>
+</preferred>
+<definition id="_eaff20c3-de2b-a01d-a8d7-0c3ca0175b3a"><verbal-definition id="_5c59242a-f123-b148-d4c7-ddaa2d56bc01"><p id="_7f3a471d-932f-e184-765e-3d6d7fdf0455">OWL statement (<tt>owl:equivalentClass</tt> or <tt>owl:equivalentProperty</tt>) asserting that two classes or properties share identical extensions</p></verbal-definition></definition>
+
+
+ <source status="identical" type="authoritative"><origin bibitemid="w3c-owl2" type="inline" citeas="W3C OWL 2"/></source></term>
+
+<term id="_94bb25fa-10d1-9d13-96dc-67afb95bdfe3" anchor="term-Subsumption-Axiom"><preferred><expression>
+<name>Subsumption Axiom</name>
+</expression>
+</preferred>
+<definition id="_dca6d54d-6a54-9418-1ebf-97250aac9437"><verbal-definition id="_3e4cc269-cf97-1a2a-cfe6-b4e5c20250fa"><p id="_d00aa8eb-c673-5fb3-72a2-653e40fce793">RDFS statement (<tt>rdfs:subClassOf</tt> or <tt>rdfs:subPropertyOf</tt>) asserting that all instances or pairs of a source term are also instances or pairs of a broader target term</p></verbal-definition></definition>
+
+
+ <source status="identical" type="authoritative"><origin bibitemid="w3c-rdf-schema" type="inline" citeas="W3C RDF Schema 1.1"/></source></term>
+
+<term id="_b74e4174-dda9-8859-6cac-cbe6c042b899" anchor="term-Conceptual-Mapping"><preferred><expression>
+<name>Conceptual Mapping</name>
+</expression>
+</preferred>
+<definition id="_1864ba2b-a769-f1cb-0a38-0c23b2d0868a"><verbal-definition id="_38a05e71-b23c-a43a-f188-3b4d6e396f2a"><p id="_eaaf4670-4566-e656-92b2-3fbbd61a3eb9">SKOS mapping assertion (<tt>skos:exactMatch</tt>, <tt>skos:closeMatch</tt>, <tt>skos:broadMatch</tt>, <tt>skos:narrowMatch</tt>, or <tt>skos:relatedMatch</tt>) indicating semantic similarity between concepts across distinct schemes without enforcing OWL logical entailment</p></verbal-definition></definition>
+
+
+ <source status="identical" type="authoritative"><origin bibitemid="w3c-skos" type="inline" citeas="W3C SKOS"/></source></term>
+</terms>
+
+<clause id="_7cd4e6f5-bd33-658e-0ae6-5a71d5a4ccac" obligation="normative">
+<title id="_14b54004-b015-1334-4959-1d92967d426c">Contributing New Alignments</title>
+<p id="_d922f239-1249-c2d1-12f0-4c88c391ec1b">The GeoSPARQL Vocabulary Alignments are maintained openly on GitHub by the OGC GeoSPARQL Standards Working Group in the <link target="https://github.com">OGC Geosemantics Semantic Resources repository</link>.</p>
+
+<p id="_d637f486-33ec-27da-1756-e937ab6a86b5">Community members and ontology maintainers may propose new vocabulary alignments or revisions to existing mappings by opening an issue at <link target="https://github.com/issues">https://github.com/issues</link> with the target vocabulary IRI, proposed Turtle mapping triples, and rationale for the chosen alignment predicates.</p>
+</clause>
+
+<clause id="_19359f8e-86e8-3a9c-1f0c-f9370a8e799e" obligation="normative">
+<title id="_c8ca54eb-5f61-805f-d1a2-c7ca1a8d2159">Vocabulary Alignments</title>
+<clause id="_a8f3c62d-2a7c-499c-33cb-97f722324888" obligation="normative">
+<title id="_ae738ff3-5fae-6267-257d-4899d6dddc70">Overview</title>
+<p id="_bb18b2bb-eaf7-e90b-2a75-25743a799020">This document specifies alignments between OGC GeoSPARQL and external spatial and domain vocabularies. The namespace prefixes used across the alignment mappings are listed in <xref target="table-alignment-namespaces"/>.</p>
+
+<table id="_2f8e0aea-8bd4-dd75-5852-1adb57956132" anchor="table-alignment-namespaces"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_42cd7e0c-ef06-e586-e409-47ecaff0f1de">Alignment: Namespaces</name>
+<thead><tr id="_e1005e8e-c3bf-2279-6a9a-49230d636b18"><th id="_7472c695-8d34-bc19-13ab-297f57a70a96" valign="middle" align="left">Prefix</th>
+<th id="_2a942065-aca2-7194-afab-1c8ecc03d2b6" valign="middle" align="left">Namespace IRI</th>
+</tr></thead>
+<tbody><tr id="_d1750a33-ba48-479a-0594-058d8efd7f5d"><td id="_63862f3f-440c-d7f4-8fa1-ba41d7889d00" valign="middle" align="left"><tt>as:</tt></td>
+<td id="_d6917b13-7ba1-166c-111a-6a47b8c56a9e" valign="middle" align="left"><link target="https://www.w3.org/ns/activitystreams#"><tt><link target="https://www.w3.org/ns/activitystreams#"/></tt></link></td>
+</tr><tr id="_4bbf308b-c481-40fa-9890-348e9a452072"><td id="_e12de846-35c2-1a03-d32d-d72169aef157" valign="middle" align="left"><tt>brick:</tt></td>
+<td id="_c23c15b1-2c84-c510-3ada-3cfa1b192d79" valign="middle" align="left"><link target="https://brickschema.org/schema/Brick#"><tt><link target="https://brickschema.org/schema/Brick#"/></tt></link></td>
+</tr><tr id="_38343de6-88aa-7cc1-8fda-44874286da8e"><td id="_3fa90556-972a-c4c5-6e7d-6bf4baea9c2b" valign="middle" align="left"><tt>cco:</tt></td>
+<td id="_753329f1-4415-abc1-1357-fbff10bbbe7f" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/"><tt><link target="https://www.commoncoreontologies.org/"/></tt></link></td>
+</tr><tr id="_5c7bc771-faf6-ed01-edff-165eb8d281a1"><td id="_3083b9ac-ba4f-7c77-9525-d445fb518181" valign="middle" align="left"><tt>cidoc:</tt></td>
+<td id="_f102b534-989e-0846-c6db-a57716b41c6b" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/"><tt><link target="http://www.cidoc-crm.org/cidoc-crm/"/></tt></link></td>
+</tr><tr id="_acfce5cd-d7cf-bf5e-d3a1-a0b4efeb7dbe"><td id="_8e8df9c1-3eab-dfd3-d220-02c2ab12e87c" valign="middle" align="left"><tt>csvw:</tt></td>
+<td id="_c61289db-bba4-f8c4-ae33-c3c908f6dc98" valign="middle" align="left"><link target="http://www.w3.org/ns/csvw#"><tt><link target="http://www.w3.org/ns/csvw#"/></tt></link></td>
+</tr><tr id="_e9b2d649-e140-1aa2-67c0-1da1b065f845"><td id="_b353945f-9418-ca70-50ae-37a455707aac" valign="middle" align="left"><tt>dc:</tt></td>
+<td id="_2fb96d53-68f7-a810-564b-cf58b5b4a90d" valign="middle" align="left"><link target="http://purl.org/dc/elements/1.1/"><tt><link target="http://purl.org/dc/elements/1.1/"/></tt></link></td>
+</tr><tr id="_3a5a52e6-0822-921d-0d2b-84fdecdcb85f"><td id="_5717c771-4c9d-5f92-e422-660320bb00dc" valign="middle" align="left"><tt>dcam:</tt></td>
+<td id="_fab4b4f2-8e2d-60e3-2857-3256efbb4316" valign="middle" align="left"><link target="http://purl.org/dc/dcam/"><tt><link target="http://purl.org/dc/dcam/"/></tt></link></td>
+</tr><tr id="_53b2f2e8-b501-67b9-6ffc-1ca1b95cc019"><td id="_3f5be627-51ea-5dc1-51a7-7bf50098d22c" valign="middle" align="left"><tt>dcat:</tt></td>
+<td id="_f285b521-1237-13a6-0ec8-e3f38b8f613f" valign="middle" align="left"><link target="http://www.w3.org/ns/dcat#"><tt><link target="http://www.w3.org/ns/dcat#"/></tt></link></td>
+</tr><tr id="_37518474-9dfd-ee1b-58e9-818705b3760c"><td id="_a756769e-c5ef-5565-7b51-d22080633c95" valign="middle" align="left"><tt>dcmitype:</tt></td>
+<td id="_c2f0e50c-fd7f-c88c-7ff0-f1ebae598a11" valign="middle" align="left"><link target="http://purl.org/dc/dcmitype/"><tt><link target="http://purl.org/dc/dcmitype/"/></tt></link></td>
+</tr><tr id="_a34f7e4b-8eb8-c192-bdd3-3705634131ea"><td id="_ecaa73ce-8e86-12c7-385d-83adfc3c5bc4" valign="middle" align="left"><tt>doap:</tt></td>
+<td id="_28c11001-8d27-3fd5-a4ba-8dfc9dcde4a9" valign="middle" align="left"><link target="http://usefulinc.com/ns/doap#"><tt><link target="http://usefulinc.com/ns/doap#"/></tt></link></td>
+</tr><tr id="_1fe9a469-75c8-86fe-afaa-e8cc5900a662"><td id="_616c790a-d66a-906f-2985-52be57646ba1" valign="middle" align="left"><tt>foaf:</tt></td>
+<td id="_5f1cf7c2-c01a-a5ac-43de-cfbeb979f8ae" valign="middle" align="left"><link target="http://xmlns.com/foaf/0.1/"><tt><link target="http://xmlns.com/foaf/0.1/"/></tt></link></td>
+</tr><tr id="_ff92e883-5afe-05d6-b4c5-7e6f8d2a397f"><td id="_817da0c1-edc8-4000-5805-dfa7902b5eea" valign="middle" align="left"><tt>geo:</tt></td>
+<td id="_952cd439-9c08-4ce8-31f8-02f5cd082c35" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link></td>
+</tr><tr id="_93d80557-55ef-e32e-96f1-dc6ceedd46e8"><td id="_a0047a8b-894a-3a87-0c5a-7e666802c5de" valign="middle" align="left"><tt>geom:</tt></td>
+<td id="_0cda9fe9-7516-30f2-4d93-5925c3ab09b0" valign="middle" align="left"><link target="http://geovocab.org/geometry#"><tt><link target="http://geovocab.org/geometry#"/></tt></link></td>
+</tr><tr id="_f30bb38f-db92-23a5-3f81-f856b259e4d3"><td id="_1e018041-260e-5119-0348-a1803099588a" valign="middle" align="left"><tt>gn:</tt></td>
+<td id="_570ddc82-9bd9-982c-28c9-73f785f4c89f" valign="middle" align="left"><link target="https://www.geonames.org/ontology#"><tt><link target="https://www.geonames.org/ontology#"/></tt></link></td>
+</tr><tr id="_1329620c-b1bb-ca4b-042e-f98b32db9f33"><td id="_73ac524a-18c7-a995-086e-745ab6d121c9" valign="middle" align="left"><tt>juso:</tt></td>
+<td id="_b2bb6003-83d5-5c64-16da-334b0668b73d" valign="middle" align="left"><link target="http://rdfs.co/juso/"><tt><link target="http://rdfs.co/juso/"/></tt></link></td>
+</tr><tr id="_852be3ff-77dc-fd07-5dde-b19e42e14ff3"><td id="_5f03fbc4-3c3e-43af-f8a3-1de7235095d7" valign="middle" align="left"><tt>locn:</tt></td>
+<td id="_1b04694e-d1ef-47c3-680b-8f61289dd152" valign="middle" align="left"><link target="http://www.w3.org/ns/locn#"><tt><link target="http://www.w3.org/ns/locn#"/></tt></link></td>
+</tr><tr id="_b4db51a2-f50e-f286-e33a-60a03bda7bdf"><td id="_e630a1d9-c254-00f9-a731-39b61ddd129d" valign="middle" align="left"><tt>ns1:</tt></td>
+<td id="_c6981a48-8dba-d063-111e-38bab4d3b425" valign="middle" align="left"><link target="http://linkedgeodata.org/meta/"><tt><link target="http://linkedgeodata.org/meta/"/></tt></link></td>
+</tr><tr id="_638dec4d-d6eb-0529-dc1f-a52b5f95213a"><td id="_8c5086e2-7cc0-4eb7-6c29-65db5a1cea4f" valign="middle" align="left"><tt>obo:</tt></td>
+<td id="_b81e772f-2f1d-6a3d-1a17-2c84e328ffb8" valign="middle" align="left"><link target="http://purl.obolibrary.org/obo/"><tt><link target="http://purl.obolibrary.org/obo/"/></tt></link></td>
+</tr><tr id="_131da4d9-e382-b224-8cd9-5c60984b6475"><td id="_23483102-c362-7648-c9a5-cdb8ec5a8a9f" valign="middle" align="left"><tt>odrl:</tt></td>
+<td id="_ec3d7915-ae27-cfe3-591c-01ee332a2d05" valign="middle" align="left"><link target="http://www.w3.org/ns/odrl/2/"><tt><link target="http://www.w3.org/ns/odrl/2/"/></tt></link></td>
+</tr><tr id="_386ba598-004c-3403-947d-7bf75c4a2a3c"><td id="_473139fa-bd55-45ef-3aeb-0277a1851af8" valign="middle" align="left"><tt>org:</tt></td>
+<td id="_7eb97f0a-40c2-80f8-5600-b437ca9b6d12" valign="middle" align="left"><link target="http://www.w3.org/ns/org#"><tt><link target="http://www.w3.org/ns/org#"/></tt></link></td>
+</tr><tr id="_f3d4c5f3-9a23-5648-c96a-093e1886f5d8"><td id="_32e03625-f539-445b-45b5-3107611b71bd" valign="middle" align="left"><tt>osmm:</tt></td>
+<td id="_f5c3cfd3-88ad-a252-0af7-9148ee62cdb5" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/"><tt><link target="https://www.openstreetmap.org/meta/"/></tt></link></td>
+</tr><tr id="_2c500838-0157-6fd3-ce3f-7028d7d2f22d"><td id="_f6a3d902-67f0-71ad-e653-8f31de2715cc" valign="middle" align="left"><tt>pos:</tt></td>
+<td id="_8be7bc19-b1e7-977c-2bd1-e82915786efe" valign="middle" align="left"><link target="http://www.w3.org/2003/01/geo/"><tt><link target="http://www.w3.org/2003/01/geo/"/></tt></link></td>
+</tr><tr id="_37adf09a-1f0f-5407-4e2f-af052916bc13"><td id="_3b18e862-6a71-614f-8abd-718d4c093b6d" valign="middle" align="left"><tt>prof:</tt></td>
+<td id="_79a11c41-6e0b-c4f8-12e6-6ed54af0ec09" valign="middle" align="left"><link target="http://www.w3.org/ns/dx/prof/"><tt><link target="http://www.w3.org/ns/dx/prof/"/></tt></link></td>
+</tr><tr id="_7a458e62-a887-9e4e-4daf-33086b7ee22f"><td id="_1d2c6291-ceee-9053-65d0-ef0f4e12bbcd" valign="middle" align="left"><tt>qb:</tt></td>
+<td id="_4bd004fd-96ab-4911-10ec-49aadd43e1a8" valign="middle" align="left"><link target="http://purl.org/linked-data/cube#"><tt><link target="http://purl.org/linked-data/cube#"/></tt></link></td>
+</tr><tr id="_342a2864-649e-917c-0d14-0c7eee69be25"><td id="_d57b8d59-015c-af26-ecd6-f2cc3d1bd115" valign="middle" align="left"><tt>schema:</tt></td>
+<td id="_dda6f223-72a7-92d7-7ba7-b69a5f6ff4b8" valign="middle" align="left"><link target="https://schema.org/"><tt><link target="https://schema.org/"/></tt></link></td>
+</tr><tr id="_7aadec94-b150-d3e0-24f8-a4f6168a22dd"><td id="_bd0b2989-81ec-94d8-eb95-783e63a4315a" valign="middle" align="left"><tt>sdo:</tt></td>
+<td id="_2e6c7de9-3315-c507-120a-a9cd1f1cb6cc" valign="middle" align="left"><link target="https://schema.org/"><tt><link target="https://schema.org/"/></tt></link></td>
+</tr><tr id="_46099e6a-1c71-e4d6-1f64-1931dac0cbcf"><td id="_c6619eb2-fe15-2248-ae16-08dc52d9955c" valign="middle" align="left"><tt>sf:</tt></td>
+<td id="_597e5985-5047-4b2d-2fe8-590beccb66b8" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#"><tt><link target="http://www.opengis.net/ont/sf#"/></tt></link></td>
+</tr><tr id="_a3b7c0c6-0db7-d77c-23c6-1f1da31f01a7"><td id="_048b64eb-8d15-0da9-84c4-e62a03b6f169" valign="middle" align="left"><tt>sh:</tt></td>
+<td id="_6b271911-2d5a-3b67-5b91-1bd8614dfaf3" valign="middle" align="left"><link target="http://www.w3.org/ns/shacl#"><tt><link target="http://www.w3.org/ns/shacl#"/></tt></link></td>
+</tr><tr id="_794828e2-ddf5-6d1f-5c5b-81f5d6c5f5e7"><td id="_49708958-ea87-51cc-5335-91f4b700dc44" valign="middle" align="left"><tt>sosa:</tt></td>
+<td id="_438508ad-2c37-c4a1-0950-119c68d22dd8" valign="middle" align="left"><link target="http://www.w3.org/ns/sosa/"><tt><link target="http://www.w3.org/ns/sosa/"/></tt></link></td>
+</tr><tr id="_23fc0def-aa0f-99c6-acde-1c82ea5e3e07"><td id="_b7aee287-985c-47b6-67d4-57e8dbdeb4a8" valign="middle" align="left"><tt>spatial:</tt></td>
+<td id="_83ae027e-09a6-000a-9e29-f967f4be8302" valign="middle" align="left"><link target="http://geovocab.org/spatial#"><tt><link target="http://geovocab.org/spatial#"/></tt></link></td>
+</tr><tr id="_ebd12d7e-6389-0c56-cffe-b14a2b70e33b"><td id="_ea7de9e3-1401-9e67-9d24-f851eee6eff8" valign="middle" align="left"><tt>spatialuk:</tt></td>
+<td id="_a6612c21-f52f-92a4-cef6-d406db2e130b" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"><tt><link target="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"/></tt></link></td>
+</tr><tr id="_c91bec01-be61-d564-768e-0270cd345264"><td id="_df53d053-0e06-c5ac-b22c-eecdb9b9e68f" valign="middle" align="left"><tt>spatialukgeom:</tt></td>
+<td id="_578c4ffb-cc28-1bac-431e-fdc7e72d7a00" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/geometry/"><tt><link target="http://data.ordnancesurvey.co.uk/ontology/geometry/"/></tt></link></td>
+</tr><tr id="_a7d8c8e5-b81e-d54f-417b-512f533aff8c"><td id="_0b60efa0-46a4-0ec7-d758-95a8e3184404" valign="middle" align="left"><tt>ssn:</tt></td>
+<td id="_056680ee-6adb-8342-20db-c4e7964d1c4b" valign="middle" align="left"><link target="http://www.w3.org/ns/ssn/"><tt><link target="http://www.w3.org/ns/ssn/"/></tt></link></td>
+</tr><tr id="_41954537-868a-cba4-eb34-d164d2b4be9b"><td id="_69b15965-256a-35e3-61a8-975a216a44ee" valign="middle" align="left"><tt>time:</tt></td>
+<td id="_5c6ef43e-4e83-fe8f-24a8-a62a400ff4fe" valign="middle" align="left"><link target="http://www.w3.org/2006/time#"><tt><link target="http://www.w3.org/2006/time#"/></tt></link></td>
+</tr><tr id="_cc94221c-cc74-cdd9-d6ec-5e56ae0b9585"><td id="_0b842c13-ed5d-5dbe-13f4-56deb51c905e" valign="middle" align="left"><tt>vann:</tt></td>
+<td id="_755e53cc-0405-9dd4-4463-9d8d4c91849a" valign="middle" align="left"><link target="http://purl.org/vocab/vann/"><tt><link target="http://purl.org/vocab/vann/"/></tt></link></td>
+</tr><tr id="_093e90c3-3286-6cf8-784a-26490912abeb"><td id="_521ead5b-0239-455e-bfe1-57ed9225d359" valign="middle" align="left"><tt>void:</tt></td>
+<td id="_e1452ab7-381f-40e5-d71e-4c9a36f1aa80" valign="middle" align="left"><link target="http://rdfs.org/ns/void#"><tt><link target="http://rdfs.org/ns/void#"/></tt></link></td>
+</tr><tr id="_0d6a5951-8be0-a40d-f00b-1f9d521cd9cd"><td id="_88fb90ba-38ad-071e-8e01-3a1ba40bd153" valign="middle" align="left"><tt>wd:</tt></td>
+<td id="_10755a86-b48a-0e9b-5ba5-ef13d94e4e4c" valign="middle" align="left"><link target="http://www.wikidata.org/entity/"><tt><link target="http://www.wikidata.org/entity/"/></tt></link></td>
+</tr><tr id="_f06f327b-cfcd-6bdf-14af-2c121422f59d"><td id="_c1b2be8c-87e2-3a6a-1dfa-537f14345ffa" valign="middle" align="left"><tt>wdt:</tt></td>
+<td id="_9f92b588-bd29-b189-92f4-50090bb915e6" valign="middle" align="left"><link target="http://www.wikidata.org/prop/direct/"><tt><link target="http://www.wikidata.org/prop/direct/"/></tt></link></td>
+</tr><tr id="_12f99cbf-0002-f5e4-2b14-356db1fce128"><td id="_86272340-9996-a5f0-74be-a7e4f7e98770" valign="middle" align="left"><tt>wgs:</tt></td>
+<td id="_bc4865fb-3e4f-6b9c-4eb6-61b7bd13a016" valign="middle" align="left"><link target="https://www.w3.org/2003/01/geo/wgs84_pos#"><tt><link target="https://www.w3.org/2003/01/geo/wgs84_pos#"/></tt></link></td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_58bfd146-eab3-6fe0-b278-0072e59e75db" obligation="normative">
+<title id="_105f0a1e-bf40-9cf3-a606-811c0649b4ee">METADATA</title>
+<p id="_554b43f0-7ab6-5286-69c4-64aeca9d2681">This section defines 0 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and  METADATA as specified in <tt>_metadata.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-metadata"/>.</p>
+
+<table id="_d034142a-b78b-d9d1-492c-d1719c88944e" anchor="table-alignment-metadata"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_c5852d5b-a2cf-5788-28ce-693f4bb19a6f">Alignment between GeoSPARQL and  METADATA</name>
+<thead><tr id="_38d5a0ab-cf23-1f12-a7c7-0a1c8be1859d"><th id="_a7f2ad96-9875-5c85-eaf4-d86c23cd0a24" valign="middle" align="left">Source Term</th>
+<th id="_ba334b0e-28ca-66b2-3d1a-df429c699773" valign="middle" align="left">Alignment Relation</th>
+<th id="_7ea13ef3-ad96-aeba-d637-2c5e9b74d238" valign="middle" align="left">Target Term</th>
+<th id="_9c37979f-1ade-ff19-0801-36ef771ce5db" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_9de5b037-7f5c-e30e-c1df-00b43e247230"><td id="_6c6591db-831f-bffd-0c16-115438910001" valign="middle" align="left"><em>No direct alignment triples found.</em></td>
+<td id="_3ffb08f4-7c39-f5a0-b697-de5b71e6476e" valign="middle" align="left">—</td>
+<td id="_3ab7db8b-15f2-ac52-f78b-9d1f74dcdd97" valign="middle" align="left">—</td>
+<td id="_13326b1c-582e-1ea9-a7de-358d39d5e947" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_4c5de7c7-4a2a-3f6f-6f7e-7fdb9b2fc750" obligation="normative">
+<title id="_b8b48e23-deec-1830-98d1-e3025716fac7">AS</title>
+<p id="_14fbf972-f707-0720-5976-c53dab8c33cc">This section defines 4 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and AS as specified in <tt>as.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-as"/>.</p>
+
+<table id="_687e5011-84ed-902b-5490-69db88aedc5f" anchor="table-alignment-as"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_4b54779d-7e0f-b554-c041-5f70114850b8">Alignment between GeoSPARQL and AS</name>
+<thead><tr id="_4faba0c2-1d32-24d7-c9be-4efec8f65630"><th id="_e2224914-cb06-39e7-8e44-f43e43029820" valign="middle" align="left">Source Term</th>
+<th id="_b051da55-db15-b71b-8d94-0b7fd5f73f72" valign="middle" align="left">Alignment Relation</th>
+<th id="_4c46f0db-5fa3-a774-c923-b0c07b3affc5" valign="middle" align="left">Target Term</th>
+<th id="_a8d6ae8a-bd1d-9124-66e8-6d17bef9ba42" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_c429eeaa-7365-5475-a07c-2c6eadd97263"><td id="_23c444eb-c2af-1530-5649-f8788af37286" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_68c372d1-6f57-4314-db7c-67bde5b532bd" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_effd632c-86b4-d8f2-0f9f-feaeec9a0641" valign="middle" align="left"><link target="https://www.w3.org/ns/activitystreams#Place"><tt>as:Place</tt></link></td>
+<td id="_9b4e31af-e834-8e73-b0e0-8d0e7cff34a6" valign="middle" align="left">—</td>
+</tr><tr id="_dfbfe1d7-9dfe-6894-a8ca-3e09de8551c0"><td id="_d4f95c6e-5c34-a0b3-b19a-4570df5f7915" valign="middle" align="left"><link target="https://www.w3.org/ns/activitystreams#accuracy"><tt>as:accuracy</tt></link></td>
+<td id="_5c8d28b2-e3f5-c8f6-b00e-6b3ac0d24c4f" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_2a2d862a-dcd7-cb55-5681-390968b2da81" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasSpatialAccuracy"><tt>geo:hasSpatialAccuracy</tt></link></td>
+<td id="_7075466b-454a-4a85-b199-04b62d5d5fcc" valign="middle" align="left">—</td>
+</tr><tr id="_7204e817-094e-8cb4-6062-9a06749c3e7b"><td id="_0ff7a2fe-98bb-1e6f-9ac1-7b26ae21b215" valign="middle" align="left"><link target="https://www.w3.org/ns/activitystreams#latitude"><tt>as:latitude</tt></link></td>
+<td id="_2bc6f8e1-ab39-7398-3d62-fd9294cdebb5" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_d117f838-6408-d7a9-14e7-468e900e722a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link></td>
+<td id="_2b8f61bf-939c-9a15-c2d0-1a6c332e90f1" valign="middle" align="left">—</td>
+</tr><tr id="_b0e101be-3062-35e5-c615-c0eed97c74cf"><td id="_c8f76446-7a40-b9aa-675c-4ae3465c4106" valign="middle" align="left"><link target="https://www.w3.org/ns/activitystreams#longitude"><tt>as:longitude</tt></link></td>
+<td id="_9c89c7e6-b5b7-69ee-54bc-eb57fb580ca3" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_1ffa6d6f-8818-d820-58a8-4dce55941dde" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link></td>
+<td id="_8b273d1b-6568-5ad8-f0ba-39af6936c5f4" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_7108cf8b-0e2b-f99a-888d-d3e82387cd11" obligation="normative">
+<title id="_bd0b7036-2095-b4c2-007a-fe9e31f30a0d">BFO</title>
+<p id="_9b141c09-259e-96eb-61a3-1b9aa0cf658a">This section defines 18 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and BFO as specified in <tt>bfo.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-bfo"/>.</p>
+
+<table id="_1c3091a3-b419-da64-c07e-a2e176e4f9b2" anchor="table-alignment-bfo"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_15fe0740-1c35-6919-1120-bfeca15da09e">Alignment between GeoSPARQL and BFO</name>
+<thead><tr id="_32015cc9-15b6-66a6-2065-e8553375bb9d"><th id="_5015fcca-64e8-7fde-c3db-b0440162883d" valign="middle" align="left">Source Term</th>
+<th id="_cb3dfec1-045f-f6f3-62a2-0d2183286c2e" valign="middle" align="left">Alignment Relation</th>
+<th id="_9552911e-b9c5-0339-2292-a363ee659445" valign="middle" align="left">Target Term</th>
+<th id="_1cf64e7f-3f51-622a-b548-8427e0383c0c" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_00978221-9fc5-42ca-6f51-75a057661858"><td id="_86e96f8b-7dbf-a21c-661b-fe56b2ff2dfa" valign="middle" align="left"><link target="http://purl.obolibrary.org/obo/BFO_0000066"><tt>obo:BFO_0000066</tt></link></td>
+<td id="_45055a9d-2131-6368-211f-6ea65842cc0e" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_ccbf6535-8837-3f39-d93b-362fc9926b90" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_157e3312-0acd-e9e1-44e1-56ecf6274acf" valign="middle" align="left">—</td>
+</tr><tr id="_b602bc51-998f-ad70-6056-b474ffa40f80"><td id="_e4dddcba-2df4-b777-b698-c64f2b8e2a4a" valign="middle" align="left"><link target="http://purl.obolibrary.org/obo/BFO_0000171"><tt>obo:BFO_0000171</tt></link></td>
+<td id="_7ba1862f-3d89-4d88-ba28-c68decaee87e" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_6505d6e2-ba26-0174-3e20-3dbc1197144c" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_24f15982-0615-0766-f911-87c2712f4a8e" valign="middle" align="left">—</td>
+</tr><tr id="_2afe7a70-24fd-61e6-5f29-1ae9b50c66d9"><td id="_e0eb0c8f-0a5c-c4a9-1b5b-2d9871d4517b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_2173c27e-220f-dad5-4620-9079bf158bf3" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_93a2e84d-2607-9d01-2e50-d6390d9e69e8" valign="middle" align="left">nc212efea1d4443f1ab9ebeb56627e1b3b1</td>
+<td id="_b5d97f84-aea7-30fb-8c21-16acffbbc3f2" valign="middle" align="left">—</td>
+</tr><tr id="_37a89db1-1cc8-df53-bb60-78d0f67cd647"><td id="_9a349626-69d0-0be1-6b5b-e21505324434" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_86d0f14a-e0b2-43aa-ec6f-a4f1ccd4b7ff" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_af655abe-7021-93ee-ec13-64333bebb54a" valign="middle" align="left"><link target="http://purl.obolibrary.org/obo/BFO_0000031"><tt>obo:BFO_0000031</tt></link></td>
+<td id="_c0f05a93-d70d-6478-c8cd-6dfb445a39ef" valign="middle" align="left">—</td>
+</tr><tr id="_e7c5af76-47c7-744d-c9c8-12bed7b5d3b2"><td id="_f550d503-16dc-da4d-a404-3bfca6405e70" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_08bc4a4c-1aa5-b6b3-6a47-20b59c808a4f" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_a7e22587-421b-fe6b-7370-f864e84b6c28" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00000853"><tt>cco:ont00000853</tt></link></td>
+<td id="_f674ae54-8f0d-909a-5a9c-8f9dd8a51d75" valign="middle" align="left">—</td>
+</tr><tr id="_cadda45f-b4ce-987f-664f-8b99f2b65a5d"><td id="_cefbc754-2c29-1fb5-4b2e-913eec78a063" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#SpatialObject"><tt>geo:SpatialObject</tt></link></td>
+<td id="_f3bdc45d-5459-f5f9-78d2-f3b72f6fbb08" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_51ec7dc7-ab73-05be-03bd-3256840b93f6" valign="middle" align="left"><link target="http://purl.obolibrary.org/obo/BFO_0000001"><tt>obo:BFO_0000001</tt></link></td>
+<td id="_80a887d4-6976-c506-14a2-db33afe7f9cd" valign="middle" align="left">—</td>
+</tr><tr id="_9ea32a44-ca7a-be60-43b1-39e6e626008e"><td id="_a4c522cb-30fa-dc5f-742e-a7cc92dc22d7" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasGeometry"><tt>geo:hasGeometry</tt></link></td>
+<td id="_57dca698-14f2-837a-a0d3-2eb7a8169e21" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_685179af-2a37-06fb-10eb-b090e496e06b" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001917"><tt>cco:ont00001917</tt></link></td>
+<td id="_c98ebb60-f6df-ca43-296a-556087f9ea13" valign="middle" align="left">—</td>
+</tr><tr id="_0c271667-1c9f-22a1-cd09-c429569cc047"><td id="_077dfd5a-0df4-c29a-4d74-79130e5467f7" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link></td>
+<td id="_861d5e60-5daf-d448-e678-48d291f5327f" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_e3cd1453-227a-8448-adeb-adae2119b7cf" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#topDataProperty"><tt>owl:topDataProperty</tt></link></td>
+<td id="_4cd3354a-c439-c199-4074-afb3fb8a0348" valign="middle" align="left">—</td>
+</tr><tr id="_fdd1ce24-0a6b-d851-4907-edaae7c5db60"><td id="_5999681a-5b9b-48d1-6ec4-6990a55cdfce" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001791"><tt>cco:ont00001791</tt></link></td>
+<td id="_370ccfaf-e8f0-7bcc-82be-f0bda98eb180" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_effe95fc-fc6f-eb5e-b1c6-c87080f962ab" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8eq"><tt>geo:rcc8eq</tt></link></td>
+<td id="_e4c8dc81-2e57-275f-cdf7-ecbf7773bce7" valign="middle" align="left">—</td>
+</tr><tr id="_81ec625e-50df-6b81-d0fe-243457b2eee5"><td id="_accfcfd2-cb1d-cfaf-64a7-eba4b5f62bda" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001796"><tt>cco:ont00001796</tt></link></td>
+<td id="_5b2191d6-80e8-38fb-0979-e765743df19a" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_a43a936d-fb0d-b180-4f0f-7e6acf5e54ac" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8tpp"><tt>geo:rcc8tpp</tt></link></td>
+<td id="_950e97ae-968f-700d-6c54-fa7bf90a2a40" valign="middle" align="left">—</td>
+</tr><tr id="_fffcf67e-de87-6d01-4a41-7f97992285c1"><td id="_1ea99f35-4f7e-0d09-1714-6974cef407a8" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001797"><tt>cco:ont00001797</tt></link></td>
+<td id="_e7cee23f-b0de-b75e-4e7f-ff469249ace9" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_bcbccfef-7ecf-2169-d2b1-a9fdd927e276" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8po"><tt>geo:rcc8po</tt></link></td>
+<td id="_94517c16-53f5-b6aa-ca36-4d3142e798a3" valign="middle" align="left">—</td>
+</tr><tr id="_255b6166-c4f0-b6a9-b45e-56ed76d8b5a2"><td id="_5c39fbee-97a0-65a9-6097-7905a505cca3" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001827"><tt>cco:ont00001827</tt></link></td>
+<td id="_8fecb44f-0d0d-7df2-e773-fb77ca44c4e5" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_4c2c9c0e-9504-7b29-ffb6-99b7c6364d4d" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ntpp"><tt>geo:rcc8ntpp</tt></link></td>
+<td id="_a60ba3af-197d-dfae-5daa-f516e9316713" valign="middle" align="left">—</td>
+</tr><tr id="_ea98c9fa-fd15-207a-8ee9-66318ed2174e"><td id="_06a08d1b-c64a-57e1-0ca6-58a4c61f436c" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001838"><tt>cco:ont00001838</tt></link></td>
+<td id="_fb96ebae-73a8-ff43-dba1-122257756227" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_e7b069a0-a754-fc39-822d-87611af6f6f4" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8dc"><tt>geo:rcc8dc</tt></link></td>
+<td id="_109aafd6-8963-5ea2-70f2-2cfe72189b35" valign="middle" align="left">—</td>
+</tr><tr id="_bc0c846a-f4f2-fb20-3437-1e1526ca74ea"><td id="_b9b3e9ad-0ac4-5d28-5039-58b152087530" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001855"><tt>cco:ont00001855</tt></link></td>
+<td id="_38cbcc50-0650-6c16-9423-10078e50662a" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_7609e7b0-9886-a629-85f0-30465109a1c3" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_452fb24e-b892-e00b-6463-389bde2cd9fc" valign="middle" align="left">—</td>
+</tr><tr id="_f513687b-53ea-95be-cb00-dfcf33d504a6"><td id="_b1ac3ad7-524e-0ad4-19d4-8bbf02027372" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001909"><tt>cco:ont00001909</tt></link></td>
+<td id="_90e1034f-d6f4-23fe-cdb1-1aa9a32677d8" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_635c7989-738f-94ba-fdf9-f8d7d5128c6b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8tppi"><tt>geo:rcc8tppi</tt></link></td>
+<td id="_058861b1-9d54-df71-e056-98b57a300e58" valign="middle" align="left">—</td>
+</tr><tr id="_bf0a458d-ea31-89ce-11c4-f397f5e48f79"><td id="_c0dedc8e-3d18-9bdf-e8ed-8ff8e51bc246" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001931"><tt>cco:ont00001931</tt></link></td>
+<td id="_57203bf3-9d43-986e-6b96-c3aec30879f3" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_4cc067a8-71fb-8541-f267-cdfb91556d70" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ec"><tt>geo:rcc8ec</tt></link></td>
+<td id="_e77e17dd-37a8-adf2-6d37-e5bb804d853f" valign="middle" align="left">—</td>
+</tr><tr id="_c009b359-9d5f-285f-0e22-1c900b8149e8"><td id="_9c420400-7927-847f-2a06-8dfed8fa51d5" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001944"><tt>cco:ont00001944</tt></link></td>
+<td id="_6ab6b68b-9af8-5e02-9635-0ae7ada763c8" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_88047767-9f65-15b9-0080-0bea0b272926" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_4cf42336-ca4b-c710-ef30-e1fcae7f3972" valign="middle" align="left">—</td>
+</tr><tr id="_fa31748c-89c9-b44a-e14b-c3f7c2626bb9"><td id="_e0762047-3047-e8b7-e394-9cc094c83c43" valign="middle" align="left"><link target="https://www.commoncoreontologies.org/ont00001989"><tt>cco:ont00001989</tt></link></td>
+<td id="_7c81b5a7-92a5-cded-f008-a583457bc1e7" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_ba0fa3b1-18bc-c43d-3102-1b56ed3af4d1" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ntppi"><tt>geo:rcc8ntppi</tt></link></td>
+<td id="_ac35f8da-0654-994e-fbc8-2b61cd6515df" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_b6c4739c-7acb-c397-111b-2ef3bcef82ca" obligation="normative">
+<title id="_bd9a50ec-7ede-7557-6fc8-25a2cc63e11a">CRMGEO</title>
+<p id="_68a95fea-f53f-b498-7bec-c288e2be89fb">This section defines 8 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and CRMGEO as specified in <tt>crmgeo.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-crmgeo"/>.</p>
+
+<table id="_0dbd1b48-a82a-5868-f8e3-7bb757d703db" anchor="table-alignment-crmgeo"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_f9babdd8-9572-efab-e269-9f7d72194328">Alignment between GeoSPARQL and CRMGEO</name>
+<thead><tr id="_ef478e57-ed9d-49f4-2b36-bf34df1be5f7"><th id="_4ec185fa-626a-61e4-9759-9b3a136c23a5" valign="middle" align="left">Source Term</th>
+<th id="_437c3083-331c-75c9-ed7e-d11fbd76e06b" valign="middle" align="left">Alignment Relation</th>
+<th id="_d6bf8eea-75f9-ef88-5f13-e8f0ebea2fe3" valign="middle" align="left">Target Term</th>
+<th id="_9684c0a4-e08f-e1bb-c572-c64b78b525de" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_a8e343b4-583b-5e73-f491-12b533ce879b"><td id="_72bea339-200b-f091-75b2-5990c443059a" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/SP10_DeclarativeTimeSpan"><tt>cidoc:SP10_DeclarativeTimeSpan</tt></link></td>
+<td id="_eabc7de7-b20e-94cf-9ef1-aeaa0608f732" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_9202c095-3f26-54aa-9792-d3a28885c531" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_9c1b5ee8-cd21-fa1d-e26b-81f527b6c270" valign="middle" align="left">—</td>
+</tr><tr id="_1b9379ba-9ad5-e31e-3132-5f527494c284"><td id="_f57943c5-d0de-a9ec-f4dc-8f8d41e074cc" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/SP14_TimeExpression"><tt>cidoc:SP14_TimeExpression</tt></link></td>
+<td id="_95d7a778-c562-47d5-f7e5-c868358660d2" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_dc7f6663-eaae-ad17-b559-422f15cf03d9" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_ebfa5613-ad12-7714-a6ec-42752aeecc5d" valign="middle" align="left">—</td>
+</tr><tr id="_e2bbef0a-9556-726e-2d5d-5c4612954c84"><td id="_d183b916-56df-4639-f5ad-aaa6f3411ae6" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/SP15_Geometry"><tt>cidoc:SP15_Geometry</tt></link></td>
+<td id="_19cf2ec2-e26c-ec41-c9cc-d5de4e7bf6f6" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_1cfcbe9d-53df-d494-16d0-75af5aa0f82c" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_084950b7-4929-34b3-fdf5-d3e6e06d724d" valign="middle" align="left">—</td>
+</tr><tr id="_b76283d6-8034-2b17-bbaa-5d670aa6c688"><td id="_6bbeecab-3d55-9185-1709-7aebb7866d2a" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/SP1_PhenomenalSpaceTimeVolume"><tt>cidoc:SP1_PhenomenalSpaceTimeVolume</tt></link></td>
+<td id="_c39e2ddd-e24d-9849-deb2-5e7ad2973e08" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_63d92a2f-5f54-0663-edfb-3d3378e7a00a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_251030bb-038b-bf99-d4a9-5794c7e7a668" valign="middle" align="left">—</td>
+</tr><tr id="_a1b19e3f-6bd7-f8e9-fe4a-d157508d5381"><td id="_5a2a3a5c-89e9-ba8c-979b-2995834d24ab" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/SP2_PhenomenalPlace"><tt>cidoc:SP2_PhenomenalPlace</tt></link></td>
+<td id="_66249943-2619-4b72-b152-3501b307c708" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_c8f455b7-b7da-db92-f77c-3f68e486eda2" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_70277fa4-5c74-4c81-cd32-95fab9a2e0eb" valign="middle" align="left">—</td>
+</tr><tr id="_ba9d8495-71b5-1993-c86d-afa94489786d"><td id="_c133feef-5096-a788-b927-eed21adc2d46" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/SP5_GeometricPlaceExpression"><tt>cidoc:SP5_GeometricPlaceExpression</tt></link></td>
+<td id="_8c35aa40-36da-ac1c-95b8-e218cf6e1eb6" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_5620fff6-8a85-cffa-dfe7-0e93322cf1c6" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_25880c32-db1b-fd2c-73de-40d7392ea66e" valign="middle" align="left">—</td>
+</tr><tr id="_50eac768-851a-02e8-01af-d642de21c8cd"><td id="_de2c9013-4cd4-b37b-eedf-ae4007ea1b56" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/SP6_DeclarativePlace"><tt>cidoc:SP6_DeclarativePlace</tt></link></td>
+<td id="_a872f8d5-29c3-bbba-2af1-d55a82bbbf5c" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_9ec34b19-119e-dbef-fd78-e6ce8e7e4b71" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_604c8367-9c5e-7f5a-4445-02a1d40c990e" valign="middle" align="left">—</td>
+</tr><tr id="_c504b3d4-7cc9-edf8-b719-948bf5269c24"><td id="_0d43c75d-327f-7b68-57b0-2461e0473a5d" valign="middle" align="left"><link target="http://www.cidoc-crm.org/cidoc-crm/SP7_DelcarativePlace"><tt>cidoc:SP7_DelcarativePlace</tt></link></td>
+<td id="_4e215a02-e9ed-dea9-4553-902bd5f7c361" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_d8d93d71-c4f6-80c0-c9bb-d1c1bc214a82" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_e7056d71-7b05-c7c4-9807-d02c4cecca98" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_85cfdc4e-c97f-0000-4f71-bc94dc07fb2c" obligation="normative">
+<title id="_fcc18e47-de3a-744d-c7d3-04d07a20ac21">DCMI</title>
+<p id="_27f652d9-5598-5dfd-9314-1b29993d65e1">This section defines 2 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and DCMI as specified in <tt>dcmi.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-dcmi"/>.</p>
+
+<table id="_23b5ebcc-83a1-d414-3796-2ec25760c4a0" anchor="table-alignment-dcmi"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_1462b18c-6c2f-610a-14ce-2847298fd0a4">Alignment between GeoSPARQL and DCMI</name>
+<thead><tr id="_7a6f4efa-7fe9-8b85-a4c2-d4c2a441b7ce"><th id="_ccf4dbb4-bca1-01d2-59b3-f13681aebe4b" valign="middle" align="left">Source Term</th>
+<th id="_6b8960e1-2cf3-0d04-28a4-7fec195e254f" valign="middle" align="left">Alignment Relation</th>
+<th id="_4cf00033-1fcb-ce37-ea0a-5cf93ac293d9" valign="middle" align="left">Target Term</th>
+<th id="_dfb6ae15-8a4b-57a2-9531-df7607bb0c7a" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_2ef247c7-35ba-f027-8a56-0c0761f89c33"><td id="_1951af69-20de-2d5c-659b-48f0aa77f9b5" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_d1c87932-e823-4142-e3fb-ccde10e0a7b9" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_9a9eaf94-e00a-f468-caf5-08242b9f5572" valign="middle" align="left"><link target="http://purl.org/dc/terms/Location"><tt>dcterms:Location</tt></link></td>
+<td id="_c8810bed-6505-582b-268c-b925bdc11065" valign="middle" align="left">—</td>
+</tr><tr id="_f8728361-da0a-31a8-1f9b-31ca37a4c9bd"><td id="_b3ed4e4a-7f86-df12-50ca-2602d18a3c5b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasGeometry"><tt>geo:hasGeometry</tt></link></td>
+<td id="_2b40455d-8bd3-2410-7a9d-0ff38bc01829" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_759f98df-1a21-4cdc-d72b-706eb68e4e0c" valign="middle" align="left"><link target="http://purl.org/dc/terms/spatial"><tt>dcterms:spatial</tt></link></td>
+<td id="_7bee76d7-be3d-a998-5a9d-414957aa9bb3" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_3d06d46e-95d1-0c12-cf3d-cb6bbcb95f11" obligation="normative">
+<title id="_7c7aedc6-6e59-3783-3fb3-a19b786cf82a">GEONAMES</title>
+<p id="_217e1e52-93ea-5216-8fa6-92a26013adce">This section defines 6 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and GEONAMES as specified in <tt>geonames.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-geonames"/>.</p>
+
+<table id="_6bb5bd60-f15b-7f3c-a710-dad58846cfd1" anchor="table-alignment-geonames"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_cf8142bd-b84e-6146-bf0e-4df9d236b1cb">Alignment between GeoSPARQL and GEONAMES</name>
+<thead><tr id="_4ec1c909-7d4b-7214-a960-703132d00cf8"><th id="_e558c15a-e515-0269-f558-4c02773b8fbe" valign="middle" align="left">Source Term</th>
+<th id="_35baf952-edc8-90b2-42ae-77fd3a031edf" valign="middle" align="left">Alignment Relation</th>
+<th id="_c65cab7d-b3e1-2c3b-81cb-18decf1258b2" valign="middle" align="left">Target Term</th>
+<th id="_1941a02e-39f5-ddd7-1a95-1c0bad074c90" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_79724d55-44e3-ac29-7b06-b24139ded121"><td id="_8d65587e-ca68-4a90-e342-f306e805f2b0" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_074d6272-2a64-eb03-031c-e9a3361611e1" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_614e25ca-aa41-05d4-8f59-05a86b2b61e3" valign="middle" align="left"><link target="https://www.geonames.org/ontology#Class"><tt>gn:Class</tt></link></td>
+<td id="_667e8a99-1111-74f2-0d45-4bb48657bd38" valign="middle" align="left">—</td>
+</tr><tr id="_e1275af8-a20f-f6f5-2136-c84b94b3f71b"><td id="_5c1be709-881e-a674-a20a-7491245d935e" valign="middle" align="left"><link target="https://www.geonames.org/ontology#Feature"><tt>gn:Feature</tt></link></td>
+<td id="_d39000cc-50cf-b9ec-739e-ccd4af32e540" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_4738ff3c-4c0f-e955-91b0-4c20730126a9" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_06936484-2471-7f5e-12dc-b456f090194d" valign="middle" align="left">—</td>
+</tr><tr id="_29c8f9b2-b1a6-0978-65ce-62dabff90705"><td id="_26ba9c6d-a563-7eb9-3edf-8eab8e9dddee" valign="middle" align="left"><link target="https://www.geonames.org/ontology#GeonamesFeature"><tt>gn:GeonamesFeature</tt></link></td>
+<td id="_9f121f0b-2d07-9635-4c59-f1f9ef9910b3" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_dc9d4d39-64ce-f210-e7b0-548d6657f3f3" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_9c41c913-e712-f2c2-402f-0aca25b33e50" valign="middle" align="left">—</td>
+</tr><tr id="_09a5872a-4e2e-2709-a1e8-1b969c535fc1"><td id="_46b831b0-a3ba-e52b-668f-93b79e3f3c80" valign="middle" align="left"><link target="https://www.geonames.org/ontology#locatedIn"><tt>gn:locatedIn</tt></link></td>
+<td id="_34297cce-bb9d-080b-a4a7-faa55901f683" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_88490032-f41f-8cbc-e8de-0e33bffa576b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_9a01b004-2071-ecde-49cb-07a4c63eac0f" valign="middle" align="left">—</td>
+</tr><tr id="_7956c92f-4b48-3a62-025c-55a1120eded7"><td id="_34aab2ee-5fd0-adac-4f53-14e8509c6750" valign="middle" align="left"><link target="https://www.geonames.org/ontology#nearby"><tt>gn:nearby</tt></link></td>
+<td id="_43bc77b9-1828-0376-25c1-27e2dbd86b56" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_d29ee05e-3ac3-746c-72eb-ad6627aad6c0" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfDisjoint"><tt>geo:sfDisjoint</tt></link></td>
+<td id="_4c80aec9-92c9-24d2-8990-e8e16a1096db" valign="middle" align="left">—</td>
+</tr><tr id="_2c30b27d-0271-f08f-c863-0ed9ad1f5abc"><td id="_c166e73d-7b4e-2421-2122-2511e55fd5cb" valign="middle" align="left"><link target="https://www.geonames.org/ontology#neighbour"><tt>gn:neighbour</tt></link></td>
+<td id="_4b3ec587-faeb-0f9a-e2a1-096ff1cc5883" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_cb6ecdd3-56c5-2637-367b-acdae83721a7" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfTouches"><tt>geo:sfTouches</tt></link></td>
+<td id="_fc599f60-403b-adff-a688-8055e2c73df1" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_296826f2-57ca-a0f0-68eb-22cc8769f378" obligation="normative">
+<title id="_e97f6715-d94e-1227-edea-53af49e8b63f">IDO</title>
+<p id="_47141515-23cd-ce81-cf93-152dda5cfc0c">This section defines 0 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and IDO as specified in <tt>ido.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-ido"/>.</p>
+
+<table id="_f4e36bf9-f6d6-b51e-9285-d859d1804d3b" anchor="table-alignment-ido"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_90dcadcf-d6dd-a906-1937-b752ef7e45cc">Alignment between GeoSPARQL and IDO</name>
+<thead><tr id="_921300fa-0a1d-32b1-ec40-d6d0da24649d"><th id="_cdd23b69-223e-832e-5402-601bc1aa44e9" valign="middle" align="left">Source Term</th>
+<th id="_81bcece8-7578-79ea-ae50-4daea807cb8d" valign="middle" align="left">Alignment Relation</th>
+<th id="_a76d7fbd-75f3-8d7b-ad29-9099508decc5" valign="middle" align="left">Target Term</th>
+<th id="_c5798efb-bf08-aa35-af9b-e1d36c561faa" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_f34c94e6-299c-56fa-f504-8f7fb48b942a"><td id="_657284fd-b1cc-c637-abb5-50c48eba5a3d" valign="middle" align="left"><em>No direct alignment triples found.</em></td>
+<td id="_0a8160fa-fadc-233b-8731-e73561d80633" valign="middle" align="left">—</td>
+<td id="_8cc62c6b-e7b9-9271-01ea-17b6e9233d42" valign="middle" align="left">—</td>
+<td id="_646d4ffd-02f9-82c9-6165-16aa693cb5e5" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_9bf28ac7-bf9b-97d9-1388-f72d51b5bbf7" obligation="normative">
+<title id="_2e66fc0b-328c-0338-11c6-0ca69fcb9093">JUSO</title>
+<p id="_774fc418-40f0-5d5b-2dd7-5ec9811e4539">This section defines 8 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and JUSO as specified in <tt>juso.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-juso"/>.</p>
+
+<table id="_86b1b17d-e938-e670-8bac-292def0f0e39" anchor="table-alignment-juso"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_1367ab79-6f88-c0d2-6902-333c92561cea">Alignment between GeoSPARQL and JUSO</name>
+<thead><tr id="_612f36cb-5b23-e5e1-e381-c4da38489620"><th id="_2e1203f5-3861-47bc-e403-b2869380cd58" valign="middle" align="left">Source Term</th>
+<th id="_1a127373-83af-a728-0dc5-c2e0ae7fed8e" valign="middle" align="left">Alignment Relation</th>
+<th id="_f29fd058-1514-3a53-7c8d-605de315961c" valign="middle" align="left">Target Term</th>
+<th id="_f4212e46-65df-be0f-f9c6-19a2e0ff17de" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_2599abd7-4e48-667a-0be7-191350ea9ee5"><td id="_fc50dc53-53a0-0c30-2584-ada80ba9c356" valign="middle" align="left"><link target="http://rdfs.co/juso/Feature"><tt>juso:Feature</tt></link></td>
+<td id="_2815e414-087d-8cf5-5490-ae04251a862d" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_61917eb9-69a1-c5b4-eb8b-5ac7fee2fadd" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_2084c796-9036-f01e-ccc9-19ac14699ce9" valign="middle" align="left">—</td>
+</tr><tr id="_4b69c550-c0a7-b65c-faf8-a4aff8167c30"><td id="_2776b930-1a3c-10a3-bc6e-5b4dbcecd78c" valign="middle" align="left"><link target="http://rdfs.co/juso/Geometry"><tt>juso:Geometry</tt></link></td>
+<td id="_f4de9ab1-3d8b-cba9-1ef8-0bbce9152746" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_63b92c45-2d30-9e45-6134-5df231d5609a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_1b8bf67f-8cdb-1e7c-8951-5ed32dff7c5d" valign="middle" align="left">—</td>
+</tr><tr id="_212c606d-1be2-def5-f191-74d28006d60d"><td id="_03997674-ac1f-f39c-ccb9-c0d9d64d60fc" valign="middle" align="left"><link target="http://rdfs.co/juso/Point"><tt>juso:Point</tt></link></td>
+<td id="_e5b5f8ca-195e-b7eb-da1a-a11a914c9f68" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_cdad93b2-56c2-5603-c002-323feb14dfaf" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#Point"><tt>sf:Point</tt></link></td>
+<td id="_a749960a-25ac-49ca-b220-0e86596b121c" valign="middle" align="left">—</td>
+</tr><tr id="_c75fa8c4-3044-6034-560c-74a2901e2fa3"><td id="_fe04e0a6-36af-748d-c3db-fdb956bc7902" valign="middle" align="left"><link target="http://rdfs.co/juso/SpatialThing"><tt>juso:SpatialThing</tt></link></td>
+<td id="_e9dc35eb-5c15-4dfa-01b1-bdfdc02f1d4d" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_ef5164fe-d4d8-3a78-4189-038ecf690c05" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#SpatialObject"><tt>geo:SpatialObject</tt></link></td>
+<td id="_0e93ebf4-a841-6135-a19d-af3fa2d649a7" valign="middle" align="left">—</td>
+</tr><tr id="_a047785d-7c5d-a56e-d93a-a0136a4b7885"><td id="_3bad8597-a2b6-8a3c-e762-6284960ccb0c" valign="middle" align="left"><link target="http://rdfs.co/juso/geometry"><tt>juso:geometry</tt></link></td>
+<td id="_95a89758-5451-589a-7f95-e823397b1df1" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_350d67f9-fa46-f066-4576-8e1ad65964e3" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasGeometry"><tt>geo:hasGeometry</tt></link></td>
+<td id="_cc6ebbf9-49b8-e0e0-5bbe-4dae7c9f6da1" valign="middle" align="left">—</td>
+</tr><tr id="_9884073c-c482-4420-8424-a5212aa0fdca"><td id="_5ff52509-b42c-4c9f-1c6d-3464e1f465df" valign="middle" align="left"><link target="http://rdfs.co/juso/parent"><tt>juso:parent</tt></link></td>
+<td id="_1ac87b7f-7e48-44ab-9dcb-91dbfc0a07c1" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_7c863a99-14e2-73c5-a30f-92e5643e881b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_65e450fd-619c-e031-ddf5-195834f1e7ae" valign="middle" align="left">—</td>
+</tr><tr id="_c27a7c85-5ae5-f37c-2d76-c1a0d6c7ae29"><td id="_5ceef902-d057-3763-f4e0-83b355903018" valign="middle" align="left"><link target="http://rdfs.co/juso/political_division"><tt>juso:political_division</tt></link></td>
+<td id="_90e0e2fe-3b69-a18b-528f-27fdacbfe81c" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_48576ef5-14e0-f319-4ddf-7259b5babfd1" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_8d791e0a-fe4b-3cb3-66fc-360182b1e9ca" valign="middle" align="left">—</td>
+</tr><tr id="_258e53a4-60ec-4c66-c15b-f0f7125eb5e2"><td id="_f5134df5-f173-0530-47b5-dd6625fadd71" valign="middle" align="left"><link target="http://rdfs.co/juso/within"><tt>juso:within</tt></link></td>
+<td id="_9bf8c33c-c9a8-b0bd-62e0-781d20a5a0b5" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_24dd5819-7799-50cb-8971-f006cda94c08" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_8cd7db17-935e-1415-5969-4e70eda31af6" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_5777ca97-3630-74b6-c3e7-91c8635c029e" obligation="normative">
+<title id="_5c451bcb-bcb0-8d71-f6d2-a3112ff1fe6a">LGD</title>
+<p id="_67e2118e-daa7-feb3-b130-6254b8d0c467">This section defines 48 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and LGD as specified in <tt>lgd.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-lgd"/>.</p>
+
+<table id="_efc0833a-838f-a67d-6f6c-d116b48e5c79" anchor="table-alignment-lgd"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_f29c3968-265e-3ebc-35e4-72a90564bf3b">Alignment between GeoSPARQL and LGD</name>
+<thead><tr id="_cfd6c517-cdd7-da5c-786f-2bcde709bf0a"><th id="_e04853bf-a702-2e4b-979b-e41442874921" valign="middle" align="left">Source Term</th>
+<th id="_17f0f746-88e8-58a7-832f-f071ac9a887f" valign="middle" align="left">Alignment Relation</th>
+<th id="_a5677f0b-8361-0e24-7613-2320de5b40c5" valign="middle" align="left">Target Term</th>
+<th id="_dd6f6647-9498-cece-51ff-0f70012f4910" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_9ff61d23-7129-ec37-0451-7311f4acb3b2"><td id="_a05c4c62-3036-e7df-ac58-3417981d2424" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Abutters"><tt><link target="http://linkedgeodata.org/ontology/Abutters"/></tt></link></td>
+<td id="_a96c1142-93c8-2a4b-33d0-878176208cb5" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_8cfd6728-be48-a1d5-4f22-2f7f7f99c679" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_d01e0099-fecd-1b21-084b-30ee97355eb7" valign="middle" align="left">—</td>
+</tr><tr id="_2b115a32-267d-899f-ad92-7c08335eee97"><td id="_7ae4024d-f836-b868-0b4b-a40e325f7df4" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/AerialwayThing"><tt><link target="http://linkedgeodata.org/ontology/AerialwayThing"/></tt></link></td>
+<td id="_607e0ae9-1a55-5908-b74b-163a2905c4a7" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_9384128e-5da1-112d-4f28-4e73425046e2" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_0082de11-e481-311a-0bf2-9d8e0f346b3d" valign="middle" align="left">—</td>
+</tr><tr id="_67d66694-145b-cf6d-5139-ececca75a591"><td id="_8281be94-b2b1-f5f7-b38c-07355149dc3d" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/AerowayThing"><tt><link target="http://linkedgeodata.org/ontology/AerowayThing"/></tt></link></td>
+<td id="_081c704c-436a-c796-09df-5253c96e9dd7" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_87a463ee-b7f8-416c-410a-ffdf1cebe1b0" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_e39611e6-e62c-75fc-804d-62caaaef79ec" valign="middle" align="left">—</td>
+</tr><tr id="_ed8fe2ce-0389-1299-004c-623b882d25f2"><td id="_baf694e8-ef2d-096b-9115-4a4261f0b4cf" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Alley"><tt><link target="http://linkedgeodata.org/ontology/Alley"/></tt></link></td>
+<td id="_16d64476-fe81-fae8-b0d8-93669288e70f" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_fe6f8086-483b-f981-61da-45dfca7dc83f" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_4a142121-9b8a-25e0-dcc1-629c90df10e6" valign="middle" align="left">—</td>
+</tr><tr id="_1bc0e854-0709-3752-5763-a9e682a9ca78"><td id="_56354b7c-b712-85c8-ec18-1e7df402ea31" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Amenity"><tt><link target="http://linkedgeodata.org/ontology/Amenity"/></tt></link></td>
+<td id="_ec0b718a-fe61-137d-0d49-433fea39ac5e" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_19da0446-50b6-15ac-790b-3ee9b436bdcb" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_7abaeebf-dace-ff55-ed62-0aa2889fd827" valign="middle" align="left">—</td>
+</tr><tr id="_eefd5ba5-8562-5c3f-ccb1-ab7f85f710c7"><td id="_ed07d642-388c-8618-7f2f-26db54382eb1" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/BarrierThing"><tt><link target="http://linkedgeodata.org/ontology/BarrierThing"/></tt></link></td>
+<td id="_3fe8c2da-22cc-a1a1-62cd-7b8cb7cb35c9" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_7ae6303f-9e1f-f5d4-3437-097473c51800" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_e9e4d144-8985-8b27-7562-68a0c5a8cd1d" valign="middle" align="left">—</td>
+</tr><tr id="_58fce8cc-4eb1-7757-7bef-c165003da78e"><td id="_867c093c-31e4-db52-7855-93a800a6ae1f" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Boundary"><tt><link target="http://linkedgeodata.org/ontology/Boundary"/></tt></link></td>
+<td id="_2e7949d2-792b-277a-cf18-fd42fb6dc103" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_48af22ac-5bca-7a43-6ae6-5fa13f1a2cfe" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_8a924462-05ed-f9c7-a908-c026632f24f2" valign="middle" align="left">—</td>
+</tr><tr id="_77d95e10-29b4-e359-e9c0-137743a4ac26"><td id="_3e343004-7278-9ed8-ff83-1156df27ccba" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Bump"><tt><link target="http://linkedgeodata.org/ontology/Bump"/></tt></link></td>
+<td id="_7dc0a4fa-4933-4f2f-7ca0-ac6fce281dec" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_7072a50a-729d-55d9-7325-ef3f0b03dd86" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_4c316917-c233-2787-8c72-805d42562cf1" valign="middle" align="left">—</td>
+</tr><tr id="_60544d0e-910f-7e37-6cf5-71b43baaaa7e"><td id="_c5cb1c91-86ff-7252-c508-b231f431b204" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Chicane"><tt><link target="http://linkedgeodata.org/ontology/Chicane"/></tt></link></td>
+<td id="_68363f8a-82ec-59b8-619c-c241827846dc" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_df54cdcc-79ab-d383-a86c-34659470a648" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_66a02806-ee0c-b1d4-e09f-9ece390bab23" valign="middle" align="left">—</td>
+</tr><tr id="_9ee0a27d-df2d-610c-61a3-7e966a78c40c"><td id="_94adcbf5-4a8d-bdd8-a3cb-faf5c935a5d8" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Choker"><tt><link target="http://linkedgeodata.org/ontology/Choker"/></tt></link></td>
+<td id="_6c378d24-a098-3c71-7e90-1f9d7487e204" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_a0db124f-8da4-e833-7d7a-127b1ab82de7" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_61e8f75c-f854-4ea4-d0db-4fe3dfa17b36" valign="middle" align="left">—</td>
+</tr><tr id="_846b2c91-df1e-90d5-fe24-33abbaa0fb2a"><td id="_fcc003c5-4db0-6037-1526-ad579f9c8e22" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Cushion"><tt><link target="http://linkedgeodata.org/ontology/Cushion"/></tt></link></td>
+<td id="_ed3b6a32-67e0-4a7d-7757-626fb4ef4a3a" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_43a88f71-9b3a-b115-f602-bfea709b7527" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_ce6f4f3a-074b-b7b8-21a7-ae341f75d36e" valign="middle" align="left">—</td>
+</tr><tr id="_6abe0fa4-a6b4-a8ab-858f-58fb685d68d8"><td id="_dee4e494-9892-9a76-2e28-c233119bc6f8" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/CyclewayThing"><tt><link target="http://linkedgeodata.org/ontology/CyclewayThing"/></tt></link></td>
+<td id="_4525ad22-fe36-073a-6512-ca8d22da06bc" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_90f9904f-0422-be56-ef9c-0116e3cbbb62" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_66f9ffcf-5f8c-b8c8-6683-4c8ff311f017" valign="middle" align="left">—</td>
+</tr><tr id="_a248658a-ba54-a0cc-93f0-98d694ccfbf2"><td id="_9f1ff966-c1b2-c5fa-371b-fe823122efac" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/DriveWay"><tt><link target="http://linkedgeodata.org/ontology/DriveWay"/></tt></link></td>
+<td id="_376ad6c4-6b7a-42cf-83c8-db5710edd9e8" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_f892ed68-f606-18ee-4198-4e7235796815" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_034f9b2e-b993-20a6-3e15-23263dc6b83d" valign="middle" align="left">—</td>
+</tr><tr id="_95e6df9d-eb72-9751-6822-d93c571d8c9a"><td id="_18a38f46-4f35-afa9-9ed0-3427519d72bd" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/EmergencyThing"><tt><link target="http://linkedgeodata.org/ontology/EmergencyThing"/></tt></link></td>
+<td id="_e5e4605e-3fa4-af9d-d989-bd8a859d34f6" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_50ac4a89-d34e-ea8b-746b-39567be96882" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_684cc6a5-f486-dc22-0d97-93fac7c05805" valign="middle" align="left">—</td>
+</tr><tr id="_5fa42dd1-53b0-a03b-5f1f-0d25b0c346ed"><td id="_084a28e4-f5ee-95d7-d2fc-fb153fb44e3b" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/HighwayThing"><tt><link target="http://linkedgeodata.org/ontology/HighwayThing"/></tt></link></td>
+<td id="_fba818f8-08fb-a576-5a62-d834a73cecea" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_8f8b54f6-5abf-caa6-ca6b-daeb382ac910" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_2229c83a-1a63-3f8c-1cbd-9b854701a7f6" valign="middle" align="left">—</td>
+</tr><tr id="_91907f9d-0304-4792-0649-0e67b6e951b0"><td id="_36f103de-9eff-7b65-b097-67a0755d241d" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/HistoricThing"><tt><link target="http://linkedgeodata.org/ontology/HistoricThing"/></tt></link></td>
+<td id="_27a115a5-cde9-46ea-6295-aa42fa16a4f9" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_1080e57f-544e-815c-5622-2cb6335f3c25" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_9edee280-5e86-3f63-92c2-812ef70fdeea" valign="middle" align="left">—</td>
+</tr><tr id="_9733ac30-1e62-50c5-6630-2cd76bb42713"><td id="_5a63237b-85e6-3073-0a87-8a3d8eaad65c" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Hump"><tt><link target="http://linkedgeodata.org/ontology/Hump"/></tt></link></td>
+<td id="_c2e5ff20-e6e4-7a5a-ea96-2a0df4719e21" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_3c729ba9-8bae-8299-a7a9-86229217db2c" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_dcbde80d-75cf-fb6f-9f43-9a389820c90d" valign="middle" align="left">—</td>
+</tr><tr id="_be89b3df-f6ee-5ee2-9f64-23fb09b1ea1c"><td id="_c90544d5-f7be-7f81-1e29-f7e2d237d691" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/IceRoad"><tt><link target="http://linkedgeodata.org/ontology/IceRoad"/></tt></link></td>
+<td id="_8dcd8831-cc91-01c2-be18-31777e47c0eb" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_7a9e6802-9ab8-5832-7be9-f7794b3b54c7" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_421ca23d-7443-8177-5795-995b53b5a663" valign="middle" align="left">—</td>
+</tr><tr id="_0f86404b-6e48-8da2-8d43-7f97c182f2de"><td id="_d3ccc297-b54b-faaf-cff4-33ac56c4be5a" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Intermittent"><tt><link target="http://linkedgeodata.org/ontology/Intermittent"/></tt></link></td>
+<td id="_eb53d275-efab-5aff-63a8-12c7d6ab0890" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_7bb51c8c-aa42-f51b-8290-91995edf11be" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_02cd6910-3356-1f5f-9520-d84224b5318e" valign="middle" align="left">—</td>
+</tr><tr id="_daf45e15-b3bf-ca6d-e878-01eab6f0ee1d"><td id="_10105966-2de3-a50c-3987-5025c870eb22" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Landuse"><tt><link target="http://linkedgeodata.org/ontology/Landuse"/></tt></link></td>
+<td id="_4b4c191b-0f6b-5c62-8150-c15ed1cdce04" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_ea0acb4a-bad3-0186-e16b-a50aba64d059" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_4f633c88-d82c-7c7d-c882-91406feaab89" valign="middle" align="left">—</td>
+</tr><tr id="_ca0a8049-318a-f23f-895a-0264c93d3962"><td id="_c9cebc23-42db-e2b0-1ef6-decb9f2e4157" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Leisure"><tt><link target="http://linkedgeodata.org/ontology/Leisure"/></tt></link></td>
+<td id="_e2d7a202-d370-cedd-9dc2-88497a0155c5" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_6a84365b-87ee-e779-3adb-75373f55af35" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_1702a3f6-62ee-2c31-3dcc-e7c99073b8d5" valign="middle" align="left">—</td>
+</tr><tr id="_c9ef12a9-776c-6d18-b399-23f429f0fe90"><td id="_6e8a3a57-f523-4754-e413-581896ff4a87" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/LockThing"><tt><link target="http://linkedgeodata.org/ontology/LockThing"/></tt></link></td>
+<td id="_7a9f9af1-e171-d252-077b-de76b77a7a77" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_c690f30f-fb1d-e864-de45-f3a0ec4677ae" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_75bce47f-91df-2595-1b0f-29a500f80464" valign="middle" align="left">—</td>
+</tr><tr id="_51e91b10-8705-54bb-7f73-87a9461524b9"><td id="_00564a34-cba9-a2eb-5fd2-9c5de8c6e1b3" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/ManMadeThing"><tt><link target="http://linkedgeodata.org/ontology/ManMadeThing"/></tt></link></td>
+<td id="_81b1d5c0-dfaa-57cf-7e6e-2abf6c7da931" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_cf428c50-0f00-2eb2-89e3-fba86ececb34" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_22c7e02f-aa67-496c-aae3-e2553aab9245" valign="middle" align="left">—</td>
+</tr><tr id="_3d6a6145-9e13-e3f0-f301-ab0fa5ca3a63"><td id="_6a8b6321-376f-e4c5-343b-baa79e925ac8" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/MilitaryThing"><tt><link target="http://linkedgeodata.org/ontology/MilitaryThing"/></tt></link></td>
+<td id="_abf21d46-2eff-a912-366d-8143228115cf" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_ac5b637d-b155-165f-f90f-a70b34108a66" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_583d6dd6-6b59-2b75-b6f1-77f34afc9382" valign="middle" align="left">—</td>
+</tr><tr id="_063947cb-2fae-a171-366b-ade266207f1f"><td id="_4f9b005a-c5dd-c5a9-c771-2c9a030cd617" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/NaturalThing"><tt><link target="http://linkedgeodata.org/ontology/NaturalThing"/></tt></link></td>
+<td id="_694aeb67-4b60-24dc-2045-18be4dfc13df" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_90d370ed-0d4e-26b9-e4c4-db537b3d3f67" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_017119ac-633b-d64e-ea48-c9e4d77d3af7" valign="middle" align="left">—</td>
+</tr><tr id="_6ba2b7cb-7170-14da-3958-c54e37e9a953"><td id="_3ca71f61-c82b-00f2-1e1d-7765b1296dcd" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Outcrop"><tt><link target="http://linkedgeodata.org/ontology/Outcrop"/></tt></link></td>
+<td id="_cae3ea15-1f1d-8a22-865d-63cf5eab17b3" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_72aca71e-68e0-9f09-32fe-9825ec6ea006" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_0d33bf17-68fc-cd17-691b-d113ce5d1ebb" valign="middle" align="left">—</td>
+</tr><tr id="_9e66103c-3569-f833-a0c1-767e8a9e73aa"><td id="_490384c5-4c33-9770-4ca3-da4e9de21ca8" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/PalaeontologicalSite"><tt><link target="http://linkedgeodata.org/ontology/PalaeontologicalSite"/></tt></link></td>
+<td id="_c093b5a6-3fcb-52c9-849c-3a021a3b2d64" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_632938ba-42e8-8242-077c-46da62700c7e" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_eba9330a-63e6-4c7b-b07e-a7d65d84bfbe" valign="middle" align="left">—</td>
+</tr><tr id="_a5e028ee-874c-4848-bf40-80c54f7c6083"><td id="_d2020100-2319-04b5-06b8-788acd2a4268" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/ParkingAisle"><tt><link target="http://linkedgeodata.org/ontology/ParkingAisle"/></tt></link></td>
+<td id="_c93fb753-5858-c3b7-9d53-bd9ebd13a8f3" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_64b75606-e8c8-b570-9149-1d9473eebcee" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_fcb00895-823a-1d34-a1df-1e6f7bdaf57a" valign="middle" align="left">—</td>
+</tr><tr id="_eded33da-4012-5a83-4268-486bd5376520"><td id="_1bf04ad4-2423-7116-e8fc-e0769e123d5e" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Place"><tt><link target="http://linkedgeodata.org/ontology/Place"/></tt></link></td>
+<td id="_8d7ddffe-b7aa-329a-b9f8-03a6495f44d1" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_19b9688a-083c-f18d-84ab-3645184aa6c3" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_31635d37-5ebe-2935-4e34-fb36551784a3" valign="middle" align="left">—</td>
+</tr><tr id="_f5330122-459b-bd8c-f5ed-d43128998a76"><td id="_3565c36b-84f1-a4e7-a510-6b9536d45482" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/PowerThing"><tt><link target="http://linkedgeodata.org/ontology/PowerThing"/></tt></link></td>
+<td id="_52c25aee-fee9-376b-c026-96888b87c934" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_f4c1f677-eca0-47e1-9634-1822ee12740a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_c0eb0626-799a-8b3c-c66d-58afdbb08338" valign="middle" align="left">—</td>
+</tr><tr id="_b54a33ea-79b3-4993-3855-fba6d161afa8"><td id="_7c721c9b-b52a-fafa-fea6-7d92728d0f71" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/PublicTransportThing"><tt><link target="http://linkedgeodata.org/ontology/PublicTransportThing"/></tt></link></td>
+<td id="_f4642965-e2b1-1d22-6702-aa645c1e7abc" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_180c471f-8d08-8f80-0747-ba2c13d8c177" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_1069afcf-d1d2-64f6-99ef-cc21a183e863" valign="middle" align="left">—</td>
+</tr><tr id="_e2ada594-a457-20f1-c180-98f4c0f7097b"><td id="_81f8a5d6-748d-f06f-e889-176000ea1f76" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/RailwayThing"><tt><link target="http://linkedgeodata.org/ontology/RailwayThing"/></tt></link></td>
+<td id="_a42c9012-d55e-689c-c2e9-2589cd6cf150" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_b18941fa-9e41-3d8d-c009-c436a2bdd7de" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_6ad4f979-3191-9248-229d-8ac170616533" valign="middle" align="left">—</td>
+</tr><tr id="_f56df513-5d51-3265-2562-881a5d1da56e"><td id="_0a0ac7ca-2afc-6c8e-19e8-6ee72f740eeb" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Roundabout"><tt><link target="http://linkedgeodata.org/ontology/Roundabout"/></tt></link></td>
+<td id="_c32c6ddd-a5fb-0363-ea76-76c22312d47f" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_6e958446-a553-9516-1f65-2c05066530b8" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_b0bcb1c7-b759-27d2-f21d-ece144d96b80" valign="middle" align="left">—</td>
+</tr><tr id="_459bd946-085f-0e55-3b0d-7cd493f605db"><td id="_56fcf2ac-3a39-2579-7450-cc390b0fbadd" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/Route"><tt><link target="http://linkedgeodata.org/ontology/Route"/></tt></link></td>
+<td id="_9490a602-6b2a-672e-a35f-25294c18e215" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_b8c3d304-e262-a790-6f60-293d80263206" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_3f43c390-6fa6-fddc-93c7-79365281510e" valign="middle" align="left">—</td>
+</tr><tr id="_049a4e66-28c3-5ebe-ce54-1e8d8226e7ce"><td id="_10507e2d-b61f-cba0-3a86-a4386c1a2d6d" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/RouteThing"><tt><link target="http://linkedgeodata.org/ontology/RouteThing"/></tt></link></td>
+<td id="_be68538c-47a7-761b-faba-e5ae61b35738" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_bf6fe05c-d96c-3a44-81b1-f13e93ed2359" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_1ee37f37-4486-45b5-8543-c3e02671d37c" valign="middle" align="left">—</td>
+</tr><tr id="_7a67fd6a-3ec5-9589-c863-9afc24747769"><td id="_b881002a-af04-b170-2a74-e27e3dbfbce4" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/RumbleStrip"><tt><link target="http://linkedgeodata.org/ontology/RumbleStrip"/></tt></link></td>
+<td id="_41031f61-cd70-b7cd-7b5b-779cb08eb1e3" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_e0311891-7e54-51d0-5a32-c2ae800f4443" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_5946f0c6-2336-d5bc-2e9b-3adb9bfda7a1" valign="middle" align="left">—</td>
+</tr><tr id="_e6f45eab-4a33-f2e3-8528-32d44f8f5cfb"><td id="_0b47eb47-c891-f976-1bbc-cbcf8c8bcbe2" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/SportThing"><tt><link target="http://linkedgeodata.org/ontology/SportThing"/></tt></link></td>
+<td id="_e646792e-e997-c5f5-962f-cbc4b62acd69" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_9b3ac725-90e7-877e-1e44-818948eb87d0" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_334b02ba-cae2-34af-f536-e004e9fd0b31" valign="middle" align="left">—</td>
+</tr><tr id="_5d96ae76-1459-2934-8440-19a505272c5a"><td id="_d4b37966-f4d0-3b3b-e815-c5045179260e" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TableBump"><tt><link target="http://linkedgeodata.org/ontology/TableBump"/></tt></link></td>
+<td id="_8cfd5320-f47e-6385-5165-ea2250e1378a" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_cb15a1de-04e8-95b6-1567-1314ba4bcfc0" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_3f62a415-2b7c-d382-f064-4cb0dfbd7577" valign="middle" align="left">—</td>
+</tr><tr id="_9dbe6091-24c8-485e-2695-c4b6bc99b84a"><td id="_bd139cea-4271-30fa-0dd6-724e9bbb801b" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TourismThing"><tt><link target="http://linkedgeodata.org/ontology/TourismThing"/></tt></link></td>
+<td id="_ebb21773-2ede-079e-1f13-9fe4785ac612" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_834c8e4b-79fc-1105-3c0e-5e8cdef4c7c6" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_0661f538-916f-4dc0-9f8d-06bf8435e274" valign="middle" align="left">—</td>
+</tr><tr id="_dd3f2f1e-8afe-dc7b-dc1a-deb520e55920"><td id="_41467630-9093-2f1d-c61e-1fe837bd70ed" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TrackType1"><tt><link target="http://linkedgeodata.org/ontology/TrackType1"/></tt></link></td>
+<td id="_f5759482-3033-b326-8a13-f2b7e34562e7" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_3791a124-689d-4986-ffc1-b62a0e2ff1f3" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_964028b6-72ee-eed0-25ac-311ff0d5344b" valign="middle" align="left">—</td>
+</tr><tr id="_b1162e7f-7bd5-f7b7-cf61-b9f6d229c576"><td id="_15dc39f1-09c2-89a6-900a-44ee1093e283" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TrackType2"><tt><link target="http://linkedgeodata.org/ontology/TrackType2"/></tt></link></td>
+<td id="_b8b78b94-41d6-117b-007e-9cf4cb72eae9" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_76262ec9-bcbe-bd92-df22-197d701a38b6" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_2db7d053-73cf-3cc1-9199-339da56db840" valign="middle" align="left">—</td>
+</tr><tr id="_166fe8dd-048b-a052-027b-c9a089eb3093"><td id="_8139f76d-ee84-187b-8554-64c747864dcb" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TrackType3"><tt><link target="http://linkedgeodata.org/ontology/TrackType3"/></tt></link></td>
+<td id="_a41d5860-0eb4-d436-dbaa-f9c44f9bd0cd" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_a47520d3-7697-b3d0-ffdc-1b9b71780676" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_f2f0a63b-62c7-9a40-e88e-be0f7e08d1eb" valign="middle" align="left">—</td>
+</tr><tr id="_58a73c4b-9cef-2bf2-c41f-78f19cb8a896"><td id="_7a46c3c0-00a6-1e86-12cc-2c14a739a0a1" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TrackType4"><tt><link target="http://linkedgeodata.org/ontology/TrackType4"/></tt></link></td>
+<td id="_8f0221e7-8318-7892-4c9b-218bca105a58" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_30a1bf5b-9654-6af5-4776-c091e340b1be" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_4b155003-a2a4-17a3-e223-7a2e41120d36" valign="middle" align="left">—</td>
+</tr><tr id="_2f2b4101-a4c6-5661-469b-15b6ed368ff3"><td id="_9dfd030c-8c38-cafc-b1c8-b299dc370b87" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TrackType5"><tt><link target="http://linkedgeodata.org/ontology/TrackType5"/></tt></link></td>
+<td id="_411e6e38-9067-39fc-9742-af665c84d897" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_dd14df89-8a8b-8bb3-73ad-0c137a489f7a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_3c49f193-3dcc-80fb-f5d2-ee8f6f2749f8" valign="middle" align="left">—</td>
+</tr><tr id="_1d133746-32eb-49c3-3cb3-867c0a071942"><td id="_d15c28c3-7750-fb14-f7f8-9087eb0bee2c" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TrafficCalming"><tt><link target="http://linkedgeodata.org/ontology/TrafficCalming"/></tt></link></td>
+<td id="_1ca4a9b3-f458-f1ed-e2fa-b39d60c78344" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_9a34687b-13d5-745a-be6d-2da7c83d3619" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_e2c6d24d-fde4-7b8d-3a45-cb2c33f1180f" valign="middle" align="left">—</td>
+</tr><tr id="_e64c519d-464c-0c14-ce7d-4f8c8fa612c2"><td id="_b95587db-d383-7854-0e88-02117ece0018" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/TunnelCulvert"><tt><link target="http://linkedgeodata.org/ontology/TunnelCulvert"/></tt></link></td>
+<td id="_eac0d497-ce0c-2bf4-a63a-b726c5c49722" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_6eedd6c4-d458-f198-2799-29a74adc8014" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_294b18da-6a5b-83a5-3e2d-dc3358cbb4bc" valign="middle" align="left">—</td>
+</tr><tr id="_992ef413-c152-9663-ad07-b2771de266a3"><td id="_72679dcb-8af5-4410-290c-3e9deaee28ff" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/WaterwayThing"><tt><link target="http://linkedgeodata.org/ontology/WaterwayThing"/></tt></link></td>
+<td id="_1fa69fe3-2cca-f653-e2b0-a1c2ec40ed23" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_a4548fd9-9ebc-4f14-9c05-0d219296d42b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_31f2ad3a-cb9b-ce55-ad59-66bfd14bf2d4" valign="middle" align="left">—</td>
+</tr><tr id="_e9e004d0-b81f-d3ee-d990-5338e333b830"><td id="_1a6db97c-5e01-5fec-e5b8-a0f7a4498266" valign="middle" align="left"><link target="http://linkedgeodata.org/ontology/WinterRoad"><tt><link target="http://linkedgeodata.org/ontology/WinterRoad"/></tt></link></td>
+<td id="_d92f48c7-d019-5d0b-afd8-6b6cd4f25b21" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_6693537e-817a-2b5f-7de6-0e9e61eef4cb" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_e5481382-41e3-120f-8ce2-d54b51d4f118" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_8eab7916-8131-4c79-af1b-0a683bc1c9c7" obligation="normative">
+<title id="_1617e764-6e8b-f3c7-d2e1-cd0c672c294b">LOCN</title>
+<p id="_3a856d33-41e8-9e86-a9e7-ccbfa4fe5b3b">This section defines 4 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and LOCN as specified in <tt>locn.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-locn"/>.</p>
+
+<table id="_2f0c948a-0ff5-589e-2433-34f06e06c6b0" anchor="table-alignment-locn"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_a2ed5e27-3a8d-2ed8-02fc-c6cd2241d10c">Alignment between GeoSPARQL and LOCN</name>
+<thead><tr id="_bbd94d99-5590-352b-d681-05d2a49955dc"><th id="_f34300d1-4ed5-71c5-8e89-10ddf44fd4f7" valign="middle" align="left">Source Term</th>
+<th id="_3fe87b9c-08b2-4180-4b14-bdcdec732cb9" valign="middle" align="left">Alignment Relation</th>
+<th id="_ddb1e2e6-c91b-b061-bc39-796516e1dd0c" valign="middle" align="left">Target Term</th>
+<th id="_d3d2476b-446a-a5c2-84b8-0117ce8fa958" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_38f8770d-7bde-d141-ecff-42a69cd7870e"><td id="_3a417585-8e09-3196-1896-936464b5d1e3" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_96288698-ac07-6e02-9dc0-5675c3abcd9b" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_83090dfc-12ec-5717-ded8-5854bdfe6bf2" valign="middle" align="left"><link target="http://purl.org/dc/terms/Location"><tt>dcterms:Location</tt></link></td>
+<td id="_93444ff7-cacd-5331-929f-a6e2b33e9ff2" valign="middle" align="left">—</td>
+</tr><tr id="_5aefdb3f-9714-fe0b-f68c-f6f8091279fc"><td id="_c304b464-3fb7-cce3-6474-32992424b935" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_40055009-61d8-067a-0a4b-cd774f32a928" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_498bc7d4-9163-4f04-dbff-22437fc54363" valign="middle" align="left"><link target="http://www.w3.org/ns/locn#Geometry"><tt>locn:Geometry</tt></link></td>
+<td id="_0ca08f13-9f3d-b00d-fbf8-3a621a1bb636" valign="middle" align="left">—</td>
+</tr><tr id="_42b9e741-fd4d-b3cf-7acd-eb42eb3db13c"><td id="_f1bc08b1-1e8a-c629-5cdb-79a234af4d8a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasGeometry"><tt>geo:hasGeometry</tt></link></td>
+<td id="_768c167a-9cf1-4a62-6d94-acc02870dff0" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_9ea698b6-6e16-b0fd-fcde-afc4b0c5a0b3" valign="middle" align="left"><link target="http://www.w3.org/ns/locn#geometry"><tt>locn:geometry</tt></link></td>
+<td id="_4783e2bb-83e6-9d4c-6f11-c3b7649d08f2" valign="middle" align="left">—</td>
+</tr><tr id="_14e746c5-73fd-23e4-a5f7-52dc83dba678"><td id="_8de8ffeb-5d6f-821b-9cf1-3ace8cb01778" valign="middle" align="left"><link target="http://www.w3.org/ns/locn#Address"><tt>locn:Address</tt></link></td>
+<td id="_7b5b5aa6-e081-725d-e6bd-ea451d603728" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_fc63bc11-dbf8-527e-558f-659e27727c0f" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_88dd3a4d-364c-37fe-be50-25ef2b97a6d6" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_3d2f2093-0058-36ae-e0ec-9ca8488f1f74" obligation="normative">
+<title id="_178e09ac-d5a5-3887-49e8-cf2013ddd1aa">NEOGEO</title>
+<p id="_97b12761-4210-8690-9d75-21f62020a136">This section defines 25 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and NEOGEO as specified in <tt>neogeo.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-neogeo"/>.</p>
+
+<table id="_78646a13-1f1c-8383-6b36-c1d6f0e8b9fb" anchor="table-alignment-neogeo"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_86f4208f-9a15-9330-c9e4-e139a9448ae2">Alignment between GeoSPARQL and NEOGEO</name>
+<thead><tr id="_e52b8359-80df-2dc5-1745-7d52d7409cb8"><th id="_a324abb1-d8d8-3727-3463-f2548b542e59" valign="middle" align="left">Source Term</th>
+<th id="_eb8a303a-901e-d534-733f-f30efdfc2e3a" valign="middle" align="left">Alignment Relation</th>
+<th id="_89abe0ea-d517-abcd-9944-e6b1a57f8887" valign="middle" align="left">Target Term</th>
+<th id="_5e1b1828-6f2d-e3f7-ab9e-85a72cade502" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_113dbef1-9ea4-c5af-a729-3b66a1d9654e"><td id="_81e44de6-9c2b-b102-4156-99237ab59870" valign="middle" align="left"><link target="http://geovocab.org/geometry#BoundingBox"><tt>geom:BoundingBox</tt></link></td>
+<td id="_fa0b1983-171b-a22e-d698-001fc02e04a5" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_1a109483-1431-abc0-55bc-8e7540ce795b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_713d45d7-727e-ebe2-eaad-929702ac7472" valign="middle" align="left">—</td>
+</tr><tr id="_71cb52b2-3019-d6e7-982f-9a691c5db6dc"><td id="_55fb812b-704a-7e67-0582-7d96d31a8d2a" valign="middle" align="left"><link target="http://geovocab.org/geometry#GeometryCollection"><tt>geom:GeometryCollection</tt></link></td>
+<td id="_5eaa7697-bfa6-915b-6746-84461bf8653a" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_9af258ec-3ed7-6746-0fcd-c55bc9de3202" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#GeometryCollection"><tt>geo:GeometryCollection</tt></link></td>
+<td id="_827c3f76-fa19-f607-671b-d354a732247e" valign="middle" align="left">—</td>
+</tr><tr id="_ada31017-2924-4afe-5187-b3b4252b6a09"><td id="_22fba13b-2036-be51-02bd-27555b3a4640" valign="middle" align="left"><link target="http://geovocab.org/geometry#LineString"><tt>geom:LineString</tt></link></td>
+<td id="_e5650de5-6396-4166-94a7-11fbedb4c761" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_c62c0d51-385a-5150-36a2-b7cb0c452803" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link></td>
+<td id="_d678c631-eac6-7b9f-7b39-aa4382026f9d" valign="middle" align="left">—</td>
+</tr><tr id="_b64fb0dc-d538-249a-fca9-62e31dc73d4c"><td id="_acfbb513-5c2a-5ed3-95f5-6fff981078fc" valign="middle" align="left"><link target="http://geovocab.org/geometry#LinearRing"><tt>geom:LinearRing</tt></link></td>
+<td id="_fec03a5d-a7d9-953f-0fc4-4e904db606c6" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_9560a5dc-817d-b65d-9041-84649ace9c7a" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#LinearRing"><tt>sf:LinearRing</tt></link></td>
+<td id="_7acaa91c-484f-c04e-f523-b449a5f5c2ce" valign="middle" align="left">—</td>
+</tr><tr id="_69e881c2-ecb5-e922-5071-9e689ce4e5c7"><td id="_c83b3889-4c03-c441-6204-a109891c8d6c" valign="middle" align="left"><link target="http://geovocab.org/geometry#MultiLineString"><tt>geom:MultiLineString</tt></link></td>
+<td id="_f678dc29-db16-55d7-462a-4089050fcc95" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_e7f1131e-3f6f-c118-19d1-e2ac9ef6c6ff" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#MultiLineString"><tt>sf:MultiLineString</tt></link></td>
+<td id="_25a0e50f-a2bf-dfb4-c4ba-289b2804207e" valign="middle" align="left">—</td>
+</tr><tr id="_6aa6a267-5f73-a753-1126-638a95905bf5"><td id="_86997e5e-88fc-d39d-61d2-36c4b45e06cb" valign="middle" align="left"><link target="http://geovocab.org/geometry#MultiPoint"><tt>geom:MultiPoint</tt></link></td>
+<td id="_71a4d7ed-3426-08a9-6419-b5d707787fbd" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_17edb35c-04d3-73cc-d223-ffd360f9a8ad" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#MultiPoint"><tt>sf:MultiPoint</tt></link></td>
+<td id="_7bad12f6-86fc-1924-7f99-c97d35cf477d" valign="middle" align="left">—</td>
+</tr><tr id="_d1efaee5-2b73-26af-fc03-dedff34f319d"><td id="_648e9b30-88f1-c725-5714-4a248543b4dc" valign="middle" align="left"><link target="http://geovocab.org/geometry#MultiPolygon"><tt>geom:MultiPolygon</tt></link></td>
+<td id="_1813c645-3ff3-e55d-3dab-40ce42d5dae8" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_944fe8c9-89f7-dfe7-a2a4-02a468adf1f9" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#MultiPolygon"><tt>sf:MultiPolygon</tt></link></td>
+<td id="_f05e8e77-bccf-ddb2-3618-db6f91a6b171" valign="middle" align="left">—</td>
+</tr><tr id="_54d0202b-dfa6-6524-bdb5-126a94895ec7"><td id="_a266d326-a843-ce7c-b682-11793b6b17b9" valign="middle" align="left"><link target="http://geovocab.org/geometry#Point"><tt>geom:Point</tt></link></td>
+<td id="_9aad413c-8ee2-a24b-1090-b01b5061033b" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_1b04b611-0ac2-8602-e044-fb79d79f9220" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#Point"><tt>sf:Point</tt></link></td>
+<td id="_3b4dec68-1c27-7939-de2b-7df79c072ea7" valign="middle" align="left">—</td>
+</tr><tr id="_0910bfa0-aa53-7f18-95dc-d46ca56b7eb7"><td id="_cb9ce7a1-1cbf-2add-f655-8e004984d77b" valign="middle" align="left"><link target="http://geovocab.org/geometry#Polygon"><tt>geom:Polygon</tt></link></td>
+<td id="_04d1e895-deeb-aecb-4d51-96c73cd2446f" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_815f80d0-11f6-5aae-6d3d-a3a85c57cddc" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#Polyogn"><tt>sf:Polyogn</tt></link></td>
+<td id="_70bfd320-a154-6feb-9dab-493c20554369" valign="middle" align="left">—</td>
+</tr><tr id="_4a8a571f-ba5d-ae08-dc70-666895303f1a"><td id="_b1178088-114c-bd10-dab4-fde5a7ed6923" valign="middle" align="left"><link target="http://geovocab.org/spatial#C"><tt>spatial:C</tt></link></td>
+<td id="_262cecbe-b7cc-e7c5-52da-6ae054f53243" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_e96dc70b-97af-54db-0e65-224b217bbc4b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ec"><tt>geo:rcc8ec</tt></link></td>
+<td id="_f23965c3-1860-ae3f-240e-732cce41a571" valign="middle" align="left">—</td>
+</tr><tr id="_817210d9-a492-f49c-8226-3331447e6a34"><td id="_f4dcdee3-1779-c671-c708-f53bfe56cd45" valign="middle" align="left"><link target="http://geovocab.org/spatial#DR"><tt>spatial:DR</tt></link></td>
+<td id="_b16deed9-b616-b170-2360-835b55d941b6" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_fd0d1254-f0cc-c928-e885-d35b9b7c9740" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8dc"><tt>geo:rcc8dc</tt></link></td>
+<td id="_8cca9a22-c786-2847-efb9-80eb5ea85f1b" valign="middle" align="left">—</td>
+</tr><tr id="_6138294c-a89b-d1c9-ea53-3f2b3d949827"><td id="_bc6bf9ca-8f08-a1cd-f442-2282408690f3" valign="middle" align="left"><link target="http://geovocab.org/spatial#EC"><tt>spatial:EC</tt></link></td>
+<td id="_917db38b-4e0e-c9f3-0d4a-60a2106f762d" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_428cd0f6-bf22-cc9c-4eb1-b25a2b2e67f8" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ec"><tt>geo:rcc8ec</tt></link></td>
+<td id="_0809a17c-112d-0ade-9ecb-a41765381583" valign="middle" align="left">—</td>
+</tr><tr id="_e669c6f7-00d0-c52c-0a12-e5ebd4b31f49"><td id="_da16964b-5f6f-d0b3-d2db-e914d06cb6ac" valign="middle" align="left"><link target="http://geovocab.org/spatial#EQ"><tt>spatial:EQ</tt></link></td>
+<td id="_84214638-4c5c-c158-daf0-04f6264bf351" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_03a5964d-2e8c-8402-cfea-2f9b63b1f329" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8eq"><tt>geo:rcc8eq</tt></link></td>
+<td id="_5a8e311b-39c0-14a2-0efd-ef4214443a12" valign="middle" align="left">—</td>
+</tr><tr id="_14106a07-175a-a7b4-cf38-4212fb1b5e35"><td id="_07b40b19-23a7-4e6f-aeea-5f795ea965c6" valign="middle" align="left"><link target="http://geovocab.org/spatial#Feature"><tt>spatial:Feature</tt></link></td>
+<td id="_48381eb0-ffc1-40cc-b21f-97c858831a18" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_2d8c159a-bad1-e8fc-d9c8-c6201023ad2f" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_c40b4428-d063-3fc1-35bc-b0c7029c79cf" valign="middle" align="left">—</td>
+</tr><tr id="_0e9bb13a-9973-ed1d-a08d-f7e9d75ac89c"><td id="_b73471ee-c9cd-8cea-866c-737811171c8e" valign="middle" align="left"><link target="http://geovocab.org/spatial#NTPP"><tt>spatial:NTPP</tt></link></td>
+<td id="_6aff9f98-77a5-10de-ff73-922e12c5f081" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_45ab53be-fe14-dd74-b3b3-2db4897731f0" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ntpp"><tt>geo:rcc8ntpp</tt></link></td>
+<td id="_857d370b-3f2a-5fbd-9eb2-7b5e88c9447e" valign="middle" align="left">—</td>
+</tr><tr id="_381c3f70-4c2f-8a4e-b1ae-1364033b8998"><td id="_6f0659b2-541b-a038-34af-959dc4fa3a6c" valign="middle" align="left"><link target="http://geovocab.org/spatial#NTPPi"><tt>spatial:NTPPi</tt></link></td>
+<td id="_f2979c42-4d6d-02c3-2cfb-3524b0d8d804" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_506ce6e3-db04-d6cb-5ba8-b06cd076606e" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ntppi"><tt>geo:rcc8ntppi</tt></link></td>
+<td id="_0dab689c-0d77-6b26-f203-36d43e426a70" valign="middle" align="left">—</td>
+</tr><tr id="_f85c488e-45b2-1f07-147f-4cb3af5c18d2"><td id="_d12bbd35-749a-5d75-0195-90f851982e2e" valign="middle" align="left"><link target="http://geovocab.org/spatial#O"><tt>spatial:O</tt></link></td>
+<td id="_c86e476d-6f1f-4456-b6f3-12328e9c61ea" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_9129168e-e80a-8d90-ba98-b40be23ce331" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfOverlaps"><tt>geo:sfOverlaps</tt></link></td>
+<td id="_8e4c5481-a6b8-9919-cbf6-550a8c36f2e0" valign="middle" align="left">—</td>
+</tr><tr id="_cb3bc08a-f277-e5ee-8a30-29b630ee2ce8"><td id="_53348fcc-2313-869b-ee5f-0d365c2c6318" valign="middle" align="left"><link target="http://geovocab.org/spatial#P"><tt>spatial:P</tt></link></td>
+<td id="_fc758a27-199f-b4dc-4b7a-f74413043a10" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_f4ace864-9fcf-cee8-2d7a-848c7ef99c71" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_1d2deed2-8fa7-f6ee-766a-de2f9bd6fa17" valign="middle" align="left">—</td>
+</tr><tr id="_3ef2fda6-295c-d360-c344-a0528fcdc681"><td id="_8f713d08-2f9f-fc20-abf5-c8be9c1c06a2" valign="middle" align="left"><link target="http://geovocab.org/spatial#PO"><tt>spatial:PO</tt></link></td>
+<td id="_10780138-f50b-51fd-7089-5468c5eb96a0" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_66648378-3a9b-8435-1133-f5c57a8157c4" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8po"><tt>geo:rcc8po</tt></link></td>
+<td id="_2b6869b4-f037-4bbc-58d0-9835c50dda7d" valign="middle" align="left">—</td>
+</tr><tr id="_3870f72e-9e64-9bf2-2b89-a0c3a1fef593"><td id="_9850195f-2a16-a3ad-a29b-98bae10dd277" valign="middle" align="left"><link target="http://geovocab.org/spatial#PP"><tt>spatial:PP</tt></link></td>
+<td id="_44435d5a-3c83-7100-b2d9-61a5cd5d5710" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_bc41cc04-ab1a-0c60-ef4a-4ece70354eb4" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_d3731185-b2d1-fe22-037a-9b6d5c44871d" valign="middle" align="left">—</td>
+</tr><tr id="_35566fc3-8a4a-cb86-5d54-7ad1d11f9862"><td id="_b815435b-96e8-e58f-16c6-eccf4c67f1f7" valign="middle" align="left"><link target="http://geovocab.org/spatial#PPi"><tt>spatial:PPi</tt></link></td>
+<td id="_a70e9bc7-0992-5eb4-fa13-39502dd0a4c6" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_6084bcb2-f626-e67a-9664-4d91f7825394" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_bbe7e10b-8684-80f4-940a-95a207338d09" valign="middle" align="left">—</td>
+</tr><tr id="_a0a7ab7e-ae2e-6058-83dd-0642adb1f376"><td id="_d4fc53e5-8395-109c-12a8-b2451027fc2c" valign="middle" align="left"><link target="http://geovocab.org/spatial#Pi"><tt>spatial:Pi</tt></link></td>
+<td id="_23b5ae40-ccac-8c0e-2f1e-e3024f9da1b1" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_03b04f02-c698-0bd1-d67d-569bb8146dd9" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_b1cb0793-1409-e785-d6cb-97cf2158bd57" valign="middle" align="left">—</td>
+</tr><tr id="_f12e490c-25dc-0356-d539-ac1d2db30494"><td id="_6d84b9ca-8f91-78e5-07d9-f766fe266d56" valign="middle" align="left"><link target="http://geovocab.org/spatial#TPP"><tt>spatial:TPP</tt></link></td>
+<td id="_272d1f3f-8115-0878-8973-9606b042a930" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_fcaf1339-b676-e2fc-fc95-c85e41272d41" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8tpp"><tt>geo:rcc8tpp</tt></link></td>
+<td id="_432c0721-cf66-3694-6314-83abd7987715" valign="middle" align="left">—</td>
+</tr><tr id="_9dec06fc-b01c-ea3f-f591-300ed3c9669a"><td id="_5ecbb8b8-354f-e713-bb77-e9e50d6918b5" valign="middle" align="left"><link target="http://geovocab.org/spatial#TPPi"><tt>spatial:TPPi</tt></link></td>
+<td id="_9ffb1e3d-0ec3-c169-1584-523917c6c97b" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_351296f5-e655-f085-913a-150400b2f0cc" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8tppi"><tt>geo:rcc8tppi</tt></link></td>
+<td id="_bb224da9-3719-ca00-344a-b970fce9ca05" valign="middle" align="left">—</td>
+</tr><tr id="_9a4850d7-845b-a2d6-94c8-e2dd14307916"><td id="_103846dd-dc1f-421a-62b2-96276a23888f" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasGeometry"><tt>geo:hasGeometry</tt></link></td>
+<td id="_26f687a9-4cfa-8536-97b6-1f86197c73a0" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_d0557e57-a21b-e94a-18b6-6373bf832c9a" valign="middle" align="left"><link target="http://geovocab.org/geometry#geometry"><tt>geom:geometry</tt></link></td>
+<td id="_e62f21cc-68f0-0238-9870-f274ff720db9" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_4d888f30-243f-76f8-b4f9-8617e113eb66" obligation="normative">
+<title id="_664511c5-85f1-abb3-0099-76696cff91f2">OSIUK</title>
+<p id="_bb92e373-740b-b574-b184-ee122694a8fc">This section defines 8 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and OSIUK as specified in <tt>osiuk.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-osiuk"/>.</p>
+
+<table id="_7d5fc9f9-8df5-83ca-4c49-d726e9b56469" anchor="table-alignment-osiuk"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_2708bacf-3df9-4c0b-64c0-39667fe4d74f">Alignment between GeoSPARQL and OSIUK</name>
+<thead><tr id="_64f4138a-ed2d-1f64-2af3-c2b2d1c050f6"><th id="_2a7ab6de-afab-81f3-e691-c3f441689557" valign="middle" align="left">Source Term</th>
+<th id="_da6f2fe4-adfd-77d3-123b-100ee2591304" valign="middle" align="left">Alignment Relation</th>
+<th id="_14c73a26-22a7-04f8-b1cf-a25bac4d0796" valign="middle" align="left">Target Term</th>
+<th id="_28353dbf-1a71-26da-852c-d7c656dbbc98" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_7f9dd154-64c2-eb75-37a2-eacef1e29f78"><td id="_1049fa06-0ec3-6f5f-8956-2168be41c621" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry"><tt>spatialukgeom:AbstractGeometry</tt></link></td>
+<td id="_86546953-733e-e77d-c13a-af48fbc01ebf" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_c502e8ac-2b2a-d745-c75e-67518e59b9b4" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_008ed716-decc-8904-b973-c7d22dd3de6b" valign="middle" align="left">—</td>
+</tr><tr id="_a0efc980-9f51-89bf-1ed8-3f90b61363fc"><td id="_188953b0-c0e1-e125-4509-4db6fe4de69f" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/geometry/asGML"><tt>spatialukgeom:asGML</tt></link></td>
+<td id="_23b607e3-5f90-4ac4-1527-9ff8ad2463f7" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_5db54cc3-9565-47b7-c8dc-121ddc225f1b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#asGML"><tt>geo:asGML</tt></link></td>
+<td id="_f6e7f693-25c8-7af1-9e1a-9a619436ba86" valign="middle" align="left">—</td>
+</tr><tr id="_aff1cffc-306a-f461-6610-3a11710fd105"><td id="_0e16ed7e-01ad-4b9d-6148-de39ded9e5b5" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/geometry/extent"><tt>spatialukgeom:extent</tt></link></td>
+<td id="_fe41de80-16e5-a2c4-03a3-fc486472fb76" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_1f38a37b-388a-cd1e-441b-714273a1b7b9" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasBoundingBox"><tt>geo:hasBoundingBox</tt></link></td>
+<td id="_6fe5ba6e-dddb-117e-5159-21fe119c285e" valign="middle" align="left">—</td>
+</tr><tr id="_01520120-00d8-4e30-3cda-eb14351e6ffb"><td id="_27dc180f-05a4-e0de-257e-2b2cab26b04c" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains"><tt>spatialuk:contains</tt></link></td>
+<td id="_b89a31d9-6420-c695-a2f2-3f937b9062be" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_e9808694-252b-8a30-3b4e-fc945ed01332" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_f93b4fe6-8d75-9702-af07-767d97ca5ee3" valign="middle" align="left">—</td>
+</tr><tr id="_0758e11b-adb8-8c5c-fa6e-61dbc70d03dc"><td id="_5c7f4504-9377-9995-f138-5114403a17fc" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint"><tt>spatialuk:disjoint</tt></link></td>
+<td id="_40fedc72-d88d-3a9f-e9be-61e6c0c4d830" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_0e523865-1886-f1db-781e-bb67d662c652" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfDisjoint"><tt>geo:sfDisjoint</tt></link></td>
+<td id="_9396b3cc-a330-b251-06f1-68f56dcd35aa" valign="middle" align="left">—</td>
+</tr><tr id="_b0e0eb44-ad78-1cc2-db7d-2ef8bac6c7be"><td id="_18fee107-5885-4ea8-8607-ece96b3c0b5b" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/equals"><tt>spatialuk:equals</tt></link></td>
+<td id="_01b01a55-c0b0-17ff-2856-512001798604" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_f956a7b2-0d84-41de-551d-7b013994b2d6" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfEquals"><tt>geo:sfEquals</tt></link></td>
+<td id="_723d9aa8-c975-b609-b333-5d5c62fa95fe" valign="middle" align="left">—</td>
+</tr><tr id="_2573b6e4-0442-2b75-0a23-921da1c1290a"><td id="_5e54a51f-48e1-4fa8-7b81-439a148d10e2" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches"><tt>spatialuk:touches</tt></link></td>
+<td id="_bef073fd-304a-bebf-ba23-a1ac9283d88d" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_97841519-d4a2-1f02-9c29-47af689c285d" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfTouches"><tt>geo:sfTouches</tt></link></td>
+<td id="_4a18118b-09a8-7432-870e-d3b68cde8511" valign="middle" align="left">—</td>
+</tr><tr id="_563bceba-4846-9027-4bad-74b51a39b857"><td id="_ed8cfbda-7996-91c6-a26d-a5a1d6c99e3d" valign="middle" align="left"><link target="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within"><tt>spatialuk:within</tt></link></td>
+<td id="_ea5a9da0-7e85-2a9c-d50e-d73f87ada554" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_ccfa51e8-c191-7266-6ee6-8ff11ac94ef4" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_827524f6-2bce-a6d3-9b69-5f1fdb7034e2" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_c8b28f79-6ab3-6260-1097-e2568d365376" obligation="normative">
+<title id="_a7d7c10f-4aee-6006-2819-f2de974dafa9">OSMRDF</title>
+<p id="_0e5fc97a-c4c6-d170-e2af-8049630f094d">This section defines 9 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and OSMRDF as specified in <tt>osmrdf.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-osmrdf"/>.</p>
+
+<table id="_a2798824-200e-2eb8-79d7-2f601c39c66f" anchor="table-alignment-osmrdf"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_7d9c9911-9eff-5e52-22ad-008af8ee49e3">Alignment between GeoSPARQL and OSMRDF</name>
+<thead><tr id="_7a819dd0-751a-af1f-ff76-26aa76414c89"><th id="_fb4dc900-9314-3506-6df9-456bd7e31ec4" valign="middle" align="left">Source Term</th>
+<th id="_91617030-26f8-db20-2c8b-a6d67c0e3d49" valign="middle" align="left">Alignment Relation</th>
+<th id="_e19e0de4-c8fb-8640-7edc-9525eef477e3" valign="middle" align="left">Target Term</th>
+<th id="_5bb27c59-f715-a8e9-5925-c32d9fb3e21d" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_006ffb02-627b-8ccb-3e7d-a04395216f4b"><td id="_5085f0ea-9ae9-f9a5-0515-ad7e3dbc8e4d" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link></td>
+<td id="_32a869d7-0263-feea-e9ad-bb12c1cb4c6d" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_d5b7e8ab-9a92-e3bb-84a8-dd135d264bf3" valign="middle" align="left">n0a9ce9411cda489da0507f6a302915c0b1</td>
+<td id="_6cbca067-868e-edf2-95db-d8575240703c" valign="middle" align="left">—</td>
+</tr><tr id="_8399e01e-99a9-41e1-5506-6bc81877cd78"><td id="_4000d5d7-b1ac-ae3c-7b4c-d55615479bda" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link></td>
+<td id="_d76bef00-bb38-c255-bdb9-b4e100e12d14" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_da9c15a1-1558-c0ad-42ee-a848f9779dfe" valign="middle" align="left">n0a9ce9411cda489da0507f6a302915c0b2</td>
+<td id="_c8224309-e42b-27da-755e-4530b740876d" valign="middle" align="left">—</td>
+</tr><tr id="_4e23ceee-a1cf-70be-b741-3dd366439195"><td id="_faf578f7-d530-dc90-1f20-309513b934ee" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link></td>
+<td id="_fb41070b-33e5-4a54-78db-2c8e3ad6a8c3" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_6a6dc2a9-9be5-5a0b-61e7-b045ed51cb9a" valign="middle" align="left">n0a9ce9411cda489da0507f6a302915c0b3</td>
+<td id="_875c1c80-52bd-ff40-7a54-9eebb4fbadb7" valign="middle" align="left">—</td>
+</tr><tr id="_1d29ced2-51dd-ba72-6cbb-f939a7781bac"><td id="_4b7eca4e-0e19-abcf-3580-5f4a8065ae57" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#Polygon"><tt>sf:Polygon</tt></link></td>
+<td id="_fc3dc767-424f-62c2-73a4-9967669d25a2" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_42a72596-0ba2-53e3-451a-c99621636348" valign="middle" align="left">n0a9ce9411cda489da0507f6a302915c0b4</td>
+<td id="_23b633b2-cc62-e37b-2090-dffa43840d3a" valign="middle" align="left">—</td>
+</tr><tr id="_7ac70c72-5843-f664-d9d7-18877f846a28"><td id="_2e752d4a-0825-fc98-793f-7ab8b8289593" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/has"><tt>osmm:has</tt></link></td>
+<td id="_8d470f9c-48a4-7dcf-64a3-f10a56d82ed4" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_a324c028-1b71-41c0-c813-e4dbae626c8a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#ehContains"><tt>geo:ehContains</tt></link></td>
+<td id="_8018ed8a-e3a6-c4eb-e682-4a9179ada099" valign="middle" align="left">—</td>
+</tr><tr id="_987ca2cc-c18e-a88d-66ac-8aec1ba4c151"><td id="_78445e95-814c-d2eb-ef58-f726547a44f3" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/has"><tt>osmm:has</tt></link></td>
+<td id="_decd0f71-51bc-fe25-d533-5f0605b38400" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_116ba089-a70f-0d87-94d7-86a9f565f6b0" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ntpp"><tt>geo:rcc8ntpp</tt></link></td>
+<td id="_24c5bdc4-d210-e979-fa16-012da8eabd0e" valign="middle" align="left">—</td>
+</tr><tr id="_5af7ac2a-47b2-2165-0506-80a1d833d096"><td id="_dd40ad3b-9b51-1007-26ad-407de03387ff" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/has"><tt>osmm:has</tt></link></td>
+<td id="_36e9d170-6113-a77e-568b-d76c5a0c957a" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_b6182be6-e717-6c69-8a50-eb5eafcecc1d" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_934532b0-a6ae-741a-46e4-fa6811ccec6b" valign="middle" align="left">—</td>
+</tr><tr id="_a120f63c-6188-a278-ba08-5252007df9d7"><td id="_f4cd63b9-470e-6d76-4ddd-96fd8c82adf2" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/isClosed"><tt>osmm:isClosed</tt></link></td>
+<td id="_e8fb393d-1295-bc0d-f490-20f60a520a7c" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_1ca7de53-8732-a2ab-7a5c-d84df2d272fb" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#rcc8ntpp"><tt>geo:rcc8ntpp</tt></link></td>
+<td id="_41dca960-1838-b605-2f1d-1bba950acb45" valign="middle" align="left">—</td>
+</tr><tr id="_036be4f7-9715-6481-b056-1d42af9db0fb"><td id="_a5ff5793-6c47-163a-b3a2-64a28106d337" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/loc"><tt>osmm:loc</tt></link></td>
+<td id="_97286835-b6cc-33c4-46ca-385db228374d" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_d5175e2b-9d20-9b99-6bda-b684ed156348" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#asWKT"><tt>geo:asWKT</tt></link></td>
+<td id="_4c28ca6c-4e90-f264-4abc-554edfac8705" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_5187a65e-43e3-e397-0c4b-0195cd488daa" obligation="normative">
+<title id="_31de15eb-862c-5953-35a9-ed4101ed1fc3">PROV O</title>
+<p id="_d9626a46-fb10-36d6-dd26-adcce7126434">This section defines 0 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and PROV O as specified in <tt>prov-o.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-prov-o"/>.</p>
+
+<table id="_8aaffc54-4d4d-daea-420a-8f1ae84078ce" anchor="table-alignment-prov-o"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_71ac7ab1-1ee3-0c35-1c2e-fd764d27e4d1">Alignment between GeoSPARQL and PROV O</name>
+<thead><tr id="_46f5f938-a73c-0752-bec9-2e4fdc9fb0ba"><th id="_3ce98a68-0375-baf8-f811-722cbdc019a3" valign="middle" align="left">Source Term</th>
+<th id="_62848de1-c4cb-8ff4-29e4-00ed76cda089" valign="middle" align="left">Alignment Relation</th>
+<th id="_a08c8baa-44d2-4046-f76f-61fa8baf5145" valign="middle" align="left">Target Term</th>
+<th id="_78afd531-bda6-033a-fb40-a9d338161524" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_69611ea2-ee95-5e14-fd6d-ddafb5076bee"><td id="_18b80adf-a043-e7f9-8d7c-02c1baa7548c" valign="middle" align="left"><em>No direct alignment triples found.</em></td>
+<td id="_cb95682c-891f-c985-3262-307fc8caef3f" valign="middle" align="left">—</td>
+<td id="_7a6c48c3-f899-2ef5-96eb-b43be0bb801f" valign="middle" align="left">—</td>
+<td id="_e3bbb885-c50e-0746-f39b-33af7b1cd1a8" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_b6a1ec68-8150-1036-03a9-d4fbf52438fa" obligation="normative">
+<title id="_d230b818-dbe5-ea1b-c6c6-1f81d2c2916b">ROUTABLETILES</title>
+<p id="_295a5f6c-0d58-11ff-ca80-3fd54e59a2ab">This section defines 4 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and ROUTABLETILES as specified in <tt>routabletiles.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-routabletiles"/>.</p>
+
+<table id="_84dd8f32-a41f-57b1-e5fa-e9f0357fb267" anchor="table-alignment-routabletiles"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_05253cd4-fc3b-58c4-de49-2b0920ccecf5">Alignment between GeoSPARQL and ROUTABLETILES</name>
+<thead><tr id="_70ce9638-f9a0-2f32-b819-2be8185fe6d7"><th id="_b685a3ee-828c-9ebe-b3d0-aaf968ed0775" valign="middle" align="left">Source Term</th>
+<th id="_9dc03064-6f15-e141-f04d-089c396f7e67" valign="middle" align="left">Alignment Relation</th>
+<th id="_7f768b73-1575-151c-c280-ac5ad05252e1" valign="middle" align="left">Target Term</th>
+<th id="_668bfa73-b28f-bf08-81ee-399b8ee5d21a" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_0d4f2a20-1c05-4257-61ec-fb8f0233dfb5"><td id="_500433fd-bb4c-e1c4-1913-0b8b5841dfe7" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/Element"><tt>osmm:Element</tt></link></td>
+<td id="_5eb97a69-1031-d140-8f16-0987d31c3ef3" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_3fafaf17-9792-b07e-c577-5bbac0bbc1a6" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_1f9aff57-8e6e-5bd2-cace-3d5a22b51304" valign="middle" align="left">—</td>
+</tr><tr id="_7ca0aa92-1725-0784-80d9-98d585f2d155"><td id="_98a06bda-dbf2-9ce9-d135-91806fef53f4" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/Node"><tt>osmm:Node</tt></link></td>
+<td id="_6ca804ee-94ff-d61f-b115-c09684ad8b87" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_80251d69-b845-6861-68a3-cb65b3ff43fb" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#Point"><tt>sf:Point</tt></link></td>
+<td id="_e252c3e3-b8f6-f37c-0012-324673c98d78" valign="middle" align="left">—</td>
+</tr><tr id="_10aa12c8-dab9-ea8d-2ab6-c5badcce1cff"><td id="_e0b01a1d-23ab-c0c6-2212-57b2ce27e046" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/Relation"><tt>osmm:Relation</tt></link></td>
+<td id="_cb702152-12ca-1ef4-0ed8-536c941db4a2" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_65b6c7f5-7e64-caef-3d62-8a8f66126b4c" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#GeometryCollection"><tt>sf:GeometryCollection</tt></link></td>
+<td id="_61d1a441-a690-d23f-16c1-e1b604c76ee8" valign="middle" align="left">—</td>
+</tr><tr id="_24951157-d476-f9ea-6e39-608bb3a4eb6a"><td id="_a4f6186b-a4c9-cacf-d6fe-c5b4b529fcb7" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/Way"><tt>osmm:Way</tt></link></td>
+<td id="_16380b46-75ac-a6d4-c945-1be95f21d844" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_37a5963d-c942-c16b-0786-ae9ec3b47986" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#LineString"><tt>sf:LineString</tt></link></td>
+<td id="_ef68d794-b281-1b47-9461-8705284d9bad" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_c7f051fc-a027-0f07-dbbc-8b588129854d" obligation="normative">
+<title id="_32c2f4a5-d206-764b-8584-d296fde6ad48">SCHEMA</title>
+<p id="_123be0db-883c-9fcd-863f-7bda3c2c2adb">This section defines 14 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and SCHEMA as specified in <tt>schema.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-schema"/>.</p>
+
+<table id="_ee5a3f47-011e-906e-df2b-0d79bc41caae" anchor="table-alignment-schema"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_b944eec7-c691-6d40-8558-48ba2271a107">Alignment between GeoSPARQL and SCHEMA</name>
+<thead><tr id="_56f98aa3-bb2c-7c43-1885-bc05c7dc04e1"><th id="_d4668fa9-a386-baaa-6e57-34310842cf1a" valign="middle" align="left">Source Term</th>
+<th id="_cc3ccd2f-16f8-ca27-9fcf-c0cd66fb37a5" valign="middle" align="left">Alignment Relation</th>
+<th id="_1248250c-e289-d05e-994b-cae1483f5f4e" valign="middle" align="left">Target Term</th>
+<th id="_2b8d2665-449c-f6a2-c4b8-38948c653e22" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_8f769888-1761-8041-74de-d87a1e415403"><td id="_e9c8d3a7-6c39-801b-5920-59c4d26cd8aa" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_1e50b1b5-b861-4011-c315-f9efd58bbb40" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_6c773685-b7ca-272b-89ef-d19ee139eb1f" valign="middle" align="left"><link target="https://schema.org/GeoShape"><tt>sdo:GeoShape</tt></link></td>
+<td id="_5ed0076c-1393-3ff9-fcc0-f1ac39646130" valign="middle" align="left">—</td>
+</tr><tr id="_91ccc504-5ef4-1b32-0d67-afc75d4f53ce"><td id="_e8c7c169-71f4-e2e8-3021-0e3ca738d4cd" valign="middle" align="left"><link target="https://schema.org/GeoCoordinates"><tt>sdo:GeoCoordinates</tt></link></td>
+<td id="_5263f9f5-07db-6ddd-8cea-7742359d5841" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_e7992378-51d7-3d5e-8bc3-be1715ab1d0c" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_7ef56673-82a7-d915-c8dc-5f8b15bc2193" valign="middle" align="left">—</td>
+</tr><tr id="_d9ce77ab-5853-5cdc-7d18-9aa92eaa1846"><td id="_88879f35-93e3-d583-b296-fe6efd36e5d7" valign="middle" align="left"><link target="https://schema.org/GeospatialGeometry"><tt>sdo:GeospatialGeometry</tt></link></td>
+<td id="_bd364e81-209f-c5f8-4c67-4f188c912c7b" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_00af7c1c-8e39-d035-01ae-3c5932110a04" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#SpatialObject"><tt>geo:SpatialObject</tt></link></td>
+<td id="_9e414a6a-8448-e109-216c-afc1c0d2d218" valign="middle" align="left">—</td>
+</tr><tr id="_7e0519bf-06d8-a252-085b-026f7b2afbe0"><td id="_0e6dec43-67a2-e23b-ea5c-5b0aafa9235a" valign="middle" align="left"><link target="https://schema.org/Landform"><tt>sdo:Landform</tt></link></td>
+<td id="_e14ec3d0-4b9c-fdc3-8043-9a37712f107f" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_6cb99e11-179c-1ad7-05fd-78b13d71ab2a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_3e14fc5d-4a73-5bd9-9dad-096944deacb9" valign="middle" align="left">—</td>
+</tr><tr id="_b18e9c65-a017-a066-9a41-52a9ddf3e6b7"><td id="_62bb27b8-84f2-31d2-bec7-f14544a54f5f" valign="middle" align="left"><link target="https://schema.org/geo"><tt>sdo:geo</tt></link></td>
+<td id="_98374bf4-e6c4-94ba-2f9e-ced89bcd3d83" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_7ba7a2e0-db1d-f52b-c440-ebcd4c545e76" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasGeometry"><tt>geo:hasGeometry</tt></link></td>
+<td id="_d01fb809-5ed1-cf2e-7d0e-dfbc9b571f1d" valign="middle" align="left">—</td>
+</tr><tr id="_a5168e62-c70c-4f5c-b440-a6144ed5d285"><td id="_c444a4e8-21e5-f123-6cb4-82d66e2d0436" valign="middle" align="left"><link target="https://schema.org/geoCoveredBy"><tt>sdo:geoCoveredBy</tt></link></td>
+<td id="_ff721deb-2fd0-0661-2cd1-30af4983283f" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_4b651beb-8968-b6c7-e4f8-c7ce21d4ec8c" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#ehCoveredBy"><tt>geo:ehCoveredBy</tt></link></td>
+<td id="_60e72ed6-055e-c9ee-2e4e-8fd5d11beb38" valign="middle" align="left">—</td>
+</tr><tr id="_36b677d6-d770-78a4-7947-209f7515837f"><td id="_b50761ec-8993-9117-f072-e2cdd68c4358" valign="middle" align="left"><link target="https://schema.org/geoCovers"><tt>sdo:geoCovers</tt></link></td>
+<td id="_28a60bf5-5e7d-0735-6418-a1877243cd09" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_c90a398a-56c4-06b2-af8f-a9e4e7ec0b1b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#ehCovers"><tt>geo:ehCovers</tt></link></td>
+<td id="_5059e57c-e49f-78b9-851f-c6fd667df4c0" valign="middle" align="left">—</td>
+</tr><tr id="_b7ec0758-08b3-ab2d-980e-77ec621d122c"><td id="_1500e4dd-cd04-f92d-7de7-ba2e9b01125d" valign="middle" align="left"><link target="https://schema.org/geoCrosses"><tt>sdo:geoCrosses</tt></link></td>
+<td id="_0f243cb5-2702-3e95-a025-e04ad914095e" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_b5112add-6277-b24e-67a3-8d4413ea4cd6" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfCrosses"><tt>geo:sfCrosses</tt></link></td>
+<td id="_dc11d7c1-8051-9102-391b-2295b8f265e3" valign="middle" align="left">—</td>
+</tr><tr id="_d01d3780-0a37-8834-12cc-bed5ac239d42"><td id="_8499e309-3a90-d036-cfc1-4a66c0e179bb" valign="middle" align="left"><link target="https://schema.org/geoDisjoint"><tt>sdo:geoDisjoint</tt></link></td>
+<td id="_09e55864-95b8-bbec-97a1-dcbc661683ea" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_25ce296e-8157-336c-608b-c21333a9ec07" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfDisjoint"><tt>geo:sfDisjoint</tt></link></td>
+<td id="_2bab3b0c-2993-6a93-6f1f-a45c79793831" valign="middle" align="left">—</td>
+</tr><tr id="_5a87e45f-5e10-a7b2-5e41-6153b78b874f"><td id="_b8c5656b-744e-b11d-800b-afbce2c6de70" valign="middle" align="left"><link target="https://schema.org/geoEquals"><tt>sdo:geoEquals</tt></link></td>
+<td id="_c98f465e-6ec3-462a-8978-158bd1da36cc" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_95442f02-1567-00f2-877f-086e37d8c573" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfEquals"><tt>geo:sfEquals</tt></link></td>
+<td id="_90454e73-f267-9ba7-b418-c7050efd3bad" valign="middle" align="left">—</td>
+</tr><tr id="_b345cb89-b2cb-5106-13fd-eb2329657314"><td id="_269b3435-99ff-16c6-4a60-9f29f20c1083" valign="middle" align="left"><link target="https://schema.org/geoIntersects"><tt>sdo:geoIntersects</tt></link></td>
+<td id="_0d5e624d-1750-66f4-d78c-012b5766dce5" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_fdf886f7-8d05-36c9-3700-bea5a2ca3b6b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfIntersects"><tt>geo:sfIntersects</tt></link></td>
+<td id="_fda70220-93ec-27b1-674f-d3085fd0e308" valign="middle" align="left">—</td>
+</tr><tr id="_3b2bd009-23d3-dea9-4ff8-f5f6db12bd5a"><td id="_f791b163-e6d4-6420-2954-43f905b4da5b" valign="middle" align="left"><link target="https://schema.org/geoOverlaps"><tt>sdo:geoOverlaps</tt></link></td>
+<td id="_5df5c2ff-cbae-b1cd-c0f5-dd70f4b231c4" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_2cb3cbef-6bdc-83ca-2a24-9ab8f6f87cb7" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfOverlaps"><tt>geo:sfOverlaps</tt></link></td>
+<td id="_9fea2ac3-70db-5bc8-3955-39455bb9d65b" valign="middle" align="left">—</td>
+</tr><tr id="_c6eed3f6-df39-950d-0582-5f0719b1c8cd"><td id="_d691c18c-a1ef-cc68-9b40-87b67223dc13" valign="middle" align="left"><link target="https://schema.org/geoTouches"><tt>sdo:geoTouches</tt></link></td>
+<td id="_804c016e-aa71-2362-9711-825c39dead9b" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_c5d3b9d4-6754-f4c6-bf06-66f5486dc4be" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfTouches"><tt>geo:sfTouches</tt></link></td>
+<td id="_e74b5883-76e4-23e8-30c9-90e9118ef71e" valign="middle" align="left">—</td>
+</tr><tr id="_96109ef3-e4bd-7570-cf44-ab31e7f49f4f"><td id="_b7465339-4566-c1ad-2866-358896f3623f" valign="middle" align="left"><link target="https://schema.org/geoWithin"><tt>sdo:geoWithin</tt></link></td>
+<td id="_c49ef01b-90ac-d978-bc6d-05fe68a82c1a" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_4e2c2923-c79c-a03b-899a-c17f37bbe348" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_a22549bf-4081-8d77-c95c-32143aff8bf0" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_ecb63715-b2ac-d29c-e5d3-60ccc3008ed6" obligation="normative">
+<title id="_b5dd9835-09e0-0490-91d3-872b16ad2516">SOPHOX</title>
+<p id="_c0d861d2-0858-cf60-92f0-ac06aa646881">This section defines 1 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and SOPHOX as specified in <tt>sophox.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-sophox"/>.</p>
+
+<table id="_3c9ac558-1fd5-7686-41ca-0b827411b715" anchor="table-alignment-sophox"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_6a1203b6-4014-ef90-7b06-a2b55aefb9b4">Alignment between GeoSPARQL and SOPHOX</name>
+<thead><tr id="_ab274dd7-99fe-1e9b-2588-4583104d08a6"><th id="_9cda648f-4219-b892-39e7-8ef8a6c2223c" valign="middle" align="left">Source Term</th>
+<th id="_34b43da2-9714-feb5-9a51-96ab37491bfa" valign="middle" align="left">Alignment Relation</th>
+<th id="_f808468e-62a3-d2a1-113b-914217d0c17c" valign="middle" align="left">Target Term</th>
+<th id="_eb1be1f2-4db2-0055-9db5-0c68966429e9" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_096d4c7a-1c1e-b4d2-3327-44f03a7b5b09"><td id="_3d17b83c-8176-8d05-d06b-0c944aca58f2" valign="middle" align="left"><link target="https://www.openstreetmap.org/meta/loc"><tt>osmm:loc</tt></link></td>
+<td id="_c5ba9628-94b7-0bf1-cf6a-179a17036bfd" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_8b6cee2c-2812-c402-d9bd-e9125c065402" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#asWKT"><tt>geo:asWKT</tt></link></td>
+<td id="_4be44c9a-b220-bf74-e4cf-ac9c185df571" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_db3bde9a-f017-92a1-8d4b-f6e6c075c54f" obligation="normative">
+<title id="_61b46bd2-2e64-d165-4ac9-362acf3bbbea">WGS84GEO</title>
+<p id="_c4e83f4e-c60f-6e0f-c6b8-a37aa7f9c8ad">This section defines 5 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and WGS84GEO as specified in <tt>wgs84geo.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-wgs84geo"/>.</p>
+
+<table id="_659cd067-19e8-4e6b-76ff-e41e97d3cfea" anchor="table-alignment-wgs84geo"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_7332b275-1dd4-f8b3-dcdc-789a298514fd">Alignment between GeoSPARQL and WGS84GEO</name>
+<thead><tr id="_779ff21f-f496-bd25-bbf1-be3456ea33a9"><th id="_b48418bf-4da9-4f4d-db06-cc61fe05e377" valign="middle" align="left">Source Term</th>
+<th id="_d2075cca-9b1a-6871-96e2-1fec6784ae60" valign="middle" align="left">Alignment Relation</th>
+<th id="_c864148c-6e48-3644-789c-90d3d7987538" valign="middle" align="left">Target Term</th>
+<th id="_4afbc5da-ddae-ef0d-e212-ca49b80c6730" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_7e77b9ea-499c-b243-688e-fbb1a2694cde"><td id="_7c20f419-6183-3b30-df2d-c918388f999a" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#SpatialObject"><tt>geo:SpatialObject</tt></link></td>
+<td id="_66cda83e-f1d9-146c-4297-318be54c4483" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_c460ee85-12b3-8e7a-c4c3-ebd4c3fc1df9" valign="middle" align="left"><link target="http://www.w3.org/2003/01/geo/SpatialThing"><tt>pos:SpatialThing</tt></link></td>
+<td id="_60a1762e-635f-aed3-c16c-98598f117808" valign="middle" align="left">—</td>
+</tr><tr id="_dd53f9fe-1af5-d135-d2a6-964e16fc646a"><td id="_c5b80f7b-1e8b-440a-004b-acff582949a1" valign="middle" align="left"><link target="http://www.w3.org/2003/01/geo/Point"><tt>pos:Point</tt></link></td>
+<td id="_9cf702b4-1b23-adf9-e9dd-ad4a05efd2ed" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_bcd929a6-bc5e-0b36-512e-81622791d3a7" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Geometry"><tt>geo:Geometry</tt></link></td>
+<td id="_95628311-2c11-a920-2db3-bd96b08159a2" valign="middle" align="left">—</td>
+</tr><tr id="_d41c87d6-f961-654b-6265-911ebfbff9cb"><td id="_b4a49664-3fe5-2d9b-eac5-5a7342888aa3" valign="middle" align="left"><link target="http://www.w3.org/2003/01/geo/Point"><tt>pos:Point</tt></link></td>
+<td id="_d6152a3e-fdd6-bbaa-6bc1-44d6dde915a1" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_d0ba2a6a-671d-680c-9c4c-772152828790" valign="middle" align="left"><link target="http://www.opengis.net/ont/sf#Point"><tt>sf:Point</tt></link></td>
+<td id="_57372401-d426-f2e9-34dc-0f0b637a0be3" valign="middle" align="left">—</td>
+</tr><tr id="_5818c76b-669f-d2f0-4fb0-a2058ae3c53f"><td id="_15244378-6d94-8103-9c4d-9c74cc3f9192" valign="middle" align="left"><link target="http://www.w3.org/2003/01/geo/lat_long"><tt>pos:lat_long</tt></link></td>
+<td id="_f1e74c85-75fe-e1b7-0784-40db6f0cc831" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_0636e271-6e7f-39d0-2b42-a876a2ef100e" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasSerialization"><tt>geo:hasSerialization</tt></link></td>
+<td id="_e4d7c4f7-b25a-99ee-c95f-a0481289a0af" valign="middle" align="left">—</td>
+</tr><tr id="_006a7f67-2811-ee97-8689-25edf9efdfa8"><td id="_2ab017c6-644f-3522-7081-ece18d5f1b63" valign="middle" align="left"><link target="http://www.w3.org/2003/01/geo/location"><tt>pos:location</tt></link></td>
+<td id="_84e6c120-22d8-4ffc-85e4-83b9da3275e9" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_2ae5065c-f6a1-a800-107f-9c61a361709c" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasGeometry"><tt>geo:hasGeometry</tt></link></td>
+<td id="_39c074c0-9d60-b521-d543-27b8787ab64c" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_15e01acc-36f9-27d9-60a0-97adf4b4ca15" obligation="normative">
+<title id="_2fd4721f-3998-6996-8810-10522205c81d">WIKIDATA</title>
+<p id="_edaadc0d-f290-e14a-4a8f-4506af2c8d22">This section defines 11 RDF alignment mapping(s) between <link target="http://www.opengis.net/ont/geosparql#"><tt><link target="http://www.opengis.net/ont/geosparql#"/></tt></link> and WIKIDATA as specified in <tt>wikidata.ttl</tt>. The formal term correspondences are summarized in <xref target="table-alignment-wikidata"/>.</p>
+
+<table id="_b8e4744e-d768-085d-9da9-5f23143a94c4" anchor="table-alignment-wikidata"><colgroup><col width="22.2222%"/><col width="22.2222%"/><col width="22.2222%"/><col width="33.3334%"/></colgroup>
+<name id="_177ceda1-c704-0805-9fd8-55ae57fbc414">Alignment between GeoSPARQL and WIKIDATA</name>
+<thead><tr id="_e773e5ba-9377-e5e4-4748-dd884bf69d1d"><th id="_0fa0cf62-5a15-9db0-874b-af86d174d235" valign="middle" align="left">Source Term</th>
+<th id="_52e1f51f-7bfd-0862-8aa1-6adf80bee39e" valign="middle" align="left">Alignment Relation</th>
+<th id="_7e082ffe-c7e5-67a0-d5d8-00caa61c6de2" valign="middle" align="left">Target Term</th>
+<th id="_2d030e3a-9282-5c80-e15f-3d2613600142" valign="middle" align="left">Notes</th>
+</tr></thead>
+<tbody><tr id="_8bf00d5a-1205-ceab-98f5-70062bc7d8cd"><td id="_97ce3bb6-dbd1-5013-2210-0732aff167d7" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_a263906d-abd8-9fcb-9828-1d67d25264a3" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_365c2ef9-e3b1-8df8-71a7-c2cab2b8cc72" valign="middle" align="left"><link target="http://www.wikidata.org/entity/Q65964571"><tt>wd:Q65964571</tt></link></td>
+<td id="_f0e48b68-091b-49f8-95c5-b7d772834c86" valign="middle" align="left">—</td>
+</tr><tr id="_6db523fa-7f77-df1d-4ef5-6c3f32c3e528"><td id="_b81cd308-f301-d456-e4e2-c003902dbab8" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_a4e36d64-ad12-95fa-8efd-e26ff7753c75" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_95bccd9f-03a5-b6e2-ceff-e8c1702d7652" valign="middle" align="left"><link target="http://www.wikidata.org/prop/direct/P361"><tt>wdt:P361</tt></link></td>
+<td id="_24255805-cdf3-ca1a-c230-e23414dcc129" valign="middle" align="left">—</td>
+</tr><tr id="_04bd47b0-9e44-71d4-f6e1-db490adba8c0"><td id="_7d1b89aa-68f5-d676-398f-6e6cb78b70d7" valign="middle" align="left"><link target="http://www.wikidata.org/entity/Q25404640"><tt>wd:Q25404640</tt></link></td>
+<td id="_e0087bad-414c-dd51-7fb5-b55836b08ddd" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_925431c0-b419-d2ed-824b-4dab979f5f3b" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#SpatialObject"><tt>geo:SpatialObject</tt></link></td>
+<td id="_d86805cb-256c-a571-f41e-ee797773ba7b" valign="middle" align="left">—</td>
+</tr><tr id="_f7e237da-6c3d-7e93-a1e3-bef557bc7aae"><td id="_d5dea86e-666b-4f78-8d69-a6c2b25174e4" valign="middle" align="left"><link target="http://www.wikidata.org/entity/Q618123"><tt>wd:Q618123</tt></link></td>
+<td id="_882ebb27-588e-1a14-f507-7f7957db2752" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentClass"><tt>owl:equivalentClass</tt></link></td>
+<td id="_3b414cf9-80bd-add7-3891-076502ca2ef6" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_9fad8568-33ba-9cfb-0de1-a292b94d5c14" valign="middle" align="left">—</td>
+</tr><tr id="_04000737-0ae9-bdf7-e6c8-c0d340c6ddda"><td id="_cf11433b-2abb-c146-1c20-f1621dc90bd8" valign="middle" align="left"><link target="http://www.wikidata.org/entity/Q82794"><tt>wd:Q82794</tt></link></td>
+<td id="_2434cfe1-ec75-94ca-6316-2f7c625accca" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_d6cb573f-8407-efba-69fe-3b989026fe6e" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_cda0c18b-b243-915b-b1e2-b87b9a9dfe40" valign="middle" align="left">—</td>
+</tr><tr id="_fa49ac37-42b3-0b56-7f80-852a1e9e7345"><td id="_935bae50-f9f6-f832-b7f2-74aefd4b0d14" valign="middle" align="left"><link target="http://www.wikidata.org/prop/direct/P131"><tt>wdt:P131</tt></link></td>
+<td id="_fcbf1141-3b58-166e-4d98-d096ea47b5aa" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_84f711ce-f7a5-1c33-8f98-51a460a99648" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_e0911944-2d57-e868-07d5-af34cf35480f" valign="middle" align="left">—</td>
+</tr><tr id="_830dc559-94a8-30aa-f325-721c14a3492f"><td id="_178dac72-87ad-a6e4-71b1-17e2bcc4b835" valign="middle" align="left"><link target="http://www.wikidata.org/prop/direct/P150"><tt>wdt:P150</tt></link></td>
+<td id="_1b67498c-5854-5007-d4ea-4f0e7836ff6a" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_2434a920-0ecc-fcfc-c642-23fe3c287b85" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfContains"><tt>geo:sfContains</tt></link></td>
+<td id="_e2f1a63d-bf2f-37d8-385d-33a047d3fb7b" valign="middle" align="left">—</td>
+</tr><tr id="_22f497dd-2862-0d5b-ec04-43f854f100cf"><td id="_5cb2b22f-15ba-3751-386a-a378668275a9" valign="middle" align="left"><link target="http://www.wikidata.org/prop/direct/P2046"><tt>wdt:P2046</tt></link></td>
+<td id="_412f4df3-1e10-d8e8-abde-9599c5b835ed" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_f5437c49-5edc-5f4c-e3a5-4f8209ddd27c" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#hasArea"><tt>geo:hasArea</tt></link></td>
+<td id="_536a715a-d096-dcfe-86b6-5e515da4d899" valign="middle" align="left">—</td>
+</tr><tr id="_7d900469-1edc-7e30-eac3-3334cfc956b0"><td id="_39398cba-02b1-3981-2ca7-1a4bae485a1f" valign="middle" align="left"><link target="http://www.wikidata.org/prop/direct/P4688"><tt>wdt:P4688</tt></link></td>
+<td id="_b339ae80-9d67-8732-60f4-278d029731ed" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subClassOf"><tt>rdfs:subClassOf</tt></link></td>
+<td id="_d706a40a-81d5-e7b9-cbd0-563178447470" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#Feature"><tt>geo:Feature</tt></link></td>
+<td id="_05e3479d-4f80-e9c4-45b7-de552f4039e1" valign="middle" align="left">—</td>
+</tr><tr id="_7f238028-0f4f-88c6-fc7d-dc24d97c5fff"><td id="_37724fbb-87ed-6cbd-d0d8-aca1582e66c6" valign="middle" align="left"><link target="http://www.wikidata.org/prop/direct/P625"><tt>wdt:P625</tt></link></td>
+<td id="_6668b01a-68c8-a281-9c00-0193759a3323" valign="middle" align="left"><link target="http://www.w3.org/2002/07/owl#equivalentProperty"><tt>owl:equivalentProperty</tt></link></td>
+<td id="_e7aab581-d422-f3bf-fb2c-d55c53ed57ba" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#asWKT"><tt>geo:asWKT</tt></link></td>
+<td id="_244b5f4e-e58c-e824-0f29-2e5e44523ad2" valign="middle" align="left">—</td>
+</tr><tr id="_52d35fc6-2d7b-2b8f-f6f8-f5504a20381f"><td id="_30e447c9-7136-c6a0-f1de-9b7c4edacd38" valign="middle" align="left"><link target="http://www.wikidata.org/prop/direct/P706"><tt>wdt:P706</tt></link></td>
+<td id="_1fb0d37e-4ab2-5c39-cd6a-cfd48e919e7c" valign="middle" align="left"><link target="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"><tt>rdfs:subPropertyOf</tt></link></td>
+<td id="_24c728bb-3fcc-74fe-c91c-bd7d5c81010d" valign="middle" align="left"><link target="http://www.opengis.net/ont/geosparql#sfWithin"><tt>geo:sfWithin</tt></link></td>
+<td id="_2645b467-c6c1-bb78-836a-b8feebda2e3c" valign="middle" align="left">—</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+</sections><bibliography><references id="_472718dd-6dad-5e88-3cc9-e3a4506b5b5f" normative="true" obligation="informative">
+<title id="_461cd77a-5cfe-f57e-70ab-04e5c4142c2b">Normative references</title><p id="_02b1c060-f2f9-4bc4-035d-e49887f749e3">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+
+<bibitem id="_7d1b6682-00e0-93c7-70f5-48880664ad59" type="standard" schema-version="v1.5.6" anchor="ogc-geosparql">
+  <fetched>2026-11-27</fetched>
+  
+<title language="en" script="Latn" type="title-intro">OGC GeoSPARQL</title>
+
+  
+<title language="en" script="Latn" type="title-main">A Geographic Query Language for RDF Data</title>
+
+  
+<title language="en" script="Latn" type="main">OGC GeoSPARQL — A Geographic Query Language for RDF Data</title>
+
+  <uri type="src">http://www.opengis.net/doc/IS/geosparql/1.1.0</uri>
+  <uri type="html">https://docs.ogc.org/is/22-047r1/22-047r1.html</uri>
+  <docidentifier type="OGC" primary="true">22-047r1</docidentifier>
+  <date type="published">
+    <on>2024-01-29</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Nicholas J. Car</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">GeoSPARQL contains a small spatial domain OWL ontology that allow literal representations of geometries to be associated with spatial features and for features to be associated with other features using spatial relations.
+
+GeoSPARQL also contains SPARQL extension function definitions that can be used to calculate relations between spatial objects.
+
+Several other supporting assets are also contained within GeoSPARQL such as vocabularies of Simple Feature types and data validators.
+
+The namespace for the GeoSPARQL ontology is http://www.opengis.net/ont/geosparql#
+
+The suggested prefix for this namespace is geo
+
+The namespace for the GeoSPARQL functions is http://www.opengis.net/def/function/geosparql/
+
+The suggested prefix for this namespace is geof
+
+
+</abstract>
+</bibitem>
+<bibitem anchor="w3c-owl2" id="_c7af706e-28e7-ba88-e110-95f7cd743b6d"><formattedref format="application/x-isodoc+xml"><em>OWL 2 Web Ontology Language Document Overview (Second Edition)</em>, W3C Recommendation, 11 December 2012. <link target="https://w3.org"/></formattedref><docidentifier type="W3C">W3C OWL 2</docidentifier><docnumber>3C OWL 2</docnumber><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="w3c-skos" id="_0935aeab-3cd9-4c93-ff49-317e9bf1ad49"><formattedref format="application/x-isodoc+xml"><em>SKOS Simple Knowledge Organization System Reference</em>, W3C Recommendation, 18 August 2009. <link target="https://w3.org"/></formattedref><docidentifier type="W3C">W3C SKOS</docidentifier><docnumber>3C SKOS</docnumber><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="w3c-rdf-schema" id="_9e4a29dc-9be5-439a-ae59-57d70b1313f0"><formattedref format="application/x-isodoc+xml"><em>RDF Schema 1.1</em>, W3C Recommendation, 25 February 2014. <link target="https://w3.org"/></formattedref><docidentifier type="W3C">W3C RDF Schema 1.1</docidentifier><docnumber>3C RDF Schema 1.1</docnumber><language>en</language><script>Latn</script></bibitem>
+</references></bibliography>
+</metanorma>
